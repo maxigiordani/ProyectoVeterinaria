@@ -1,0 +1,68 @@
+
+.custom-navbar {
+    background-color: black  }
+  
+    footer {
+     
+      background-color: blue;
+      color: black;
+      width: 1920px;
+      margin-top: 370px;
+      position: fixed;
+      
+      
+    }
+  
+  
+    .estilocards {
+      display: flex;
+      
+      
+    }
+   
+   
+    .cardplanes {
+      max-width: 300px;
+      margin-left: 20px;
+      margin-bottom: 30px;
+    }
+   
+  
+    .tituloprincipal {
+      color:white;
+      border-color: black;
+      align-items: center;
+      font-size: 80px;
+      -webkit-text-stroke: 2px rgb(179, 57, 57);
+    }
+  
+    .fondo-container {
+      background-size: cover;
+      background-position: center;
+      background-image: url('/src/assets/imagenes/img2.jpg');
+      color: white;
+      padding: 20px;
+      height: 500px;
+      width: 100%;
+    }
+  
+    .cardservice {
+      max-width: 300px;
+      margin: 5px;
+      margin-left: 20px;
+    }
+  
+  .cardservice:hover {
+    background-color: #c08ad4;
+    cursor: pointer;
+  }
+  
+   .servicesandproduct{
+    display: flex;
+    flex-wrap: wrap;
+   }
+  
+   .botonformulario {
+    padding: 10px;
+    margin: 5px;
+   }
