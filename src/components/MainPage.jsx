@@ -1,14 +1,18 @@
 // components/MainPage.js
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import '/src/App.css';
+import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import publicidadImage from '../assets/imagenes/principal.jpg';
+import WeatherWidget from './helpers/WeatherWidget';
 
 
 const MainPage = () => {
   
   return (
-    
+    <div className='principal'> 
+      <WeatherWidget />
       <Container fluid>
         <div className="fondo-container">
           <h1 className='display tituloprincipal'>Veterinaria Rolling</h1>
@@ -17,86 +21,97 @@ const MainPage = () => {
  <br/>
 
       {/* Sección de Servicios, Productos y Marcas */}
-      <div className="servicios">
-        <h2 className='text-center'>Ofrecemos una amplia variedad de servicios</h2>
-      </div>
-
-      <div className='container divservices'>
+      <div className=" container fluid servicios text-center">
+        <h2 className='text-center h3'>Ofrecemos una amplia variedad de productos y servicios</h2>
         <Row>
           <Col className='servicesandproduct'>
-            <Card className='cardservice'>
-              <Card.Body>
-                <Card.Title>Operaciones</Card.Title>
-              </Card.Body>
-            </Card>
-            
-            <Card className='cardservice'>
-              <Card.Body>
-                <Card.Title>Ecografías</Card.Title>
-              </Card.Body>
-            </Card>
-          
-            <Card className='cardservice'>
-              <Card.Body>
-                <Card.Title>Aplicación y venta de vacunas</Card.Title>
-              </Card.Body>
-            </Card>
-     
-            <Card className='cardservice'>
-              <Card.Body>
-                <Card.Title>Radiografías</Card.Title>
-              </Card.Body>
-            </Card>
-     
-            <Card className='cardservice'>
-              <Card.Body>
-                <Card.Title>Laboratorio de análisis</Card.Title>
-              </Card.Body>
-            </Card>
+            <Link className='linkstyle'  to="/page404">
+              <Card className='cardservice'>
+                <Card.Body>
+                  <Card.Title>Cirugías</Card.Title>
+                </Card.Body>
+              </Card>
+            </Link>
 
-            <Card className='cardservice'>
-              <Card.Body>
-                <Card.Title>Accesorios para tu mascota</Card.Title>
-              </Card.Body>
-            </Card>
-            <Card className='cardservice'>
-              <Card.Body>
-                <Card.Title>Alimentos balanceados de varias marcas</Card.Title>
-              </Card.Body>
-            </Card>
-            <Card className='cardservice'>
-              <Card.Body>
-                <Card.Title>Venta de medicamentos</Card.Title>
-              </Card.Body>
-            </Card>
+            <Link className='linkstyle' to="/page404">
+              <Card className='cardservice'>
+                <Card.Body>
+                  <Card.Title>Ecografías</Card.Title>
+                </Card.Body>
+              </Card>
+            </Link>
 
-            <Card className='cardservice'>
-              <Card.Body>
-                <Card.Title>Peluqueria</Card.Title>
-              </Card.Body>
-            </Card>
-     
+            <Link className='linkstyle'  to="/page404">
+              <Card className='cardservice'>
+                <Card.Body>
+                  <Card.Title>Aplicación y venta de vacunas</Card.Title>
+                </Card.Body>
+              </Card>
+            </Link>
 
+            <Link className='linkstyle' to="/page404">
+              <Card className='cardservice'>
+                <Card.Body>
+                  <Card.Title>Radiografías</Card.Title>
+                </Card.Body>
+              </Card>
+            </Link>
 
-            {/* Agrega más tarjetas de planes según sea necesario */}
+            <Link className='linkstyle'  to="/page404">
+              <Card className='cardservice'>
+                <Card.Body>
+                  <Card.Title>Laboratorio de análisis</Card.Title>
+                </Card.Body>
+              </Card>
+            </Link>
+
+            <Link className='linkstyle'  to="/page404">
+              <Card className='cardservice'>
+                <Card.Body>
+                  <Card.Title>Accesorios para tu mascota</Card.Title>
+                </Card.Body>
+              </Card>
+            </Link>
+
+            <Link className='linkstyle'  to="/page404">
+              <Card className='cardservice'>
+                <Card.Body>
+                  <Card.Title>Alimentos balanceados de varias marcas</Card.Title>
+                </Card.Body>
+              </Card>
+            </Link>
+
+            <Link className='linkstyle' to="/page404">
+              <Card className='cardservice'>
+                <Card.Body>
+                  <Card.Title>Venta de medicamentos</Card.Title>
+                </Card.Body>
+              </Card>
+            </Link>
+
+            <Link className='linkstyle' to="/page404">
+              <Card className='cardservice'>
+                <Card.Body>
+                  <Card.Title>Peluqueria</Card.Title>
+                </Card.Body>
+              </Card>
+            </Link>
           </Col>
         </Row>
       </div>
-      {/* Sección de Comentarios de Clientes */}
-      <Row className="mt-4">
-        <Col>
-          <h3 className='text-center'>Comentarios de Nuestros Clientes</h3>
-          {/* Agrega un componente de comentarios de clientes si es necesario */}
+    
+<Col className='publicidad-horizontal text-center'>
+          <img src={publicidadImage} alt="Publicidad2" />
         </Col>
-      </Row>
 
       {/* Sección de Profesionales */}
       <Row className="mt-4">
         <Col>
-          <h3 className='text-center' >Nuestros Profesionales</h3>
+          <h3 className='text-center h3' >Nuestros Profesionales</h3>
           <h5 className='text-center'>
             En nuestra veterinaria contamos con los siguientes profesionales
           </h5>
+      
           <Container>
             <Card>
               <Card.Body>
@@ -133,14 +148,64 @@ const MainPage = () => {
           </Container>
         </Col>
       </Row>
+        {/* Sección de Comentarios de Clientes */}
+        
+        <div className='comentariosdeclientes'> 
+        <Row className="mt-4">
+        <h3 className='text-center h3'>Comentarios de Nuestros Clientes</h3>
+        <Col>
+          <Carousel className='carousel text-center'>
+            <Carousel.Item>
+              <Card className='comentscustomer'>
+                <Card.Body>
+                  <Card.Text>
+                    "Excelente servicio, siempre confío en la veterinaria Rolling para el cuidado de mis mascotas."
+                  </Card.Text>
+                  <p className='cliente'>- María Pérez</p>
+                </Card.Body>
+              </Card>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Card className='comentscustomer'>
+                <Card.Body >
+                  <Card.Text>
+                    "Los profesionales de la veterinaria son muy dedicados. Mi perro siempre recibe la mejor atención aquí."
+                  </Card.Text>
+                  <p className='cliente'>- Juan Rodríguez</p>
+                </Card.Body>
+              </Card>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Card className='comentscustomer'>
+                <Card.Body >
+                  <Card.Text>
+                    "Excelente atención, muy buenos precios y contencion al cliente."
+                  </Card.Text>
+                  <p className='cliente'>- Carlos Giovanni</p>
+                </Card.Body>
+              </Card>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Card className='comentscustomer'>
+                <Card.Body >
+                  <Card.Text>
+                    "Rapida atención, excelente trato y precios accesibles."
+                  </Card.Text>
+                  <p className='cliente'>-Valentina Mamani</p>
+                </Card.Body>
+              </Card>
+            </Carousel.Item>
+          </Carousel>
+        </Col>
+      </Row>
+      </div>
+
 
       {/* Sección de Planes Especiales */}
-      <div>
-        <h2 className='text-center'>En veterinaria tenemos diferentes planes de acuerdo a tus necesidades:</h2>
-      </div>
-      <div className='container planes'>
+      <div className='container fluid planes text-center'>
+      <h3 className='h3 text-center'>En veterinaria tenemos diferentes planes de acuerdo a tus necesidades:</h3>
         <Row>
-          <Col className='estilocards'>
+          <Col className='estilocards text-center'>
             <Card className='cardplanes'>
               <Card.Body>
                 <Card.Title>Primeros Pasos</Card.Title>
@@ -178,6 +243,7 @@ const MainPage = () => {
         </Row>
       </div>
     </Container>
+    </div>
   );
 };
 
