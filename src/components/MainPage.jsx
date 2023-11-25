@@ -12,10 +12,12 @@ const MainPage = () => {
   
   return (
     <div className='principal'> 
-      <WeatherWidget />
+    <div className=' container fluid tiempo text-center ms-auto'> 
+      <WeatherWidget/>
+    </div>
       <Container fluid>
         <div className="fondo-container">
-          <h1 className='display tituloprincipal'>Veterinaria Rolling</h1>
+          <h1 className='tituloprincipal '>VETERINARIA ROLLING</h1>
         </div>
 
  <br/>

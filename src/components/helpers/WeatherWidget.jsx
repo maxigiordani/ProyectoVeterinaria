@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaTemperatureHigh } from 'react-icons/fa'; // Importa el icono de temperatura de react-icons
 import axios from 'axios';
 
 const WeatherWidget = () => {
@@ -6,8 +7,8 @@ const WeatherWidget = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const apiKey = 'TU_CLAVE_DE_API'; // Reemplaza con tu clave de API de OpenWeatherMap
-    const city = 'BUENOS AIRES'; // Reemplaza con el nombre de tu ciudad
+    const apiKey = '4a6d503b013ea6d2a76a2a71181b5be2'; // Reemplaza con tu clave de API de OpenWeatherMap
+    const city = 'TUCUMAN'; // Reemplaza con el nombre de tu ciudad
 
     const fetchData = async () => {
       try {
@@ -30,10 +31,11 @@ const WeatherWidget = () => {
       {loading ? (
         <p>Cargando datos del clima...</p>
       ) : weatherData ? (
-        <div>
-          <h3>Información del clima en {weatherData.name}</h3>
-          <p>Temperatura: {weatherData.main.temp}°C</p>
-          <p>Condiciones: {weatherData.weather[0].description}</p>
+        <div className='tiempo'>
+          <h5>Clima en {weatherData.name}</h5>
+          <p>
+            <FaTemperatureHigh /> {weatherData.main.temp}°C
+          </p>
         </div>
       ) : (
         <p>No se pudo obtener la información del clima.</p>
