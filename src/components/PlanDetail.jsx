@@ -1,4 +1,4 @@
-// En PlanDetail.js
+
 import React from 'react';
 import { Form, Button, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
@@ -70,8 +70,7 @@ const PlanDetail = () => {
           Enviar Consulta
         </Button>
       </Form>
-      
-      {/* Ventana Modal */}
+    
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>Consulta Enviada</Modal.Title>

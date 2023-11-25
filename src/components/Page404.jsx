@@ -6,7 +6,7 @@ const Page404 = () => {
   return (
     <div>
       <h1>404 - Página no encontrada</h1>
-      {/* Puedes agregar contenido adicional o un enlace de regreso a la página principal */}
+     
 
 
 
