@@ -32,7 +32,7 @@ const WeatherWidget = () => {
         <p>Cargando datos del clima...</p>
       ) : weatherData ? (
         <div className='tiempo'>
-          <h5>Clima en {weatherData.name}</h5>
+          <h5>{weatherData.name}</h5>
           <p>
             <FaTemperatureHigh /> {weatherData.main.temp}°C
           </p>

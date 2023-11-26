@@ -1,16 +1,16 @@
-/* En app.css o en un nuevo archivo de estilos */
+
 .vertical-ad {
   position: fixed;
   top: 0;
   right: 0;
   width: 200px;
-  /* Ajusta el ancho según tus necesidades */
+
   height: 100vh;
   background-color: #f2f2f2;
-  /* Fondo de la publicidad */
+ 
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* Sombra para resaltar la publicidad */
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +22,7 @@
   top: 1000px;
   right: 150px;
   width: 30px;
-  /* Ajusta el ancho según tus necesidades */
+ 
   height: 100vh;
   padding: 20px;
   display: flex;
@@ -36,7 +36,7 @@
   top: 420px;
   right: 150px;
   width: 30px;
-  /* Ajusta el ancho según tus necesidades */
+
   height: 100vh;
   padding: 20px;
   display: flex;
@@ -152,17 +152,30 @@
 }
 
 .tiempo {
-max-height: 100px;
-
-
+max-height: 80px;
+padding: 5px;
 }
 
 .logounico {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+
 }
 
 .navbarstyle {
   max-height: 300px;
+  background-color:#c08ad4;
+  padding: 15px;
 
 }
+
+
+.titulonav {
+  color: white;
+  margin-top: -100px;
+  margin-left: 80px;
+  
+}
+
+

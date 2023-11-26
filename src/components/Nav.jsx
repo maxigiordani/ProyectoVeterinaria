@@ -12,12 +12,11 @@ const NavbarComponent = ({ isAdmin }) => {
             src={logo}
             alt="Logo de la Empresa"
             height="30"
-            className ="d-inline-block align-top logounico"
-          />
-          VETERINARIA ROLLING
+            className ="d-inline-block align-top logounico"   /> <h3 className='titulonav h3'>VETERINARIA ROLLING</h3>
+            
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav navboton" />
+        <Navbar.Collapse id="basic-navbar-nav navboton">
           <Nav className="me-auto">
             {isAdmin && (
               <>
@@ -28,8 +27,9 @@ const NavbarComponent = ({ isAdmin }) => {
           
           </Nav>
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/login">Login</Nav.Link>
-          
+          <Nav.Link as={Link} to="/">Inicio</Nav.Link>
+           <Nav.Link as={Link} to="/Login">Login</Nav.Link>
+           <Nav.Link as={Link} to="">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
