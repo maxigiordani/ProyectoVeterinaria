@@ -1,5 +1,5 @@
 
-const PacientTable = () => {
+const Pacients = () => {
     return (
         <div>
             
@@ -7,4 +7,4 @@ const PacientTable = () => {
     );
 };
 
-export default PacientTable;
+export default Pacients;
