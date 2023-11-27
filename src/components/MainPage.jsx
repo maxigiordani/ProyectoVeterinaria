@@ -1,5 +1,3 @@
-
-import React from 'react';
 import '/src/App.css';
 import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -205,7 +203,6 @@ const MainPage = () => {
       <Row className="mt-4 text-center">
           <h3 className='text-center h3'>En veterinaria tenemos diferentes planes de acuerdo a tus necesidades:</h3>
           <Row className='estilocards text-center'>
-            {/* Utiliza las clases de columnas responsivas de Bootstrap */}
             <Col md={4} sm={6}>
               <Card className='cardplanes text-center'>
                 <Card.Body>

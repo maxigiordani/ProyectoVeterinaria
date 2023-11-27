@@ -5,6 +5,8 @@ import MainPage from './components/MainPage';
 import PlanDetail from './components/PlanDetail';
 import Page404 from './components/Page404';
 import ContactUs from './components/ContactUs';
+import AboutUs from './components/AboutUs';
+
 
 
 
@@ -25,7 +27,11 @@ function App() {
           <Route path="/planes/madurando" element={<PlanDetail plan="madurando" />} />
           <Route path="/planes/adultos" element={<PlanDetail plan="adultos" />} />
           <Route path="/page404" element={<Page404 />} />
-          <Route path="/contactus" element={<ContactUs/>} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+         
+          
+        
         </Routes>
         <Footer />
       </>

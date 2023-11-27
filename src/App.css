@@ -185,3 +185,17 @@ padding: 5px;
   margin-left: 255px;
 }
 
+.imagenavatar {
+ max-width: 350px;
+ max-height: 300px;
+}
+
+.imagenavatar:hover {
+transform: scale(1.1);
+box-shadow: 0 0 15px rgba(183, 26, 223, 0.5);
+}
+
+
+.fraseequipo {
+  margin: 30px;
+}
