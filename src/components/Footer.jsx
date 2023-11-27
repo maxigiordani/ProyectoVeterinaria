@@ -7,7 +7,10 @@ import '/src/App.css';
 const Footer = () => {
   return (
     <footer className="stylefooter bg-dark text-light">
+
+      
   
+
   </footer>
   );
 };

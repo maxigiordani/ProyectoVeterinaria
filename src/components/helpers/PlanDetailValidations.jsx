@@ -31,6 +31,13 @@ export const validationRules = {
       message: 'El mensaje no puede tener más de 300 caracteres',
     },
   },
+  phone: {
+    required: 'Este campo es obligatorio',
+    pattern: {
+      value: /^\d{12}$/,
+      message: 'Número de celular inválido. Debe tener 12 dígitos.',
+    },
+  },
 };
 
 export const errorStyle = {

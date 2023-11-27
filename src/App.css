@@ -59,9 +59,9 @@
 }
 
 .cardplanes {
-  max-width: 300px;
-  margin-left: 20px;
-  margin-bottom: 30px;
+   width: 100%;
+  margin-bottom: 20px;
+  
 }
 
 
@@ -178,4 +178,10 @@ padding: 5px;
   
 }
 
+
+.botonnav {
+  margin: 20px;
+  background-color: aqua;
+  margin-left: 255px;
+}
 

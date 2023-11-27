@@ -1,4 +1,4 @@
-// components/MainPage.js
+
 import React from 'react';
 import '/src/App.css';
 import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
@@ -22,7 +22,7 @@ const MainPage = () => {
 
  <br/>
 
-      {/* Sección de Servicios, Productos y Marcas */}
+  
       <div className=" container fluid servicios text-center">
         <h2 className='text-center h3'>Ofrecemos una amplia variedad de productos y servicios</h2>
         <Row>
@@ -102,11 +102,11 @@ const MainPage = () => {
         </Row>
       </div>
     
-<Col className='publicidad-horizontal text-center'>
+<Col className='publicidad-horizontal text-center fluid d-none d-md-block'>
           <img src={publicidadImage} alt="Publicidad2" />
         </Col>
 
-      {/* Sección de Profesionales */}
+   
       <Row className="mt-4">
         <Col>
           <h3 className='text-center h3' >Nuestros Profesionales</h3>
@@ -150,7 +150,7 @@ const MainPage = () => {
           </Container>
         </Col>
       </Row>
-        {/* Sección de Comentarios de Clientes */}
+     
         
         <div className='comentariosdeclientes'> 
         <Row className="mt-4">
@@ -202,48 +202,52 @@ const MainPage = () => {
       </Row>
       </div>
 
-
-      {/* Sección de Planes Especiales */}
-      <div className='container fluid planes text-center'>
-      <h3 className='h3 text-center'>En veterinaria tenemos diferentes planes de acuerdo a tus necesidades:</h3>
-        <Row>
-          <Col className='estilocards text-center'>
-            <Card className='cardplanes'>
-              <Card.Body>
-                <Card.Title>Primeros Pasos</Card.Title>
-                <Card.Text>
-                  Servicios para mascotas de 0 a 5 años.
-                </Card.Text>
-                <Link to="/planes/primeros-pasos">
-                  <Button variant="primary">Detalles</Button>
-                </Link>
-              </Card.Body>
-            </Card>
-            <Card className='cardplanes'>
-              <Card.Body>
-                <Card.Title>Madurando</Card.Title>
-                <Card.Text>
-                  Servicios para mascotas de 5 a 10 años.
-                </Card.Text>
-                <Link to="/planes/madurando">
-                  <Button variant="primary">Detalles</Button>
-                </Link>
-              </Card.Body>
-            </Card>
-            <Card className='cardplanes'>
-              <Card.Body>
-                <Card.Title>Adultos</Card.Title>
-                <Card.Text>
-                  Servicios para mascotas de más de 10 años.
-                </Card.Text>
-                <Link to="/planes/adultos">
-                  <Button variant="primary">Detalles</Button>
-                </Link>
-              </Card.Body>
-            </Card>
-          </Col>
+      <Row className="mt-4 text-center">
+          <h3 className='text-center h3'>En veterinaria tenemos diferentes planes de acuerdo a tus necesidades:</h3>
+          <Row className='estilocards text-center'>
+            {/* Utiliza las clases de columnas responsivas de Bootstrap */}
+            <Col md={4} sm={6}>
+              <Card className='cardplanes text-center'>
+                <Card.Body>
+                  <Card.Title>Primeros Pasos</Card.Title>
+                  <Card.Text>
+                    Servicios para mascotas de 0 a 5 años.
+                  </Card.Text>
+                  <Link to="/planes/primeros-pasos">
+                    <Button variant="primary">Detalles</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4} sm={6}>
+              <Card className='cardplanes'>
+                <Card.Body>
+                  <Card.Title>Madurando</Card.Title>
+                  <Card.Text>
+                    Servicios para mascotas de 5 a 10 años.
+                  </Card.Text>
+                  <Link to="/planes/madurando">
+                    <Button variant="primary">Detalles</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4} sm={6}>
+              <Card className='cardplanes'>
+                <Card.Body>
+                  <Card.Title>Adultos</Card.Title>
+                  <Card.Text>
+                    Servicios para mascotas de más de 10 años.
+                  </Card.Text>
+                  <Link to="/planes/adultos">
+                    <Button variant="primary">Detalles</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Row>
-      </div>
+     
     </Container>
     </div>
   );

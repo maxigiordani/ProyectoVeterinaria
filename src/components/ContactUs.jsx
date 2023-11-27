@@ -1,51 +1,30 @@
 import React from 'react';
 import { Form, Button, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import emailjs from 'emailjs-com';
 import { validationRules, errorStyle, ErrorMessage } from './helpers/PlanDetailValidations';
 
 const PlanDetail = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [showModal, setShowModal] = React.useState(false);
 
-  const emailjsConfig = {
-    serviceId: 'service_fai8lrq',
-    templateId: 'template_mmkeyvm',
-    userId: 'uMxMpO7OXL7pbTgxO',
-  };
-
   const onSubmit = async (data) => {
-    try {
-      const emailData = {
-        ...data,
-        user_name: data.name,
-        user_email: data.email,
-      };
+ 
 
-      const response = await emailjs.send(
-        emailjsConfig.serviceId,
-        emailjsConfig.templateId,
-        emailData,
-        emailjsConfig.userId
-      );
+ 
+    setShowModal(true);
 
-      console.log('Correo enviado con éxito:', response);
-
-      setShowModal(true);
-
-      reset();
-    } catch (error) {
-      console.error('Error al enviar el correo:', error);
-    }
+    
+    reset();
   };
 
   const handleCloseModal = () => {
+  
     setShowModal(false);
   };
 
   return (
     <div className='container fluid formularioconsulta'>
-      <h2>Consulta de Plan</h2>
+      <h2>Contáctenos</h2>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group controlId="formName">
           <Form.Label>Nombre y apellido:</Form.Label>
@@ -58,20 +37,18 @@ const PlanDetail = () => {
           <Form.Control type="email" {...register('email', validationRules.email)} placeholder='juanperez@gmail.com' maxLength={35} />
           {errors.email && <ErrorMessage message={errors.email.message} />}
         </Form.Group>
-        
+
         <Form.Group controlId="formPhone">
           <Form.Label>Número de Celular:</Form.Label>
-          <Form.Control type="tel" {...register('phone', validationRules.phone)} placeholder='123-456-7890' maxLength={12}/>
+          <Form.Control type="tel" {...register('phone', validationRules.phone)} placeholder='54381545588' maxLength={12}/>
           {errors.phone && <ErrorMessage message={errors.phone.message} />}
         </Form.Group>
 
         <Form.Group controlId="formMessage">
           <Form.Label>Mensaje:</Form.Label>
-          <Form.Control as="textarea" rows={3} {...register('message', validationRules.message)} placeholder='consultanos' maxLength={300}/>
+          <Form.Control as="textarea" rows={3} {...register('message', validationRules.message)} placeholder='Su consulta' maxLength={300}/>
           {errors.message && <ErrorMessage message={errors.message.message} />}
         </Form.Group>
-
-        
 
         <Button className="botonformulario" variant="primary" type="submit">
           Enviar Consulta
@@ -83,7 +60,7 @@ const PlanDetail = () => {
           <Modal.Title>Consulta Enviada</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Gracias por tu consulta, recibirás un correo electrónico.
+          Gracias por tu consulta. Pronto sera Contactado.
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>
