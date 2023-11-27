@@ -1,5 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
 
-import React from 'react';
 import '/src/App.css';
 import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';

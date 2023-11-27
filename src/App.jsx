@@ -1,16 +1,17 @@
-import React from 'react';
 import Footer from './components/Footer';
 import NavComponent from './components/Nav';
 import MainPage from './components/MainPage';
 import PlanDetail from './components/PlanDetail';
 import Page404 from './components/Page404';
 import ContactUs from './components/ContactUs';
+import PacientTable from './components/PacientTable';
 
 
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/app.css';
+import AppointmentTable from './components/AppointmentTable';
 
 
 
@@ -26,6 +27,8 @@ function App() {
           <Route path="/planes/adultos" element={<PlanDetail plan="adultos" />} />
           <Route path="/page404" element={<Page404 />} />
           <Route path="/contactus" element={<ContactUs/>} />
+          <Route path='/admin-pacientes' element={<PacientTable/>}/>
+          <Route path='/admin-turnos' element={<AppointmentTable/>} ></Route>
         </Routes>
         <Footer />
       </>
