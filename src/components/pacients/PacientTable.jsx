@@ -1,7 +1,10 @@
+/* eslint-disable react/prop-types */
 import { Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Pacients from "./Pacients";
 
-const PacientTable = () => {
+const PacientTable = ({ pacients, getAPI }) => {
+console.log(pacients)
 
     return (
      <div>
@@ -17,6 +20,7 @@ const PacientTable = () => {
         </div>
         <hr />
         {/* Table of PACIENTS */}
+        {pacients?.length !== 0 ? (
           <Table bordered hover responsive className="align-middle mt-3">
             <thead>
               <tr>
@@ -31,17 +35,25 @@ const PacientTable = () => {
               </tr>
             </thead>
             <tbody>
-           
+            {pacients?.map((pacient) => (
+                <Pacients
+                  key={pacient._id}
+                  pacients={pacient}
+                  getAPI={getAPI}
+
+                />
+              ))}
             </tbody>
           </Table>
-     
+        ) : (
           <div className="no-products-found d-flex align-items-center justify-content-center">
-            <h1> 🐾 No pacients found 🐾</h1>
+            <h1>🐾 No pacients found 🐾</h1>
           </div>
-      </Container>
-
-        </div>
-    );
+        )}
+        </Container>
+    </div>
+  );
 };
+
 
 export default PacientTable;
