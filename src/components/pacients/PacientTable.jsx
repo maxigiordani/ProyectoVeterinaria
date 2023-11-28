@@ -2,13 +2,14 @@ import { Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const PacientTable = () => {
+
     return (
      <div>
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
           <h1>Pacients Table</h1>
           <Link
-            to="/pacient-create"
+            to="/pacient/create"
             className="btn-red text-decoration-none text-center"
           >
             Add Pacient
