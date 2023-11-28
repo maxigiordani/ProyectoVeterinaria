@@ -6,6 +6,7 @@ import PlanDetail from './components/PlanDetail';
 import Page404 from './components/Page404';
 import ContactUs from './components/ContactUs';
 import AboutUs from './components/AboutUs';
+import LoginPage from './components/LoginPage';
 
 
 
@@ -29,7 +30,8 @@ function App() {
           <Route path="/page404" element={<Page404 />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/aboutus" element={<AboutUs />} />
-         
+          <Route path="/loginpage" element={<LoginPage />} />
+          
           
         
         </Routes>

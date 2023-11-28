@@ -40,7 +40,10 @@ export const validationRules = {
   },
 };
 
-
+export const errorStyle = {
+  color: 'red',
+  fontSize: '14px',
+};
 
 export const ErrorMessage = ({ message }) => (
   <p style={errorStyle}>{message}</p>
