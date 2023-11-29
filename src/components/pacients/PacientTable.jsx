@@ -2,7 +2,7 @@
 import { Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Pacients from "./Pacients";
-
+import '../../App.css'
 const PacientTable = ({ pacients, getAPI }) => {
 console.log(pacients)
 
@@ -13,7 +13,7 @@ console.log(pacients)
           <h1>Pacients Table</h1>
           <Link
             to="/pacient/create"
-            className="btn-red text-decoration-none text-center"
+            className=" btn btn-violeta text-decoration-none text-center"
           >
             Add Pacient
           </Link>
@@ -23,8 +23,8 @@ console.log(pacients)
         {pacients?.length !== 0 ? (
           <Table bordered hover responsive className="align-middle mt-3">
             <thead>
-              <tr>
-                <th>Id</th>
+              <tr> 
+                <th >Id</th>
                 <th>Owner Name</th>
                 <th>Email</th>
                 <th>Tel</th>

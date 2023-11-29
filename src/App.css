@@ -135,6 +135,7 @@
 }
 
 
+
 .cardplanes {
   align-items: center;
 }
@@ -183,5 +184,14 @@ padding: 5px;
   margin: 20px;
   background-color: aqua;
   margin-left: 255px;
+}
+
+.btn-violeta{
+  background-color: #c08ad4;
+  color:white
+}
+.btn-violeta:hover{
+  background-color: blueviolet;
+  color:white
 }
 
