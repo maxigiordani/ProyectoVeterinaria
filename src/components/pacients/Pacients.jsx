@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import axios from "axios";
-import { STATUS } from "../../constant";
+import { STATUS } from "../constant";
 import Swal from "sweetalert2";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Pacients = ({ pacients, getAPI }) => {
   const URL = import.meta.env.VITE_API_VETERINARIA;
   const handleDelete = (id) => {
@@ -49,18 +49,18 @@ const Pacients = ({ pacients, getAPI }) => {
 
       <td className="w-25">
         <div className="d-flex justify-content-center">
-      {/*    { <Link
-            to={`/product/edit/${product?._id}`}
-            className="btn-orange mx-1 text-decoration-none text-center"
-          > }
-            Update
-       {/   </Link> */}
+          <Link
+            to={`/pacient/edit/${pacients?._id}`}
+            className= "btn btn-warning mx-1 "
+          >
+            Update 
+          </Link>
           <button
-            className="btn-red mx-1"
+            className="btn btn-danger mx-1"
             onClick={() => handleDelete(pacients?._id)}
-          > 
+          >
             Delete
-        </button> 
+          </button>
         </div>
       </td>
     </tr>

@@ -17,10 +17,11 @@ import AppointmentTable from './components/AppointmentTable';
 import PacientCreate from './components/pacients/PacientCreate';
 import { useEffect, useState } from 'react';
 import axios from "../src/components/config/axiosInit"
+import PacientEdit from './components/pacients/PacientEdit';
 
 
 function App() {
-  const [pacients, setPacient] = useState([]);
+  const [pacients, setPacients] = useState([]);
   //usamos la variable entorno
   const URL = import.meta.env.VITE_API_VETERINARIA;
 console.log(URL)
@@ -31,7 +32,7 @@ console.log(URL)
   const getAPI = async () => {
     try {
       const res = await axios.get(URL);
-      setPacient(res.data.pacientList);
+      setPacients(res.data);
     } catch (error) {
       console.log("error en el server");
     }
@@ -51,7 +52,8 @@ console.log(URL)
           <Route path='/admin/pacientes' element={<PacientTable pacients={pacients} getAPI={getAPI}  />}/>
           <Route path='/admin/turnos' element={<AppointmentTable/>}/>
           <Route exact path="/pacient/create" element={<PacientCreate getAPI={getAPI} />} />
-        
+          <Route exact path="/pacient/edit/:id" element={<PacientEdit getAPI={getAPI} />} />
+
         </Routes>
         <Footer />
       </>

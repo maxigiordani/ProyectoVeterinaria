@@ -12,7 +12,7 @@ import {
 
 const PacientCreate = ({ getAPI }) => {
   const [inputs, setInputs] = useState({});
-  const [errorMessage, setErrorMessaage] = useState(null);
+  const [errorMessage,  setErrorMessage] = useState(null);
   const [show, setShow] = useState(false);
 
   const URL = import.meta.env.VITE_API_VETERINARIA;
@@ -69,17 +69,18 @@ const PacientCreate = ({ getAPI }) => {
             navigate("/admin/pacientes");
           }
         } catch (error) {
+          console.log(error);
           error.response.data?.message &&
-            setErrorMessaage(error.response.data?.message);
-          error.response.data.errors?.length > 0 &&
-            error.response.data.errors?.map((error) =>
-              setErrorMessaage(error.msg)
-            );
-          setShow(true);
+             setErrorMessage(error.response.data?.message);
+          error.response.data?.errors?.length > 0 &&
+             error.response.data.errors?.map((error) =>
+                setErrorMessage(error.msg)
+             );
         }
       }
     });
   };
+
   return (
     <div>
       <Container className="py-5">
@@ -87,7 +88,7 @@ const PacientCreate = ({ getAPI }) => {
         <hr />
         {/* Form Pacient */}
         <Form className="my-5" onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-3" controlId="formOwnerName">
             <Form.Label>Owner name*</Form.Label>
             <Form.Control
               type="text"
@@ -98,7 +99,7 @@ const PacientCreate = ({ getAPI }) => {
               maxLength={30}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-3" controlId="formEmail">
             <Form.Label>Email*</Form.Label>
             <Form.Control
               type="text"
@@ -109,7 +110,7 @@ const PacientCreate = ({ getAPI }) => {
               maxLength={30}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-3" controlId="formTel">
             <Form.Label>Tel*</Form.Label>
             <Form.Control
               type="text"
@@ -119,7 +120,7 @@ const PacientCreate = ({ getAPI }) => {
               maxLength={12}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-3" controlId="formPetName">
             <Form.Label>Pet Name*</Form.Label>
             <Form.Control
               type="text"
@@ -129,7 +130,7 @@ const PacientCreate = ({ getAPI }) => {
             maxLength={30}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-3" controlId="formSpecie">
             <Form.Label>Specie*</Form.Label>
             <Form.Control
               type="text"
@@ -140,7 +141,7 @@ const PacientCreate = ({ getAPI }) => {
 
            />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-3" controlId="formR">
             <Form.Label>race*</Form.Label>
             <Form.Control
               type="text"
