@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Integrante1Avatar from '../assets/imagenes/avatar-agus.png';
 import Integrante2Avatar from '../assets/imagenes/avatar-maxi.png';
-import Integrante3Avatar from '../assets/imagenes/avatar-rosario2.png';
-import Integrante4Avatar from '../assets/imagenes/avatar-rosario2.png';
+import Integrante3Avatar from '../assets/imagenes/avatar-rosario.jpg';
+import Integrante4Avatar from '../assets/imagenes/avatar-sofia.png';
 
 const AboutUs = () => {
   return (
