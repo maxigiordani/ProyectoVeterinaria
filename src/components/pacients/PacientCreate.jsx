@@ -95,6 +95,7 @@ const PacientCreate = ({ getAPI }) => {
               name="ownerName"
               value={inputs.ownerName || ""}
               onChange={(e) => handleChange(e)}
+              maxLength={30}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -105,6 +106,7 @@ const PacientCreate = ({ getAPI }) => {
               name="email"
               value={inputs.email || ""}
               onChange={(e) => handleChange(e)}
+              maxLength={30}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -114,6 +116,7 @@ const PacientCreate = ({ getAPI }) => {
               name="tel"
               value={inputs.tel || ""}
               onChange={(e) => handleChange(e)}
+              maxLength={12}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -123,6 +126,7 @@ const PacientCreate = ({ getAPI }) => {
               name="petName"
               value={inputs.petName || ""}
               onChange={(e) => handleChange(e)}
+            maxLength={30}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -132,7 +136,9 @@ const PacientCreate = ({ getAPI }) => {
               name="specie"
               value={inputs.specie || ""}
               onChange={(e) => handleChange(e)}
-            />
+              maxLength={30}
+
+           />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>race*</Form.Label>
@@ -141,6 +147,8 @@ const PacientCreate = ({ getAPI }) => {
               name="race"
               value={inputs.race || ""}
               onChange={(e) => handleChange(e)}
+              maxLength={30}
+
             />
           </Form.Group>
           <div className="text-end">
