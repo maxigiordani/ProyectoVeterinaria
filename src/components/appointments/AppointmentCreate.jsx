@@ -3,7 +3,7 @@ import { useState } from "react";
 import { STATUS } from "../constant";
 import Swal from "sweetalert2";
 import axios from "axios";
-import {  Navigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { Alert, Container, Form } from "react-bootstrap";
 
 const AppointmentCreate = ({ getTurnosAPI }) => {
@@ -11,7 +11,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
   const [errorMessage, setErrorMessage] = useState(null);
   const [show, setShow] = useState(false);
   const URLTURNO = import.meta.env.VITE_API_APPOINTMENTS;
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const value = e.target.value;
     const name = e.target.name;
@@ -49,7 +49,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
             );
             e.target.reset();
             getTurnosAPI();
-            Navigate("/admin/turnos");
+            navigate("/admin/turnos");
           }
         } catch (error) {
           console.log(error);
