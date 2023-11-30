@@ -44,30 +44,30 @@ const PlanDetail = () => {
   };
 
   return (
-    <div className='container fluid formularioconsulta'>
+    <div className='container mt-5 fluid containerconsulta'>
       <h2>Consulta de Plan</h2>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group controlId="formName">
           <Form.Label>Nombre y apellido:</Form.Label>
-          <Form.Control type="text" {...register('name', validationRules.name)} placeholder='Juan Perez' maxLength={25}/>
+          <Form.Control type="text" {...register('name', validationRules.name)} placeholder='Juan Perez' maxLength={25} required/>
           {errors.name && <ErrorMessage message={errors.name.message} />}
         </Form.Group>
 
         <Form.Group controlId="formEmail">
           <Form.Label>Correo Electrónico:</Form.Label>
-          <Form.Control type="email" {...register('email', validationRules.email)} placeholder='juanperez@gmail.com' maxLength={35} />
+          <Form.Control type="email" {...register('email', validationRules.email)} placeholder='juanperez@gmail.com' maxLength={35} required/>
           {errors.email && <ErrorMessage message={errors.email.message} />}
         </Form.Group>
         
         <Form.Group controlId="formPhone">
           <Form.Label>Número de Celular:</Form.Label>
-          <Form.Control type="tel" {...register('phone', validationRules.phone)} placeholder='123-456-7890' maxLength={12}/>
+          <Form.Control type="tel" {...register('phone', validationRules.phone)} placeholder='123-456-7890' maxLength={12} required/>
           {errors.phone && <ErrorMessage message={errors.phone.message} />}
         </Form.Group>
 
         <Form.Group controlId="formMessage">
           <Form.Label>Mensaje:</Form.Label>
-          <Form.Control as="textarea" rows={3} {...register('message', validationRules.message)} placeholder='consultanos' maxLength={300}/>
+          <Form.Control as="textarea" rows={3} {...register('message', validationRules.message)} placeholder='consultanos' maxLength={300} required />
           {errors.message && <ErrorMessage message={errors.message.message} />}
         </Form.Group>
 

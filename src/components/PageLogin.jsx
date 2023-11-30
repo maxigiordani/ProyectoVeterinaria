@@ -19,7 +19,6 @@ const PageLogin = () => {
          alert("correcto")
         // Lógica para redirigir al usuario después de iniciar sesión
       } else {
-        console.log('Credenciales incorrectas');
         Swal.fire({
           icon: "error",
           title: "Oops...",

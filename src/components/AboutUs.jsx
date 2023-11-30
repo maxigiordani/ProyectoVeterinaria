@@ -10,7 +10,7 @@ import Integrante4Avatar from '../assets/imagenes/avatar-sofia.png';
 const AboutUs = () => {
   return (
     <Container className="mt-5 text-center">
-      <h2 className="mb-4">Quienes somos </h2>
+      <h2 className="mb-4">Sobre nosotros </h2>
       <h3 className='h3 text-center fraseequipo'>¡Unidos en cada desafío, creamos el éxito juntos!</h3>
 
       <Row className="justify-content-center">

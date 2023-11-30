@@ -13,9 +13,9 @@ const MainPage = () => {
     <div className=' container fluid tiempo text-center ms-auto'> 
       <WeatherWidget/>
     </div>
-      <Container fluid>
+      <Container fluid >
         <div className="fondo-container img-fluid ">
-          <h1 className='tituloprincipal '>VETERINARIA ROLLING</h1>
+          <h1 className='tituloprincipal fluid '>VETERINARIA ROLLING</h1>
         </div>
 
  <br/>
