@@ -1,6 +1,5 @@
 
-
-const AppointmentTable = () => {
+const AppointmentEdit = () => {
     return (
         <div>
             
@@ -8,4 +7,4 @@ const AppointmentTable = () => {
     );
 };
 
-export default AppointmentTable;
+export default AppointmentEdit;
