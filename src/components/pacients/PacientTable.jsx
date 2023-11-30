@@ -3,6 +3,8 @@ import { Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Pacients from "./Pacients";
 import '../../App.css'
+import { BsPersonPlus } from "react-icons/bs";
+
 const PacientTable = ({ pacients, getAPI }) => {
 console.log(pacients)
 
@@ -16,6 +18,7 @@ console.log(pacients)
             className=" btn btn-violeta text-decoration-none text-center"
           >
             Add Pacient
+            <BsPersonPlus className="m-2" />
           </Link>
         </div>
         <hr />
