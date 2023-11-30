@@ -18,6 +18,7 @@ import PacientCreate from './components/pacients/PacientCreate';
 import { useEffect, useState } from 'react';
 import axios from "../src/components/config/axiosInit"
 import PacientEdit from './components/pacients/PacientEdit';
+import PageAdmin from './components/pageAdmin/PageAdmin';
 
 
 function App() {
@@ -49,6 +50,7 @@ console.log(URL)
           <Route path="/planes/adultos" element={<PlanDetail plan="adultos" />} />
           <Route path="/page404" element={<Page404 />} />
           <Route path="/contactus" element={<ContactUs/>} />
+          <Route path='/admin' element={<PageAdmin/>} />
           <Route path='/admin/pacientes' element={<PacientTable pacients={pacients} getAPI={getAPI}  />}/>
           <Route path='/admin/turnos' element={<AppointmentTable/>}/>
           <Route exact path="/pacient/create" element={<PacientCreate getAPI={getAPI} />} />

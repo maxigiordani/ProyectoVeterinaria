@@ -17,14 +17,13 @@ const NavbarComponent = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='botonnav'/>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-                <Nav.Link as={Link} to="/admin/pacientes">Administrar Pacientes</Nav.Link>
-                <Nav.Link as={Link} to="/admin/turnos">Administrar Turnos</Nav.Link>
-          </Nav>
+    
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
             <Nav.Link as={Link} to="/Login">Login</Nav.Link>
             <Nav.Link as={Link} to="/ContactUs">Contacto</Nav.Link>
+            <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
