@@ -1,64 +1,197 @@
 
+.vertical-ad {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+
+  height: 100vh;
+  background-color: #f2f2f2;
+ 
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.publicidadvertical {
+  position: absolute;
+  top: 1000px;
+  right: 150px;
+  width: 30px;
+ 
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.publicidadverticaldos {
+  position: absolute;
+  top: 420px;
+  right: 150px;
+  width: 30px;
+
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .custom-navbar {
-  background-color: black  }
-
-  footer {
-   
-    background-color: blue;
-    color: blue;
-    
-  }
+  background-color: black
+}
 
 
-  .estilocards {
-    display: flex;
-    
-    
-  }
- 
- 
-  .cardplanes {
-    max-width: 300px;
-    margin-left: 20px;
-    margin-bottom: 30px;
-  }
- 
 
-  .tituloprincipal {
-    color:white;
-    border-color: black;
-    align-items: center;
-    font-size: 80px;
-    -webkit-text-stroke: 2px rgb(179, 57, 57);
-  }
+.estilocards {
+  display: flex;
+  justify-content: center;
 
-  .fondo-container {
-    background-size: cover;
-    background-position: center;
-    background-image: url('/src/assets/imagenes/img2.jpg');
-    color: white;
-    padding: 20px;
-    height: 500px;
-    width: 100%;
-  }
 
-  .cardservice {
-    max-width: 300px;
-    margin: 5px;
-    margin-left: 20px;
-  }
+}
+
+.cardplanes {
+   width: 100%;
+  margin-bottom: 20px;
+  
+}
+
+
+.tituloprincipal {
+  color: white;
+  border-color: black;
+  align-items: center;
+  font-size: 80px;
+  -webkit-text-stroke: 2px rgb(179, 57, 57);
+}
+
+.fondo-container {
+  background-size: cover;
+  background-position: center;
+  background-image: url('/src/assets/imagenes/img2.jpg');
+  color: white;
+  padding: 20px;
+  height: 500px;
+  width: 100%;
+}
 
 .cardservice:hover {
   background-color: #c08ad4;
   cursor: pointer;
 }
 
- .servicesandproduct{
+.servicesandproduct {
   display: flex;
   flex-wrap: wrap;
- }
+}
 
- .botonformulario {
+.cardplanes:hover {
+  background-color: #c08ad4;
+}
+
+.botonformulario {
   padding: 10px;
   margin: 5px;
- }
+}
+
+.linkstyle {
+  text-decoration: none;
+}
+
+.comentscustomer {
+  color: white;
+  background-color: #c08ad4;
+}
+
+.comentariosdeclientes {
+
+  margin: 50px;
+
+}
+
+.servicios {
+  align-content: center;
+  align-items: center;
+}
+
+.cardservice {
+  max-width: 300px;
+  margin: 5px;
+  margin-left: 40px;
+  text-decoration: none;
+}
+
+.servicename {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+
+
+.cardplanes {
+  align-items: center;
+}
+
+.botonformulario {
+  margin-top: 20px;
+}
+
+.publicidaddetail{
+  margin-top: 5000px;
+}
+
+.formularioconsulta {
+  margin-top: 150px;
+}
+
+.tiempo {
+max-height: 80px;
+padding: 5px;
+}
+
+.logounico {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+
+}
+
+.navbarstyle {
+  max-height: 300px;
+  background-color:#c08ad4;
+  padding: 15px;
+
+}
+
+
+.titulonav {
+  color: white;
+  margin-top: -100px;
+  margin-left: 80px;
+  
+}
+
+
+.botonnav {
+  margin: 20px;
+  background-color: aqua;
+  margin-left: 255px;
+}
+
+.btn-violeta{
+  background-color: #c08ad4;
+  color:white
+}
+.btn-violeta:hover{
+  background-color: blueviolet;
+  color:white
+}
+

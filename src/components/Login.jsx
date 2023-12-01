@@ -4,12 +4,10 @@ import '/src/App.css';
 
 const Footer = () => {
   return (
-    <footer className="stylefooter bg-dark text-light">
+   <div>
+ <h1> PAGINA DE LOGIN </h1>
 
-      
-  
-
-  </footer>
+   </div>
   );
 };
 
