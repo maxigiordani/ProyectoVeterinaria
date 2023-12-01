@@ -13,7 +13,6 @@
     "@fortawesome/fontawesome-free": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.6.2",
-    "bcryptjs": "^2.4.3",
     "bootstrap": "^5.3.2",
     "emailjs-com": "^3.2.0",
     "react": "^18.2.0",

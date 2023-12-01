@@ -14,10 +14,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/app.css';
 import axios from "../src/components/config/axiosInit"
 import PacientEdit from './components/pacient/PacientEdit';
+import PacientTable from './components/pacients/PacientTable';
+import PacientCreate from './components/pacients/PacientCreate';
+import AppointmentTable from './components/appointments/AppointmentTable';
+
+
 
 function App() {
   const isAdmin = true; 
 
+
+
+  
   return (
     <Router>
       <>
@@ -32,7 +40,13 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/loginpage" element={<PageLogin />} />
           <Route path="/pageadmin" element={<PageAdmin />} />
-      
+          <Route exact path="/pacient/edit/:id" element={<PacientEdit/>} />
+          <Route path='/admin/pacientes' element={<PacientTable />}/>
+          <Route exact path="/pacient/create" element={<PacientCreate />} />
+          <Route path='/admin/turnos' element={<AppointmentTable />}/>
+
+          
+
         </Routes>
         <Footer />
       </>
