@@ -1,9 +1,11 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/imagenes/logo1.png';
 
 const NavbarComponent = ({ isAdmin }) => {
+  const location = useLocation();
+
   return (
     <Navbar bg="" expand="lg" className='navbarstyle'>
       <Container>
@@ -12,14 +14,14 @@ const NavbarComponent = ({ isAdmin }) => {
             src={logo}
             alt="Logo de la Empresa"
             height="30"
-            className ="d-inline-block align-top logounico"
-          />{' '}
+            className="d-inline-block align-top logounico"
+          />
           <h3 className='titulonav h3'>VETERINARIA ROLLING</h3>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className='botonnav'/>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className='botonnav' />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            {isAdmin && (
+            {isAdmin && location.pathname === '/pageadmin' && (
               <>
                 <Nav.Link as={Link} to="/admin-pacientes">Administrar Pacientes</Nav.Link>
                 <Nav.Link as={Link} to="/admin-turnos">Administrar Turnos</Nav.Link>
@@ -27,7 +29,7 @@ const NavbarComponent = ({ isAdmin }) => {
             )}
           </Nav>
           <Nav className="ms-auto">
-          <Nav.Link as={Link} to="/">INICIO</Nav.Link>
+            <Nav.Link as={Link} to="/">INICIO</Nav.Link>
             <Nav.Link as={Link} to="/loginpage">INGRESAR</Nav.Link>
             <Nav.Link as={Link} to="/contactus">CONTÁCTENOS</Nav.Link>
           </Nav>

@@ -9,20 +9,17 @@ import AboutUs from './components/pages/AboutUs';
 import PageLogin from './components/pages/PageLogin';
 import PageAdmin from './components/pages/PageAdmin';
 
-
-
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/app.css';
 
-
-
 function App() {
+  const isAdmin = true; 
+
   return (
     <Router>
       <>
-        <NavComponent />
+        <NavComponent isAdmin={isAdmin} />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/planes/primeros-pasos" element={<PlanDetail plan="primeros-pasos" />} />
@@ -33,9 +30,6 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/loginpage" element={<PageLogin />} />
           <Route path="/pageadmin" element={<PageAdmin />} />
-          
-          
-        
         </Routes>
         <Footer />
       </>
