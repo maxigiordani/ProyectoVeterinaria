@@ -153,7 +153,7 @@ const PacientCreate = ({ getAPI }) => {
             />
           </Form.Group>
           <div className="text-end">
-            <button className="btn btn-primary">Save</button>
+            <button className="btn btn-violeta">Save</button>
           </div>
         </Form>
         {show && (
