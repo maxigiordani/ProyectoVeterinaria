@@ -12,6 +12,8 @@ import PageAdmin from './components/pages/PageAdmin';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/app.css';
+import axios from "../src/components/config/axiosInit"
+import PacientEdit from './components/pacient/PacientEdit';
 
 function App() {
   const isAdmin = true; 
@@ -30,6 +32,7 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/loginpage" element={<PageLogin />} />
           <Route path="/pageadmin" element={<PageAdmin />} />
+      
         </Routes>
         <Footer />
       </>

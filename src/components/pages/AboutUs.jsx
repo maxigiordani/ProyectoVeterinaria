@@ -29,7 +29,7 @@ const AboutUs = () => {
    
         <Col>
           <Image className="imagenavatar" src={Integrante3Avatar} alt="Avatar Integrante 3" roundedCircle fluid />
-          <h4 className="mt-3">Rosario Alvaréz</h4>
+          <h4 className="mt-3">Rosario Alvarez</h4>
         
         </Col>
        

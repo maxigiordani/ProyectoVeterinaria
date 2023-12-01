@@ -23,8 +23,8 @@ const NavbarComponent = ({ isAdmin }) => {
           <Nav className="me-auto">
             {isAdmin && location.pathname === '/pageadmin' && (
               <>
-                <Nav.Link as={Link} to="/admin-pacientes">Administrar Pacientes</Nav.Link>
-                <Nav.Link as={Link} to="/admin-turnos">Administrar Turnos</Nav.Link>
+                <Nav.Link className='linkadm' as={Link} to="/admin-pacientes">ADMINISTRAR PACIENTES</Nav.Link>
+                <Nav.Link className='linkadm' as={Link} to="/admin-turnos">ADMINISTRAR TURNOS</Nav.Link>
               </>
             )}
           </Nav>
