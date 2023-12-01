@@ -23,14 +23,15 @@ const NavbarComponent = ({ isAdmin }) => {
           <Nav className="me-auto">
             {isAdmin && location.pathname === '/pageadmin' && (
               <>
-                <Nav.Link className='linkadm' as={Link} to="/admin-pacientes">ADMINISTRAR PACIENTES</Nav.Link>
-                <Nav.Link className='linkadm' as={Link} to="/admin-turnos">ADMINISTRAR TURNOS</Nav.Link>
+                <Nav.Link className='linkadm' as={Link} to="pageadmin">ADMINISTRADOR</Nav.Link>
+                <Nav.Link className='linkadm' as={Link} to="admin/pacientes">ADMINISTRAR PACIENTES</Nav.Link>
+                <Nav.Link className='linkadm' as={Link} to="admin/turnos">ADMINISTRAR TURNOS</Nav.Link>
               </>
             )}
           </Nav>
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">INICIO</Nav.Link>
-            <Nav.Link as={Link} to="/loginpage">INGRESAR</Nav.Link>
+            <Nav.Link as={Link} to="/pagelogin">INGRESAR</Nav.Link>
             <Nav.Link as={Link} to="/contactus">CONTÁCTENOS</Nav.Link>
           </Nav>
         </Navbar.Collapse>
