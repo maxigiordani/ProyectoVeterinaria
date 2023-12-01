@@ -1,12 +1,13 @@
 import React from 'react';
-import Footer from './components/Footer';
-import NavComponent from './components/Nav';
-import MainPage from './components/MainPage';
-import PlanDetail from './components/PlanDetail';
-import Page404 from './components/Page404';
-import ContactUs from './components/ContactUs';
-import AboutUs from './components/AboutUs';
-import PageLogin from './components/PageLogin';
+import Footer from './components/pages/Footer';
+import NavComponent from './components/pages/Nav';
+import MainPage from './components/pages/MainPage';
+import PlanDetail from './components/pages/PlanDetail';
+import Page404 from './components/pages/Page404';
+import ContactUs from './components/pages/ContactUs';
+import AboutUs from './components/pages/AboutUs';
+import PageLogin from './components/pages/PageLogin';
+import PageAdmin from './components/pages/PageAdmin';
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/loginpage" element={<PageLogin />} />
+          <Route path="/pageadmin" element={<PageAdmin />} />
           
           
         

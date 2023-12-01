@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Button, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
-import { validationRules, errorStyle, ErrorMessage } from './helpers/PlanDetailValidations';
+import { validationRules, errorStyle, ErrorMessage } from '../helpers/PlanDetailValidations';
 
 const PlanDetail = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();

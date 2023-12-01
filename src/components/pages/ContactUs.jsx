@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Button, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { validationRules, ErrorMessage } from './helpers/PlanDetailValidations';
+import { validationRules, ErrorMessage } from '../helpers/PlanDetailValidations';
 
 const ContactUs = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();

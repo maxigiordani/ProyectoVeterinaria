@@ -1,5 +1,5 @@
 import React from 'react';
-import imagen from '../assets/imagenes/error404.jpg';
+import imagen from './../../assets/imagenes/error404.jpg'
 
 const Page404 = () => {
   return (

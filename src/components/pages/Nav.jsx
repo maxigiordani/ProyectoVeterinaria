@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import logo from '../assets/imagenes/LOGO1.png';
+import logo from '../../assets/imagenes/logo1.png';
 
 const NavbarComponent = ({ isAdmin }) => {
   return (
