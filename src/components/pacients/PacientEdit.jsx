@@ -164,7 +164,7 @@ const PacientEdit = ({getAPI}) => {
             />
           </Form.Group>
           <div className='text-end'>
-            <button className='btn-orange'>Update</button>
+            <button className='btn-violeta'>Update</button>
           </div>
         </Form>
       </Container>
