@@ -4,10 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from '../config/axiosInit';
 import Swal from 'sweetalert2';
 import { STATUS } from '../constant/index';
-
-
-
-
+import { validateEmail, validateNames, validateTel } from '../helpers/validateFieldCreate';
 
 
 // eslint-disable-next-line react/prop-types

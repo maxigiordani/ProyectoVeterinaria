@@ -20,6 +20,9 @@ import PacientCreate from './components/pacients/PacientCreate';
 import AppointmentTable from './components/appointments/AppointmentTable';
 import AppointmentCreate from './components/appointments/AppointmentCreate';
 
+
+import AppointmentEdit from './components/appointments/AppointmentEdit';
+
 function App() {
 
  const isAdmin = true; 
@@ -74,6 +77,9 @@ function App() {
           <Route path='/admin/turnos' element={<AppointmentTable appointments={appointments} getTurnosAPI={getTurnosAPI} />} />
           <Route exact path="/turnos/create" element={<AppointmentCreate getTurnosAPI={getTurnosAPI} />} />
    
+          <Route exact path="/turnos/edit/:id" element={<AppointmentEdit getTurnosAPI={getTurnosAPI}/>} />
+
+
         </Routes>
         <Footer />
       </>

@@ -8,7 +8,7 @@ import {
   validateEmail,
   validateNames,
   validateTel,
-} from "../helpers/ValidateFieldCreate";
+} from "../helpers/validateFieldCreate";
 
 const PacientCreate = ({ getAPI }) => {
   const [inputs, setInputs] = useState({});
