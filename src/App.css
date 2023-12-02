@@ -194,3 +194,12 @@ padding: 5px;
   background-color: blueviolet;
   color:white
 }
+
+.btn-violeta{
+  background-color: #c08ad4;
+  color:white
+}
+.btn-violeta:hover{
+  background-color: blueviolet;
+  color:white
+}
