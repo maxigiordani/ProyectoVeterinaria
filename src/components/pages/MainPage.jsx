@@ -1,11 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import '/src/App.css';
 import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
-import publicidadImage from '../assets/imagenes/principal.jpg';
-import WeatherWidget from './helpers/WeatherWidget';
+import publicidadImage from '../../assets/imagenes/principal.jpg';
+import WeatherWidget from '../helpers/WeatherWidget';
 
 
 const MainPage = () => {
@@ -15,15 +13,15 @@ const MainPage = () => {
     <div className=' container fluid tiempo text-center ms-auto'> 
       <WeatherWidget/>
     </div>
-      <Container fluid>
-        <div className="fondo-container">
-          <h1 className='tituloprincipal '>VETERINARIA ROLLING</h1>
+      <Container fluid >
+        <div className="fondo-container img-fluid ">
+          <h1 className='tituloprincipal fluid '>VETERINARIA ROLLING</h1>
         </div>
 
  <br/>
 
   
-      <div className=" container fluid servicios text-center">
+      <div className=" container  servicios text-center">
         <h2 className='text-center h3'>Ofrecemos una amplia variedad de productos y servicios</h2>
         <Row>
           <Col className='servicesandproduct'>
@@ -110,11 +108,7 @@ const MainPage = () => {
       <Row className="mt-4">
         <Col>
           <h3 className='text-center h3' >Nuestros Profesionales</h3>
-          <h5 className='text-center'>
-            En nuestra veterinaria contamos con los siguientes profesionales
-          </h5>
-      
-          <Container>
+          <Container className='container fluid text-center'>
             <Card>
               <Card.Body>
                 <Card.Title>Vet. Marcelo Gomez</Card.Title>
@@ -205,7 +199,6 @@ const MainPage = () => {
       <Row className="mt-4 text-center">
           <h3 className='text-center h3'>En veterinaria tenemos diferentes planes de acuerdo a tus necesidades:</h3>
           <Row className='estilocards text-center'>
-            {/* Utiliza las clases de columnas responsivas de Bootstrap */}
             <Col md={4} sm={6}>
               <Card className='cardplanes text-center'>
                 <Card.Body>

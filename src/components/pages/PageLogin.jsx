@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { admin } from '../helpers/Credintals'; // Ajusta la ruta según la estructura de tu proyecto
 import bcrypt from 'bcryptjs'; // Importa bcrypt para comparar contraseñas
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import imagen from '../../assets/imagenes/bannerlogin.jpg';

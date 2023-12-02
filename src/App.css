@@ -22,7 +22,6 @@
   top: 1000px;
   right: 150px;
   width: 30px;
- 
   height: 100vh;
   padding: 20px;
   display: flex;
@@ -68,9 +67,9 @@
 .tituloprincipal {
   color: white;
   border-color: black;
-  align-items: center;
-  font-size: 80px;
+  font-size: 58px;
   -webkit-text-stroke: 2px rgb(179, 57, 57);
+
 }
 
 .fondo-container {
@@ -135,7 +134,6 @@
 }
 
 
-
 .cardplanes {
   align-items: center;
 }
@@ -146,10 +144,6 @@
 
 .publicidaddetail{
   margin-top: 5000px;
-}
-
-.formularioconsulta {
-  margin-top: 150px;
 }
 
 .tiempo {
@@ -186,14 +180,38 @@ padding: 5px;
   margin-left: 255px;
 }
 
-.btn-violeta{
-  background-color: #c08ad4;
-  color:white
+.imagenavatar {
+ max-width: 350px;
+ max-height: 300px;
 }
-.btn-violeta:hover{
-  background-color: blueviolet;
-  color:white
+
+.imagenavatar:hover {
+transform: scale(1.1);
+box-shadow: 0 0 15px rgba(183, 26, 223, 0.5);
 }
+
+
+.fraseequipo {
+  margin: 30px;
+}
+
+.botonlogin {
+  margin-top: 20px;
+}
+
+.map-container {
+  height: 400px;
+}
+
+.map-container iframe {
+  width: 320px;
+  height: 200px;
+}
+
+.linkadm {
+  color: white;
+}
+
 
 .btn-violeta{
   background-color: #c08ad4;
