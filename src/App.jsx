@@ -14,7 +14,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/app.css';
 import axios from "../src/components/config/axiosInit";
-import PacientEdit from './components/pacients/PacientEdit';
+import PacientEdit from './components/pacients/PacientEdit'
 import PacientTable from './components/pacients/PacientTable';
 import PacientCreate from './components/pacients/PacientCreate';
 import AppointmentTable from './components/appointments/AppointmentTable';
@@ -74,11 +74,11 @@ function App() {
           <Route path='/admin/pacientes' element={<PacientTable pacients={pacients} getAPI={getAPI} />} />
           <Route exact path="/pacient/create" element={<PacientCreate getAPI={getAPI} />} />
           <Route exact path="/pacient/edit/:id" element={<PacientEdit getAPI={getAPI} />} />
-          <Route path='/admin/turnos' element={<AppointmentTable appointments={appointments} getTurnosAPI={getTurnosAPI} />} />
           <Route exact path="/turnos/create" element={<AppointmentCreate getTurnosAPI={getTurnosAPI} />} />
-   
           <Route exact path="/turnos/edit/:id" element={<AppointmentEdit getTurnosAPI={getTurnosAPI}/>} />
 
+
+         <Route path='/admin/turnos' element={<AppointmentTable appointments={appointments} getTurnosAPI={getTurnosAPI} />} />
 
         </Routes>
         <Footer />
