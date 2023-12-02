@@ -14,7 +14,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/app.css';
 import axios from "../src/components/config/axiosInit";
-import PacientEdit from './components/pacient/PacientEdit';
+import PacientEdit from './components/pacients/PacientEdit'
 import PacientTable from './components/pacients/PacientTable';
 import PacientCreate from './components/pacients/PacientCreate';
 import AppointmentTable from './components/appointments/AppointmentTable';
