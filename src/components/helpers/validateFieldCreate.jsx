@@ -1,4 +1,4 @@
- const regExpName = /^[A-Za-z\s?]+$/ ;
+const regExpName = /^[A-Za-z\s?]+$/ ;
 const regExpEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ 
 const regExpTel = /^\d{12}$/
 const regExpTime =  /^(?:1[0-6]|[89])$/;

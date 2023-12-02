@@ -1,57 +1,70 @@
 /* eslint-disable react/prop-types */
-import { Container, Table } from "react-bootstrap";
+import axios from "axios";
+import Swal from "sweetalert2";
+import { STATUS } from "../constant";
 import { Link } from "react-router-dom";
-import { TfiAgenda } from "react-icons/tfi";
-import "../../App.css";
-import Appointments from "./Appointments";
 
-const AppointmentTable = ({ appointments, getTurnosAPI }) => {
-  return (
-    <div>
-      <Container className="py-5">
-        <div className="d-flex align-items-center justify-content-between">
-          <h1>Appointment Table</h1>
+const Appointments = ({appointments, getTurnosAPI}) => {
+
+    const URLTURNO = import.meta.env.VITE_API_APPOINTMENTS;
+
+    const handleDelete = (id) => {
+      Swal.fire({
+        title: "Are you sure?",
+  
+        text: "You won't be able to revert this!",
+  
+        icon: "warning",
+  
+        showCancelButton: true,
+  
+        confirmButtonColor: "#3085d6",
+  
+        cancelButtonColor: "#d33",
+  
+        confirmButtonText: "Yes, delete it!",
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          try {
+            const res = await axios.delete(`${URLTURNO}/${id}`);
+  
+            console.log(res);
+            if (res.status === STATUS.STATUS_OK) {
+              Swal.fire("Deleted!", "Your Appointment has been deleted", "success");
+              getTurnosAPI();
+            }
+          } catch (error) {
+            console.log(error);
+          }
+        }
+      });
+    };
+    return (
+        <tr>
+        <td>{appointments?._id}</td>
+        <td>{appointments?.appointmentDetail}</td>
+        <td>{ appointments?.veterinarian}</td>
+        <td>{appointments?.pet}</td>
+        <td>{appointments?.date}</td>
+        <td>{appointments?.time}</td>
+        <td className="w-25">
+        <div className="d-flex justify-content-center">
           <Link
-            to="/turnos/create"
-            className=" btn btn-violeta text-decoration-none text-center"
+            to={`/turnos/edit/${appointments?._id}`}
+            className= "btn btn-warning mx-1 "
           >
-            Add Appointment
-            <TfiAgenda className="m-2" />
+            Update 
           </Link>
+          <button
+            className="btn btn-danger mx-1"
+            onClick={() => handleDelete(appointments?._id)}
+          >
+            Delete
+          </button>
         </div>
-        <hr />
-        {/* Table of Appointments */}
-        {appointments?.length !== 0 ? (
-          <Table bordered hover responsive className="align-middle mt-3">
-            <thead>
-              <tr>
-                <th>Id</th>
-                <th>Appointment Details</th>
-                <th>Veterinarian</th>
-                <th>Pet</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {appointments?.map((appointment) => (
-                <Appointments
-                  key={appointment._id}
-                  appointments={appointment}
-                  getTurnosAPI={getTurnosAPI}
-                />
-              ))}
-            </tbody>
-          </Table>
-        ) : (
-          <div className="no-products-found d-flex align-items-center justify-content-center">
-            <h1>📆 No Appointments found 📆</h1>
-          </div>
-        )}
-      </Container>
-    </div>
-  );
+      </td>
+    </tr>
+    );
 };
 
-export default AppointmentTable;
+export default Appointments;
