@@ -1,4 +1,5 @@
- const regExpName = /^[A-Za-z\s?]+$/ ;
+/* eslint-disable react/prop-types */
+/*  const regExpName = /^[A-Za-z\s?]+$/ ;
 const regExpEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ 
 const regExpTel = /^\d{12}$/
 const regExpTime =  /^(?:1[0-6]|[89])$/;
@@ -34,10 +35,11 @@ export const validateTime = (field)=>{
         false
     }
 }
- 
+  */
 
 
-/* 
+
+// eslint-disable-next-line react-refresh/only-export-components
 export const validationsFieldCreate ={
 
 ownerName:{
@@ -108,6 +110,7 @@ race:{
 }
 
 };
+// eslint-disable-next-line react-refresh/only-export-components
 export const errorStyle = {
     color: 'red',
     fontSize: '14px',
@@ -116,4 +119,4 @@ export const errorStyle = {
   export const ErrorMessage = ({ message }) => (
     <p style={errorStyle}>{message}</p>
   );
-   */
+   
