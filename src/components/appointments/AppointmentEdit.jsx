@@ -1,5 +1,3 @@
-// AppointmentEdit.jsx
-
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
@@ -8,11 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { STATUS } from "../constant";
-import {
-  validateNames,
-  validateTime,
-  validateDate,
-} from "../helpers/ValidateFieldCreate";
+import { validateNames, validateTime } from "../helpers/validateFieldCreate";
 
 const AppointmentEdit = ({ getTurnosAPI }) => {
   const [appointment, setAppointment] = useState({});
@@ -35,10 +29,16 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
 
   const getOne = async () => {
     try {
+
       const res = await axios.get(`${URLTURNOS}/${id}`);
+
       const appointmentApi = res.data;
+
       setAppointment(appointmentApi);
+      console.log(appointmentApi)
+
     } catch (error) {
+
       console.log(error);
     }
   };
@@ -50,15 +50,15 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
       !validateNames(appointmentDetailRef.current.value) ||
       !validateNames(veterinarianRef.current.value) ||
       !validateNames(petRef.current.value) ||
-      !validateDate(dateRef.current.value) ||
+      !validateNames(dateRef.current.value) ||
       !validateTime(timeRef.current.value)
     ) {
-      Swal.fire("Oop!!", "Some data is invalid", "error");
+      Swal.fire("Oop!!", "Some data is invalid", "Error");
       return;
     }
 
     const apponintmentUpdated = {
-      appointmentDetail: appointmentDetailRef.current.value,
+     appointmentDetail: appointmentDetailRef.current.value,
       veterinarian: veterinarianRef.current.value,
       pet: petRef.current.value,
       date: dateRef.current.value,
@@ -81,10 +81,11 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             apponintmentUpdated
           );
 
+          console.log(res);
           if (res.status === STATUS.STATUS_OK) {
             Swal.fire(
               "Updated",
-              "Your product has been updated successfully",
+              "Your product have been updated successfully",
               "success"
             );
             e.target.reset();
@@ -100,6 +101,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
 
   return (
     <div>
+      {" "}
       <Container className="py-5">
         <h1>Edit Product</h1>
         <hr />
@@ -109,7 +111,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Appointment Detail*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="E.g., Pepe Argento"
+              placeholder="Ej: Pepe Argento"
               name="appointmentDetail"
               defaultValue={appointment?.appointmentDetail}
               ref={appointmentDetailRef}
@@ -119,8 +121,8 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Veterinarian*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="E.g., pepeargento@gmail.com"
-              name="veterinarian"
+              placeholder="Ej: pepeargento@gmail.com"
+              name= "veterinarian"
               defaultValue={appointment?.veterinarian}
               ref={veterinarianRef}
             />
@@ -129,7 +131,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Pet *</Form.Label>
             <Form.Control
               type="text"
-              placeholder="E.g., 38156334051"
+              placeholder="Ej: 38156334051"
               name="pet"
               defaultValue={appointment?.pet}
               ref={petRef}
@@ -139,7 +141,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Date *</Form.Label>
             <Form.Control
               type="text"
-              placeholder="MM/DD/YYYY"
+              placeholder="Ej: "
               name="date"
               defaultValue={appointment?.date}
               ref={dateRef}
@@ -149,7 +151,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Time*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="E.g., 10:00 AM"
+              placeholder="Ej: Perro"
               name="time"
               defaultValue={appointment?.time}
               ref={timeRef}
