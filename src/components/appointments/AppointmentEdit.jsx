@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Form, Container, Alert } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "../config/axiosInit";
@@ -13,8 +13,8 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
+    setValue,
     reset,
   } = useForm();
 
@@ -22,14 +22,6 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [errorMessage, setErrorMessage] = useState(null);
-
-  const formData = {
-    appointmentDetail: useRef(null),
-    veterinarian: useRef(null),
-    pet: useRef(null),
-    date: useRef(null),
-    time: useRef(null),
-  };
 
   useEffect(() => {
     getOne();
@@ -84,12 +76,8 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Appointment Detail*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Ej: Pepe Argento"
-              name="appointmentDetail"
-              ref={(e) => {
-                formData.appointmentDetail.current = e;
-                register(e, validationAppointment.appointmentDetail);
-              }}
+              placeholder="E.g., Vaccination"
+              {...register("appointmentDetail", validationAppointment.appointmentDetail)}
             />
             {errors.appointmentDetail && (
               <ErrorMessage message={errors.appointmentDetail.message} />
@@ -99,42 +87,30 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Veterinarian*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Ej: pepeargento@gmail.com"
-              name="veterinarian"
-              ref={(e) => {
-                formData.veterinarian.current = e;
-                register(e, validationAppointment.veterinarian);
-              }}
+              placeholder="E.g., Dr. Smith"
+              {...register("veterinarian", validationAppointment.veterinarian)}
             />
             {errors.veterinarian && (
               <ErrorMessage message={errors.veterinarian.message} />
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPet">
-            <Form.Label>Pet *</Form.Label>
+            <Form.Label>Pet Name*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Ej: 38156334051"
-              name="pet"
-              ref={(e) => {
-                formData.pet.current = e;
-                register(e, validationAppointment.pet);
-              }}
+              placeholder="E.g., Max"
+              {...register("pet", validationAppointment.pet)}
             />
             {errors.pet && (
               <ErrorMessage message={errors.pet.message} />
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formDate">
-            <Form.Label>Date *</Form.Label>
+            <Form.Label>Date*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Ej: "
-              name="date"
-              ref={(e) => {
-                formData.date.current = e;
-                register(e, validationAppointment.date);
-              }}
+              placeholder="E.g., 2023-01-01"
+              {...register("date", validationAppointment.date)}
             />
             {errors.date && (
               <ErrorMessage message={errors.date.message} />
@@ -144,12 +120,8 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Time*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Ej: Perro"
-              name="time"
-              ref={(e) => {
-                formData.time.current = e;
-                register(e, validationAppointment.time);
-              }}
+              placeholder="Ej. 10:00 AM"
+              {...register("time", validationAppointment.time)}
             />
             {errors.time && (
               <ErrorMessage message={errors.time.message} />
