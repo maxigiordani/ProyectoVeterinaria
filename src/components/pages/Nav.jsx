@@ -16,7 +16,7 @@ const NavbarComponent = ({ isAdmin }) => {
             height="30"
             className="d-inline-block align-top logounico"
           />
-          <h3 className='titulonav h3'>VETERINARIA ROLLING</h3>
+          <h3 className='titulonav '>VETERINARIA ROLLING</h3>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='botonnav' />
         <Navbar.Collapse id="basic-navbar-nav">
