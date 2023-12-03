@@ -1,4 +1,6 @@
- const regExpName = /^[A-Za-z\s?]+$/ ;
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/prop-types */
+/*  const regExpName = /^[A-Za-z\s?]+$/ ;
 const regExpEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ 
 const regExpTel = /^\d{12}$/
 const regExpTime =  /^(?:1[0-6]|[89])$/;
@@ -34,86 +36,153 @@ export const validateTime = (field)=>{
         false
     }
 }
- 
+  */
 
 
-/* 
+
+// eslint-disable-next-line react-refresh/only-export-components
 export const validationsFieldCreate ={
 
-ownerName:{
-    requered: 'Este campo es obligatorio',
-    pattern:{
-        value: /^[A-Za-z\s?]+$/,
-        message: 'El nombre no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
+    ownerName:{
+        required: 'Este campo es obligatorio',
+        pattern:{
+            value: /^[A-Za-z\s?]+$/,
+            message: 'El nombre no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
+        },
+        maxLength:{
+            value:30,
+            message: 'El nombre no puede tener más de 25 caracteres',
+    
+        }
     },
-    maxLength:{
-        value:30,
-        message: 'El nombre no puede tener más de 25 caracteres',
-
+    email: {
+        required: 'Este campo es obligatorio',
+        pattern: { 
+          value:  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ ,
+          message: 'Correo electrónico inválido',
+        },
+        maxLength: {
+          value: 30,
+          message: 'El correo electrónico no puede tener más de 30 caracteres',
+        },
+      },
+      tel:{
+        required: 'Este campo es obligatorio',
+        pattern: {
+          value: /^\d{12}$/,
+          message: 'Número de celular inválido. Debe tener 12 dígitos.',
+        },
+      },
+      petName:{
+        required: 'Este campo es obligatorio',
+        pattern:{
+            value: /^[A-Za-z\s?]+$/,
+            message: 'El nombre de la mascota no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
+        },
+        maxLength:{
+            value:30,
+            message: 'El nombre de la mascota no puede tener más de 30 caracteres',
+    
+        }
+    },
+    specie:{
+        required: 'Este campo es obligatorio',
+        pattern:{
+            value: /^[A-Za-z\s?]+$/,
+            message: 'El nombre no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
+        },
+        maxLength:{
+            value:30,
+            message: 'El nombre no puede tener más de 25 caracteres',
+    
+        }
+    },
+    race:{
+        required: 'Este campo es obligatorio',
+        pattern:{
+            value: /^[A-Za-z\s?]+$/,
+            message: 'El nombre no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
+        },
+        maxLength:{
+            value:30,
+            message: 'El nombre no puede tener más de 30 caracteres',
+    
+        }
     }
-},
-email: {
-    required: 'Este campo es obligatorio',
-    pattern: { 
-      value:  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ ,
-      message: 'Correo electrónico inválido',
-    },
-    maxLength: {
-      value: 30,
-      message: 'El correo electrónico no puede tener más de 35 caracteres',
-    },
-  },
-  tel:{
-    required: 'Este campo es obligatorio',
-    pattern: {
-      value: /^\d{12}$/,
-      message: 'Número de celular inválido. Debe tener 12 dígitos.',
-    },
-  },
-  petName:{
-    requered: 'Este campo es obligatorio',
-    pattern:{
-        value: /^[A-Za-z\s?]+$/,
-        message: 'El nombre de la mascota no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
-    },
-    maxLength:{
-        value:30,
-        message: 'El nombre de la mascota no puede tener más de 25 caracteres',
-
+    
+    };
+    export const validationAppointment={
+        appointmentDetail:{
+            required: 'Este campo es obligatorio',
+            pattern: {
+                value: /^[A-Za-z?]+$/,
+                message: 'El nombre no puede contener espacios en blancos (ni al principio, ni al final), tampoco números'
+            },
+            maxLength:{
+                value:30,
+                message: 'El nombre no puede tener más de 30 caracteres',
+        
+            }
+        },
+        veterinarian:{
+            required: 'Este campo es obligatorio',
+            pattern: {
+                value: /^[A-Za-z?]+$/,
+                message: 'El nombre no puede contener espacios en blancos (ni al principio, ni al final), tampoco números'
+            },
+            maxLength:{
+                value:30,
+                message: 'El nombre no puede tener más de 30 caracteres',
+        
+            }
+        },
+        pet:{
+            required: 'Este campo es obligatorio',
+            pattern: {
+                value: /^[A-Za-z?]+$/,
+                message: 'El nombre no puede contener espacios en blancos (ni al principio, ni al final), tampoco números'
+            },
+            maxLength:{
+                value:30,
+                message: 'El nombre de la mascota no puede tener más de 30 caracteres',
+        
+            }
+        },
+        date:{
+            required: 'Este campo es obligatorio',
+            
+            maxLength:{
+                value:30,
+                message: 'El nombre no puede tener más de 30 caracteres',
+        
+            }
+        },
+        time:{
+            required: 'Este campo es obligatorio',
+            pattern:{
+                value: /^(?:1[0-6]|[89])$/,
+                message: 'Recuerda el horario de atencion es de 8:00 a 16:00 de corrido'
+            }
+        
+        },
+        
+    
+    
+    
     }
-},
-specie:{
-    requered: 'Este campo es obligatorio',
-    pattern:{
-        value: /^[A-Za-z\s?]+$/,
-        message: 'El nombre no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
-    },
-    maxLength:{
-        value:30,
-        message: 'El nombre no puede tener más de 25 caracteres',
-
-    }
-},
-race:{
-    requered: 'Este campo es obligatorio',
-    pattern:{
-        value: /^[A-Za-z\s?]+$/,
-        message: 'El nombre no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
-    },
-    maxLength:{
-        value:30,
-        message: 'El nombre no puede tener más de 25 caracteres',
-
-    }
-}
-
-};
-export const errorStyle = {
-    color: 'red',
-    fontSize: '14px',
-  };
-  
-  export const ErrorMessage = ({ message }) => (
-    <p style={errorStyle}>{message}</p>
-  );
-   */
+    
+    
+    
+    
+    
+    
+    // eslint-disable-next-line react-refresh/only-export-components
+    export const errorStyle = {
+        color: 'red',
+        fontSize: '14px',
+      };
+      
+      export const ErrorMessage = ({ message }) => (
+        <p style={errorStyle}>{message}</p>
+      );
+       
