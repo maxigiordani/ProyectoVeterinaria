@@ -20,15 +20,15 @@ const NavbarComponent = ({ isAdmin }) => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='botonnav' />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            {isAdmin && location.pathname === '/pageadmin' && (
-              <>
-                <Nav.Link className='linkadm' as={Link} to="pageadmin">ADMINISTRADOR</Nav.Link>
-                <Nav.Link className='linkadm' as={Link} to="admin/pacientes">ADMINISTRAR PACIENTES</Nav.Link>
-                <Nav.Link className='linkadm' as={Link} to="admin/turnos">ADMINISTRAR TURNOS</Nav.Link>
-              </>
-            )}
-          </Nav>
+        <Nav className="me-auto">
+  {(isAdmin && (location.pathname.startsWith('/admin') || location.pathname === '/pageadmin')) && (
+    <>
+      <Nav.Link className='linkadm' as={Link} to="pageadmin">ADMINISTRADOR</Nav.Link>
+      <Nav.Link className='linkadm' as={Link} to="admin/pacientes">ADMINISTRAR PACIENTES</Nav.Link>
+      <Nav.Link className='linkadm' as={Link} to="admin/turnos">ADMINISTRAR TURNOS</Nav.Link>
+    </>
+  )}
+</Nav>
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">INICIO</Nav.Link>
             <Nav.Link as={Link} to="/pagelogin">INGRESAR</Nav.Link>

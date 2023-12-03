@@ -1,4 +1,6 @@
 
+
+
 .vertical-ad {
   position: fixed;
   top: 0;
@@ -103,6 +105,7 @@
 
 .linkstyle {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .comentscustomer {
@@ -221,3 +224,16 @@ box-shadow: 0 0 15px rgba(183, 26, 223, 0.5);
   background-color: blueviolet;
   color:white
 }
+
+.footer {
+  background-color: #c08ad4;
+  margin-top: auto;
+  
+}
+
+.containerpage {
+  min-height: 72.5vh;
+  display: flex;
+  flex-direction: column;
+}
+

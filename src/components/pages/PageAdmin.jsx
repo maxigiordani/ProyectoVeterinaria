@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const PageAdmin = () => {
   return (
-    <Container>
+    <Container className="containerpage mt-5">
       <h1 className="display-4 text-center mt-3">
         Bienvenido a la página de administración
       </h1>

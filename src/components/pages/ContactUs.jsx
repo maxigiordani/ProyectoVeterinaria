@@ -17,7 +17,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className='container fluid mt-5'>
+    <div className='container fluid mt-5 containerpage'>
       <div className='row'>
         <div className='col-md-6'>
           <h2 className="mb-2">Contáctenos</h2>
