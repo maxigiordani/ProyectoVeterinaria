@@ -1,6 +1,3 @@
-
-
-
 .vertical-ad {
   position: fixed;
   top: 0;
@@ -9,7 +6,7 @@
 
   height: 100vh;
   background-color: #f2f2f2;
- 
+
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
@@ -60,9 +57,9 @@
 }
 
 .cardplanes {
-   width: 100%;
+  width: 100%;
   margin-bottom: 20px;
-  
+
 }
 
 
@@ -145,13 +142,13 @@
   margin-top: 20px;
 }
 
-.publicidaddetail{
+.publicidaddetail {
   margin-top: 5000px;
 }
 
 .tiempo {
-max-height: 80px;
-padding: 5px;
+  max-height: 80px;
+  padding: 5px;
 }
 
 .logounico {
@@ -163,7 +160,7 @@ padding: 5px;
 
 .navbarstyle {
   max-height: 300px;
-  background-color:#c08ad4;
+  background-color: #c08ad4;
   padding: 15px;
 
 }
@@ -173,7 +170,7 @@ padding: 5px;
   color: white;
   margin-top: -100px;
   margin-left: 80px;
-  
+
 }
 
 
@@ -184,13 +181,13 @@ padding: 5px;
 }
 
 .imagenavatar {
- max-width: 350px;
- max-height: 300px;
+  max-width: 350px;
+  max-height: 300px;
 }
 
 .imagenavatar:hover {
-transform: scale(1.1);
-box-shadow: 0 0 15px rgba(183, 26, 223, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(183, 26, 223, 0.5);
 }
 
 
@@ -216,19 +213,19 @@ box-shadow: 0 0 15px rgba(183, 26, 223, 0.5);
 }
 
 
-.btn-violeta{
+.btn-violeta {
   background-color: #c08ad4;
-  color:white
+  color: white
 }
-.btn-violeta:hover{
+
+.btn-violeta:hover {
   background-color: blueviolet;
-  color:white
+  color: white
 }
 
 .footer {
   background-color: #c08ad4;
- 
-  
+
 }
 
 .containerpage {
@@ -238,15 +235,20 @@ box-shadow: 0 0 15px rgba(183, 26, 223, 0.5);
 }
 
 .logofooter {
-  height: 150px;
+  height: 100px;
 }
 
 .linkfooter {
   text-decoration: none;
   color: white;
+  margin: 12px;
 }
 
 .linkfooter:hover {
   color: black;
   background-color: aqua;
+}
+
+.infofooter {
+  color: white;
 }
