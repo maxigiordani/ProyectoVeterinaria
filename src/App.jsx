@@ -69,7 +69,8 @@ const getTurnosAPI= async () => {
           <Route path="/page404" element={<Page404 />} />
           <Route path="/contactus" element={<ContactUs/>} />
           <Route path='/admin' element={<PageAdmin/>} />
-          <Route path='/admin/pacientes' element={<PacientTable pacients={pacients} getAPI={getAPI}  />}/>
+          <Route path='/admin/pacientes' element={<PacientTable pacients={pacients} getAPI={getAPI} />} />
+
           <Route exact path="/pacient/create" element={<PacientCreate getAPI={getAPI} />} />
           <Route exact path="/pacient/edit/:id" element={<PacientEdit getAPI={getAPI} />} />
           <Route path='/admin/turnos' element={<AppointmentTable appointments={appointments} getTurnosAPI={getTurnosAPI} />}/>

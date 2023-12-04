@@ -115,7 +115,7 @@ export const validationAppointment={
     appointmentDetail:{
         required: 'Este campo es obligatorio',
         pattern: {
-            value: /^[A-Za-z?]+$/,
+            value:  /^[A-Za-z\s?]+$/,
             message: 'El nombre no puede contener espacios en blancos (ni al principio, ni al final), tampoco números'
         },
         maxLength:{
@@ -127,7 +127,7 @@ export const validationAppointment={
     veterinarian:{
         required: 'Este campo es obligatorio',
         pattern: {
-            value: /^[A-Za-z?]+$/,
+            value: /^[A-Za-z\s?]+$/,
             message: 'El nombre no puede contener espacios en blancos (ni al principio, ni al final), tampoco números'
         },
         maxLength:{
@@ -139,7 +139,7 @@ export const validationAppointment={
     pet:{
         required: 'Este campo es obligatorio',
         pattern: {
-            value: /^[A-Za-z?]+$/,
+            value: /^[A-Za-z\s?]+$/,
             message: 'El nombre no puede contener espacios en blancos (ni al principio, ni al final), tampoco números'
         },
         maxLength:{

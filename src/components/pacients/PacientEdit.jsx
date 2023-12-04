@@ -9,7 +9,7 @@ import { STATUS } from "../constant";
 import { useForm } from "react-hook-form";
 import { ErrorMessage, validationsFieldCreate } from "../helpers/validateFieldCreate";
 
-const PacientEdit = ({ getTurnosAPI }) => {
+const PacientEdit = ({ getAPI }) => {
   const {
     register,
     handleSubmit,
@@ -49,8 +49,10 @@ const PacientEdit = ({ getTurnosAPI }) => {
       if (res.status === STATUS.STATUS_OK) {
         Swal.fire('Updated', 'Your pacient has been updated successfully', 'success');
         reset(); 
-        getTurnosAPI();
+        getAPI();
         navigate('/admin/pacientes');
+        // Llamada a getAPI para actualizar la lista de pacientes después de la edición
+        getAPI();
       }
     } catch (error) {
       console.log(error);
@@ -94,7 +96,8 @@ const PacientEdit = ({ getTurnosAPI }) => {
             <Form.Control
               type="text"
               placeholder="E.g., Max"
-              {...register("tel", validationsFieldCreate.tel)}
+              {...register("tel", validationsFieldCreate.tel)}              maxLength={12}
+
             />
             {errors.tel && (
               <ErrorMessage message={errors.tel.message} />
