@@ -61,6 +61,7 @@ const PacientCreate = ({ getAPI }) => {
               {...register("ownerName", validationsFieldCreate.ownerName)}
               placeholder="Juan Perez"
               maxLength={30}
+              required
             />
             {errors.ownerName && (
               <ErrorMessage message={errors.ownerName.message} />
@@ -73,6 +74,7 @@ const PacientCreate = ({ getAPI }) => {
               {...register("email", validationsFieldCreate.email)}
               placeholder="juanperez@gmail.com"
               maxLength={30}
+              required
             />
             {errors.email && <ErrorMessage message={errors.email.message} />}
           </Form.Group>
@@ -83,6 +85,7 @@ const PacientCreate = ({ getAPI }) => {
               {...register("tel", validationsFieldCreate.tel)}
               placeholder="381544444444"
               maxLength={12}
+              required
             />
             {errors.tel && <ErrorMessage message={errors.tel.message} />}
           </Form.Group>
@@ -93,6 +96,7 @@ const PacientCreate = ({ getAPI }) => {
               {...register("petName", validationsFieldCreate.petName)}
               placeholder="Frida"
               maxLength={30}
+              required
             />
             {errors.petName && (
               <ErrorMessage message={errors.petName.message} />
@@ -105,6 +109,7 @@ const PacientCreate = ({ getAPI }) => {
               {...register("specie", validationsFieldCreate.specie)}
               placeholder="Perro"
               maxLength={30}
+              required
             />
             {errors.specie && <ErrorMessage message={errors.specie.message} />}
           </Form.Group>
@@ -115,6 +120,7 @@ const PacientCreate = ({ getAPI }) => {
               {...register("race", validationsFieldCreate.race)}
               placeholder="Fox terrier"
               maxLength={30}
+              required
             />
             {errors.race && <ErrorMessage message={errors.race.message} />}
           </Form.Group>

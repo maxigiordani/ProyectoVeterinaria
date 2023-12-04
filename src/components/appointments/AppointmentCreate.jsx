@@ -58,10 +58,13 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
             <Form.Label>Appointment Details*</Form.Label>
             <Form.Control
               type="text"
+          
               {...register(
                 "appointmentDetail",
                 validationAppointment.appointmentDetail
               )}
+              maxLength={30}
+              required
               placeholder="Mordida superficial"
             />
             {errors.appointmentDetail && (
@@ -76,6 +79,8 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
                 "veterinarian",
                 validationAppointment.veterinarian
               )}
+              maxLength={30}
+              required
               placeholder="Medico Alejandro Cortez"
             />
             {errors.veterinarian && (
@@ -90,6 +95,8 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
                 "pet",
                 validationAppointment.pet
               )}
+              maxLength={30}
+              required
               placeholder="Buddy"
             />
             {errors.pet && (
@@ -104,6 +111,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
                 "date",
                 validationAppointment.date
               )}
+              required
             />
             {errors.date && (
               <ErrorMessage message={errors.date.message} />
@@ -117,7 +125,8 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
                 "time",
                 validationAppointment.time
               )}
-              placeholder="14:30"
+              placeholder="14:00"
+              required
             />
             {errors.time && (
               <ErrorMessage message={errors.time.message} />
