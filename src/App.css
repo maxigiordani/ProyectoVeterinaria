@@ -241,7 +241,9 @@
 .linkfooter {
   text-decoration: none;
   color: white;
+  font-size: 15px;
   margin: 12px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .linkfooter:hover {
@@ -257,4 +259,8 @@
   min-height: 74vh;
   display: flex;
   flex-direction: column;
+}
+
+.linknav {
+  color: white;
 }

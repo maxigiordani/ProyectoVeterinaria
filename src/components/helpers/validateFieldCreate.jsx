@@ -111,18 +111,12 @@ export const validationsFieldCreate ={
         },
         date:{
             required: 'Este campo es obligatorio',
-            
-            maxLength:{
-                value:30,
-                message: 'El nombre no puede tener más de 30 caracteres',
-        
-            }
         },
         time:{
             required: 'Este campo es obligatorio',
             pattern:{
-                value: /^(?:1[0-6]|0?[8-9]):[0-5][0-9]$/,
-                message: 'Recuerda el horario de atencion es de 8:00 a 16:00 de corrido.'
+                value: /^(0[8-9]|1[0-5]):00$/,
+                message: 'Recuerda el horario de atencion es de 8:00 a 16:00 de corrido. Los turnos son cada hora en punto, ej: "12:00"'
             }
         
         },

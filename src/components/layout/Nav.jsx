@@ -31,9 +31,9 @@ const NavbarComponent = ({ isAdmin }) => {
             )}
           </Nav>
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/">INICIO</Nav.Link>
-            <Nav.Link as={Link} to="/pagelogin">INGRESAR</Nav.Link>
-            <Nav.Link as={Link} to="/contactus">CONTÁCTENOS</Nav.Link>
+            <Nav.Link className="linknav" as={Link} to="/">INICIO</Nav.Link>
+            <Nav.Link className="linknav" as={Link} to="/pagelogin">INGRESAR</Nav.Link>
+            <Nav.Link className="linknav" as={Link} to="/contactus">CONTÁCTENOS</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

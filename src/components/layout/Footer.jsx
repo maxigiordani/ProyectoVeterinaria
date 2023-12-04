@@ -39,11 +39,11 @@ const Footer = () => {
           <Col md={6} lg={3}>
             <h5 className="mb-3">Contacto</h5>
             <ul className="list-unstyled">
-              <li className="infofooter mb-2">TELEFÓNO: (381) 456-7850</li>
-              <li className="infofooter mb-2">
+              <li className="linkfooter mb-2">TELEFÓNO: (381) 456-7850</li>
+              <li className="linkfooter mb-2">
                 EMAIL: veternariarolling23@gmail.com
               </li>
-              <li className="infofooter">WHATSAPP: +5493814238444</li>
+              <li className="linkfooter">WHATSAPP: +5493814238444</li>
             </ul>
           </Col>
           <Col md={6} lg={3}>

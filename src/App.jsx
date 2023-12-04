@@ -1,7 +1,7 @@
 // Importa useState y useEffect directamente desde 'react'
 import { useState, useEffect } from 'react';
-import Footer from './components/pages/Footer';
-import NavComponent from './components/pages/Nav';
+import Footer from './components/layout/Footer';
+import NavComponent from './components/layout/Nav';
 import MainPage from './components/pages/MainPage';
 import PlanDetail from './components/pages/PlanDetail';
 import Page404 from './components/pages/Page404';

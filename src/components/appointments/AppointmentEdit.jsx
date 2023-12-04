@@ -137,7 +137,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
           </Form.Group>
 
           <div className="text-end">
-            <button className="btn-violeta">Update</button>
+            <button className="btn btn-violeta">Update</button>
           </div>
         </Form>
         {errorMessage && (
