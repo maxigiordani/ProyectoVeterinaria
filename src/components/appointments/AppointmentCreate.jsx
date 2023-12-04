@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "../config/axiosInit";
 import { useForm } from "react-hook-form";
-
+import dayjs from "dayjs";
 import { ErrorMessage, validationAppointment } from "../helpers/validateFieldCreate";
 
 const AppointmentCreate = ({ getTurnosAPI }) => {
@@ -22,6 +22,8 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
 
   const onSubmit = async (data) => {
     try {
+      data.date = dayjs(data.date).format("DD-MM-YYYY");
+
       const res = await axios.post(URLTURNO, data);
       console.log(res);
       if (res.status === 201) {
@@ -97,12 +99,11 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
                     <Form.Group className="mb-3" controlId="formDate">
             <Form.Label>Date*</Form.Label>
             <Form.Control
-              type="text"
+              type="date"
               {...register(
                 "date",
                 validationAppointment.date
               )}
-              placeholder="2023-12-31"
             />
             {errors.date && (
               <ErrorMessage message={errors.date.message} />
