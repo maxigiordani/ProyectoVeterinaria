@@ -38,6 +38,8 @@ const Pacients = ({ pacients, getAPI }) => {
   };
 
   return (
+    
+  
     <tr>
       <td>{pacients?._id}</td>
       <td>{pacients?.ownerName}</td>
@@ -48,15 +50,15 @@ const Pacients = ({ pacients, getAPI }) => {
       <td>{pacients?.race}</td>
 
       <td className="w-25">
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center containerpagecrud">
           <Link
             to={`/pacient/edit/${pacients?._id}`}
-            className= "btn btn-warning mx-1 "
+            className= "btn btn-warning mx-1 botoncrud "
           >
             Update 
           </Link>
           <button
-            className="btn btn-danger mx-1"
+            className="btn btn-danger mx-3 botoncrud "
             onClick={() => handleDelete(pacients?._id)}
           >
             Delete
@@ -64,6 +66,7 @@ const Pacients = ({ pacients, getAPI }) => {
         </div>
       </td>
     </tr>
+   
   );
 };
 

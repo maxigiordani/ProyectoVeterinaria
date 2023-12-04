@@ -252,3 +252,14 @@
 .infofooter {
   color: white;
 }
+
+.containerpagecrud {
+  min-height: 7vh;
+  display: flex;
+ 
+}
+
+.botoncrud {
+  height: 40px;
+  margin: 12px;
+   }
