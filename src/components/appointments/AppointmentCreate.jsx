@@ -103,7 +103,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
               <ErrorMessage message={errors.pet.message} />
             )}
           </Form.Group>
-                    <Form.Group className="mb-3" controlId="formDate">
+          <Form.Group className="mb-3" controlId="formDate">
             <Form.Label>Date*</Form.Label>
             <Form.Control
               type="date"
@@ -120,7 +120,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
           <Form.Group className="mb-3" controlId="formTime">
             <Form.Label>Time*</Form.Label>
             <Form.Control
-              type="text"
+              type="time"
               {...register(
                 "time",
                 validationAppointment.time
