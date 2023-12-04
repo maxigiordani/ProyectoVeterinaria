@@ -1,8 +1,47 @@
-# React + Vite
+# VETERINARIA ROLLING
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta página web desarrollada con ReactJS utilizando Vite, centrada en el cuidado de mascotas, resalta servicios, profesionales y planes veterinarios. Emplea React Router para la navegación y muestra información climática a través de una API dedicada. También, integra un CRUD para la gestión de turnos y pacientes, conectándose a una API externa.
 
-Currently, two official plugins are available:
+## ✨ [Ver Demo](https://crudburgers.netlify.app/) 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Comandos
+
+Cuando se clone este repositorio se deben ejecutar los siguientes comandos:
+
+## Install before clone
+```sh
+npm i
+```
+
+## Usage
+```sh
+npm run dev
+```
+## Backend
+
+El código del backend de esta aplicación se encuentra en [Backend-vet](https://github.com/Agusme/backend-vet).
+
+### Librerias usadas
+- Sweet Alert
+- Boostrap React
+- React Icons
+- React Router Dom
+- React hook Form
+- Emailjs-com
+- Axios 
+
+### Autors
+- 👨‍💻 **Maximiliano Giordani**
+- 👩‍💻 **Eliana del Rosario Alvarez**
+- 👩‍💻 **Sofia Delgado**
+- 👩‍💻 **Agustina Mena**
+
+
+### Github:
+- [Maxigiordiani](https://github.com/maxigiordani)
+- [Sofia Delgado]()
+- [Eliana del Rosario Alvarez](https://github.com/rhoalvarez)
+- [Agusme](https://github.com/Agusme)
+
+
+
