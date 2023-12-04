@@ -9,7 +9,7 @@ const PacientTable = ({ pacients, getAPI }) => {
 console.log(pacients)
 
     return (
-     <div>
+     <div className="estilotabla">
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
           <h1>Pacients Table</h1>
@@ -22,12 +22,12 @@ console.log(pacients)
           </Link>
         </div>
         <hr />
-        {/* Table of PACIENTS */}
+    
         {pacients?.length !== 0 ? (
-          <Table bordered hover responsive className="align-middle mt-3">
+          <Table bordered hover responsive className="align-middle mt-3 ">
             <thead>
               <tr> 
-                <th >Id</th>
+                <th>Id</th>
                 <th>Owner Name</th>
                 <th>Email</th>
                 <th>Tel</th>

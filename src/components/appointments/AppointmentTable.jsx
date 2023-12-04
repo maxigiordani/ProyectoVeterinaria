@@ -7,7 +7,7 @@ import Appointments from "./Appointments";
 
 const AppointmentTable = ({ appointments, getTurnosAPI }) => {
   return (
-    <div>
+    <div className="estilotabla">
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
           <h1>Appointment Table</h1>

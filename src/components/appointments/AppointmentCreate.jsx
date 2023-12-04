@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "../config/axiosInit";
 import { useForm } from "react-hook-form";
-
+import dayjs from "dayjs";
 import { ErrorMessage, validationAppointment } from "../helpers/validateFieldCreate";
 
 const AppointmentCreate = ({ getTurnosAPI }) => {
@@ -22,6 +22,8 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
 
   const onSubmit = async (data) => {
     try {
+      data.date = dayjs(data.date).format("DD-MM-YYYY");
+
       const res = await axios.post(URLTURNO, data);
       console.log(res);
       if (res.status === 201) {
@@ -56,10 +58,13 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
             <Form.Label>Appointment Details*</Form.Label>
             <Form.Control
               type="text"
+          
               {...register(
                 "appointmentDetail",
                 validationAppointment.appointmentDetail
               )}
+              maxLength={30}
+              required
               placeholder="Mordida superficial"
             />
             {errors.appointmentDetail && (
@@ -74,6 +79,8 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
                 "veterinarian",
                 validationAppointment.veterinarian
               )}
+              maxLength={30}
+              required
               placeholder="Medico Alejandro Cortez"
             />
             {errors.veterinarian && (
@@ -88,21 +95,23 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
                 "pet",
                 validationAppointment.pet
               )}
+              maxLength={30}
+              required
               placeholder="Buddy"
             />
             {errors.pet && (
               <ErrorMessage message={errors.pet.message} />
             )}
           </Form.Group>
-                    <Form.Group className="mb-3" controlId="formDate">
+          <Form.Group className="mb-3" controlId="formDate">
             <Form.Label>Date*</Form.Label>
             <Form.Control
-              type="text"
+              type="date"
               {...register(
                 "date",
                 validationAppointment.date
               )}
-              placeholder="2023-12-31"
+              required
             />
             {errors.date && (
               <ErrorMessage message={errors.date.message} />
@@ -111,12 +120,13 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
           <Form.Group className="mb-3" controlId="formTime">
             <Form.Label>Time*</Form.Label>
             <Form.Control
-              type="text"
+              type="time"
               {...register(
                 "time",
                 validationAppointment.time
               )}
-              placeholder="14:30"
+              placeholder="14:00"
+              required
             />
             {errors.time && (
               <ErrorMessage message={errors.time.message} />

@@ -75,6 +75,8 @@ const PacientEdit = ({ getAPI }) => {
             <Form.Label>Owner Name*</Form.Label>
             <Form.Control
               type="text"
+              maxLength={30}
+              required
               {...register("ownerName", validationsFieldCreate.ownerName)}
             />
             {errors.ownerName && (
@@ -85,6 +87,8 @@ const PacientEdit = ({ getAPI }) => {
             <Form.Label>email*</Form.Label>
             <Form.Control
               type="text"
+              maxLength={30}
+              required
               {...register("email", validationsFieldCreate.email)}
             />
             {errors.email && (
@@ -95,8 +99,10 @@ const PacientEdit = ({ getAPI }) => {
             <Form.Label>Tel*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="E.g., Max"
-              {...register("tel", validationsFieldCreate.tel)}              maxLength={12}
+              placeholder="Max"
+              maxLength={12}
+              required
+              {...register("tel", validationsFieldCreate.tel)}        
 
             />
             {errors.tel && (
@@ -108,6 +114,8 @@ const PacientEdit = ({ getAPI }) => {
             <Form.Control
               type="text"
               placeholder="Buddy"
+              maxLength={30}
+              required
               {...register("petName", validationsFieldCreate.petName)}
             />
             {errors.petName && (
@@ -119,6 +127,8 @@ const PacientEdit = ({ getAPI }) => {
             <Form.Control
               type="text"
               placeholder="Perro"
+              maxLength={30}
+              required
               {...register("specie", validationsFieldCreate.specie)}
             />
             {errors.specie && (
@@ -130,6 +140,8 @@ const PacientEdit = ({ getAPI }) => {
             <Form.Control
               type="text"
               placeholder="Labrador"
+              maxLength={30}
+              required
               {...register("race", validationsFieldCreate.race)}
             />
             {errors.race && (

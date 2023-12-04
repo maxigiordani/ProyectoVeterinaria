@@ -77,6 +77,8 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Control
               type="text"
               placeholder="E.g., Vaccination"
+              required
+              maxLength={30}
               {...register("appointmentDetail", validationAppointment.appointmentDetail)}
             />
             {errors.appointmentDetail && (
@@ -87,8 +89,10 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Veterinarian*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="E.g., Dr. Smith"
+              placeholder="Dr. Smith"
               {...register("veterinarian", validationAppointment.veterinarian)}
+              maxLength={30}
+              required
             />
             {errors.veterinarian && (
               <ErrorMessage message={errors.veterinarian.message} />
@@ -98,7 +102,9 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Pet Name*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="E.g., Max"
+              placeholder="Max"
+              maxLength={30}
+              required
               {...register("pet", validationAppointment.pet)}
             />
             {errors.pet && (
@@ -108,8 +114,9 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
           <Form.Group className="mb-3" controlId="formDate">
             <Form.Label>Date*</Form.Label>
             <Form.Control
-              type="text"
-              placeholder="E.g., 2023-01-01"
+              type="date"
+              placeholder="12"
+              required
               {...register("date", validationAppointment.date)}
             />
             {errors.date && (
@@ -120,6 +127,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Time*</Form.Label>
             <Form.Control
               type="text"
+              required
               placeholder="Ej. 10:00 AM"
               {...register("time", validationAppointment.time)}
             />

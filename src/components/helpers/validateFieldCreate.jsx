@@ -6,7 +6,7 @@ export const validationsFieldCreate ={
     ownerName:{
         required: 'Este campo es obligatorio',
         pattern:{
-            value: /^[A-Za-z\s?]+$/,
+            value: /^[^\s].*[^\s]$/,
             message: 'El nombre no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
         },
         maxLength:{
@@ -36,7 +36,7 @@ export const validationsFieldCreate ={
       petName:{
         required: 'Este campo es obligatorio',
         pattern:{
-            value: /^[A-Za-z\s?]+$/,
+            value: /^[^\s].*[^\s]$/,
             message: 'El nombre de la mascota no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
         },
         maxLength:{
@@ -48,7 +48,7 @@ export const validationsFieldCreate ={
     specie:{
         required: 'Este campo es obligatorio',
         pattern:{
-            value: /^[A-Za-z\s?]+$/,
+            value: /^[^\s].*[^\s]$/,
             message: 'El nombre no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
         },
         maxLength:{
@@ -60,7 +60,7 @@ export const validationsFieldCreate ={
     race:{
         required: 'Este campo es obligatorio',
         pattern:{
-            value: /^[A-Za-z\s?]+$/,
+            value: /^[^\s].*[^\s]$/,
             message: 'El nombre no puede contener espacios en blancos(ni al principio, ni al final), tampoco números'
         },
         maxLength:{
@@ -76,7 +76,7 @@ export const validationsFieldCreate ={
         appointmentDetail:{
             required: 'Este campo es obligatorio',
             pattern: {
-                value:  /^[A-Za-z\s?]+$/,
+                value: /^[^\s].*[^\s]$/,
                 message: 'El nombre no puede contener espacios en blancos (ni al principio, ni al final), tampoco números'
             },
             maxLength:{
@@ -88,7 +88,7 @@ export const validationsFieldCreate ={
         veterinarian:{
             required: 'Este campo es obligatorio',
             pattern: {
-                value: /^[A-Za-z\s?]+$/,
+                value: /^[^\s].*[^\s]$/,
                 message: 'El nombre no puede contener espacios en blancos (ni al principio, ni al final), tampoco números'
             },
             maxLength:{
@@ -100,7 +100,7 @@ export const validationsFieldCreate ={
         pet:{
             required: 'Este campo es obligatorio',
             pattern: {
-                value: /^[A-Za-z\s?]+$/,
+                value: /^[^\s].*[^\s]$/,
                 message: 'El nombre no puede contener espacios en blancos (ni al principio, ni al final), tampoco números'
             },
             maxLength:{
@@ -121,8 +121,8 @@ export const validationsFieldCreate ={
         time:{
             required: 'Este campo es obligatorio',
             pattern:{
-                value: /^(?:1[0-6]|[89])$/,
-                message: 'Recuerda el horario de atencion es de 8:00 a 16:00 de corrido'
+                value: /^(?:1[0-6]|0?[8-9]):[0-5][0-9]$/,
+                message: 'Recuerda el horario de atencion es de 8:00 a 16:00 de corrido.'
             }
         
         },
