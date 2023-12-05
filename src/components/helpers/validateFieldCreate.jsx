@@ -11,7 +11,7 @@ ownerName:{
     },
     maxLength:{
         value:30,
-        message: 'El nombre no puede tener más de 25 caracteres',
+        message: 'El nombre no puede tener más de 30 caracteres',
 
     }
 },
