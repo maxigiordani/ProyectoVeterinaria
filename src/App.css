@@ -264,3 +264,9 @@
 .linknav {
   color: white;
 }
+
+.fondo-violetaClaro{
+  border-color: rgb(120, 75, 163);
+  border-width: 2px;
+  
+}

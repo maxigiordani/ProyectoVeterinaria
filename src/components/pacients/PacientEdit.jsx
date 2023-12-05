@@ -51,6 +51,7 @@ const PacientEdit = ({ getAPI }) => {
         reset(); 
         getAPI();
         navigate('/admin/pacientes');
+        // Llamada a getAPI para actualizar la lista de pacientes después de la edición
         getAPI();
       }
     } catch (error) {
@@ -149,7 +150,7 @@ const PacientEdit = ({ getAPI }) => {
           </Form.Group>
 
           <div className="text-end">
-            <button className="btn btn-violeta">Update</button>
+            <button className="btn-violeta">Update</button>
           </div>
         </Form>
         {errorMessage && (
