@@ -50,12 +50,12 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
   return (
     <div>
       <Container className="py-5">
-        <h1>Add Appointment</h1>
+        <h1>Agregar Cita</h1>
         <hr />
         {/* Form Appointment */}
-        <Form className="my-5" onSubmit={handleSubmit(onSubmit)}>
+        <Form className="my-4" onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formAppointmentDetail">
-            <Form.Label>Appointment Details*</Form.Label>
+            <Form.Label>Detalles de la cita*</Form.Label>
             <Form.Control
               type="text"
           
@@ -72,7 +72,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formVeterinarian">
-            <Form.Label>Veterinarian*</Form.Label>
+            <Form.Label>Veterinario*</Form.Label>
             <Form.Control
               type="text"
               {...register(
@@ -88,7 +88,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPetName">
-            <Form.Label>Pet Name*</Form.Label>
+            <Form.Label>Nombre Mascota*</Form.Label>
             <Form.Control
               type="text"
               {...register(
@@ -104,7 +104,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formDate">
-            <Form.Label>Date*</Form.Label>
+            <Form.Label>Fecha*</Form.Label>
             <Form.Control
               type="date"
               {...register(
@@ -118,7 +118,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTime">
-            <Form.Label>Time*</Form.Label>
+            <Form.Label>Hora*</Form.Label>
             <Form.Control
               type="time"
               {...register(
@@ -133,7 +133,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <div className="text-end">
-            <button className="btn btn-violeta">Save</button>
+            <button className="btn btn-violeta">Guardar</button>
           </div>
         </Form>
         {errorMessage && (

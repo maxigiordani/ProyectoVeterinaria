@@ -10,28 +10,27 @@ const AppointmentTable = ({ appointments, getTurnosAPI }) => {
     <div>
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
-          <h1>Appointment Table</h1>
+          <h1>Tabla de citas</h1>
           <Link
             to="/turnos/create"
             className=" btn btn-violeta text-decoration-none text-center"
           >
-            Add Appointment
+            Agregar Cita
             <TfiAgenda className="m-2" />
           </Link>
         </div>
         <hr />
-        {/* Table of Appointments */}
         {appointments?.length !== 0 ? (
           <Table bordered hover responsive className="align-middle mt-3">
             <thead>
               <tr>
                 <th>Id</th>
-                <th>Appointment Details</th>
-                <th>Veterinarian</th>
-                <th>Pet</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Actions</th>
+                <th>Detalles Cita</th>
+                <th>Veterinario</th>
+                <th>Nombre Mascota</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
@@ -46,7 +45,7 @@ const AppointmentTable = ({ appointments, getTurnosAPI }) => {
           </Table>
         ) : (
           <div className="no-products-found d-flex align-items-center justify-content-center">
-            <h1>📆 No Appointments found 📆</h1>
+            <h1>📆 No se encontraron Citas 🥲 📆</h1>
           </div>
         )}
       </Container>

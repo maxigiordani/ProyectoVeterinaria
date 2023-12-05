@@ -53,13 +53,13 @@ const Pacients = ({ pacients, getAPI }) => {
             to={`/pacient/edit/${pacients?._id}`}
             className= "btn btn-warning mx-1 "
           >
-            Update 
+            Actualizar 
           </Link>
           <button
             className="btn btn-danger mx-1"
             onClick={() => handleDelete(pacients?._id)}
           >
-            Delete
+            Eliminar
           </button>
         </div>
       </td>

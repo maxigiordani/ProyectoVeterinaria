@@ -68,15 +68,15 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
   return (
     <div>
       <Container className="py-5">
-        <h1>Edit Appointment</h1>
+        <h1>Editar Cita</h1>
         <hr />
         {/* Form Appointment */}
         <Form className="my-5" onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formDetails">
-            <Form.Label>Appointment Detail*</Form.Label>
+            <Form.Label>Detalles de la cita*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="E.g., Vaccination"
+              placeholder="Ojo hinchado"
               required
               maxLength={30}
               {...register("appointmentDetail", validationAppointment.appointmentDetail)}
@@ -86,7 +86,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formVeterinarian">
-            <Form.Label>Veterinarian*</Form.Label>
+            <Form.Label>Veterinario*</Form.Label>
             <Form.Control
               type="text"
               placeholder="Dr. Smith"
@@ -99,7 +99,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPet">
-            <Form.Label>Pet Name*</Form.Label>
+            <Form.Label>Nombre Mascota*</Form.Label>
             <Form.Control
               type="text"
               placeholder="Max"
@@ -112,7 +112,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formDate">
-            <Form.Label>Date*</Form.Label>
+            <Form.Label>Fecha*</Form.Label>
             <Form.Control
               type="date"
               placeholder="12"
@@ -124,7 +124,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTime">
-            <Form.Label>Time*</Form.Label>
+            <Form.Label>Hora*</Form.Label>
             <Form.Control
               type="text"
               required
@@ -137,7 +137,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
           </Form.Group>
 
           <div className="text-end">
-            <button className="btn btn-violeta">Update</button>
+            <button className="btn btn-violeta">Actualizar</button>
           </div>
         </Form>
         {errorMessage && (
