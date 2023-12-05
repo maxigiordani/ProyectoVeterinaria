@@ -1,6 +1,5 @@
 # VETERINARIA ROLLING
-
-Esta página web desarrollada con ReactJS utilizando Vite, centrada en el cuidado de mascotas, resalta servicios, profesionales y planes veterinarios. Emplea React Router para la navegación y muestra información climática a través de una API dedicada. También, integra un CRUD para la gestión de turnos y pacientes, conectándose a una API externa.
+Página web desarrollada con ReactJS, centrada en el cuidado de mascotas. La misma cuenta con una sección informativa donde se exhibe información de la veterinaria, servicios y productos que ofrece. Además integra un CRUD para la gestión de pacientes y reserva de turnos, conectándose a una API externa.
 
 ## ✨ [Ver Demo](agregar ruta del deploy del frontend) 
 
@@ -28,7 +27,8 @@ El código del backend de esta aplicación se encuentra en [Backend-vet](https:/
 - React Router Dom
 - React hook Form
 - Emailjs-com
-- Axios 
+- Axios
+- Bcryptjs
 
 ### Autors
 - 👨‍💻 **Maximiliano Giordani**
