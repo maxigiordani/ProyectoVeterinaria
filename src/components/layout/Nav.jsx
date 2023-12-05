@@ -16,12 +16,13 @@ const NavbarComponent = ({ isAdmin }) => {
             height="30"
             className="d-inline-block align-top logounico"
           />
-          <h3 className='titulonav '>VETERINARIA ROLLING</h3>
+          <h3 className='titulonav h3'>VETERINARIA ROLLING</h3>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='botonnav' />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            {isAdmin && location.pathname === '/pageadmin' && (
+            {(isAdmin && (location.pathname.startsWith('/admin') || location.pathname === '/pageadmin' 
+            || location.pathname === '/pacient/create' || location.pathname === '/turnos/create')) && (
               <>
                 <Nav.Link className='linkadm' as={Link} to="pageadmin">ADMINISTRADOR</Nav.Link>
                 <Nav.Link className='linkadm' as={Link} to="admin/pacientes">ADMINISTRAR PACIENTES</Nav.Link>
@@ -30,9 +31,9 @@ const NavbarComponent = ({ isAdmin }) => {
             )}
           </Nav>
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/">INICIO</Nav.Link>
-            <Nav.Link as={Link} to="/pagelogin">INGRESAR</Nav.Link>
-            <Nav.Link as={Link} to="/contactus">CONTÁCTENOS</Nav.Link>
+            <Nav.Link className="linknav" as={Link} to="/">INICIO</Nav.Link>
+            <Nav.Link className="linknav" as={Link} to="/pagelogin">INGRESAR</Nav.Link>
+            <Nav.Link className="linknav" as={Link} to="/contactus">CONTÁCTENOS</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -9,7 +9,7 @@ import { STATUS } from "../constant";
 import { useForm } from "react-hook-form";
 import { ErrorMessage, validationsFieldCreate } from "../helpers/validateFieldCreate";
 
-const PacientEdit = ({ getTurnosAPI }) => {
+const PacientEdit = ({ getAPI }) => {
   const {
     register,
     handleSubmit,
@@ -47,10 +47,12 @@ const PacientEdit = ({ getTurnosAPI }) => {
 
       console.log(res);
       if (res.status === STATUS.STATUS_OK) {
-        Swal.fire('Updated', 'Your pacient has been updated successfully', 'success');
+        Swal.fire('Actualizado', 'El paciente fue actualizado correctamente', 'success');
         reset(); 
-        getTurnosAPI();
+        getAPI();
         navigate('/admin/pacientes');
+        // Llamada a getAPI para actualizar la lista de pacientes después de la edición
+        getAPI();
       }
     } catch (error) {
       console.log(error);
@@ -66,13 +68,15 @@ const PacientEdit = ({ getTurnosAPI }) => {
   return (
     <div>
       <Container className="py-5">
-        <h1>Edit Pacient 🐾</h1>
+        <h1>Editar paciente 🐾</h1>
         <hr />
         <Form className="my-5" onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formDetails">
-            <Form.Label>Owner Name*</Form.Label>
+            <Form.Label>Nombre y apellido*</Form.Label>
             <Form.Control
               type="text"
+              maxLength={30}
+              required
               {...register("ownerName", validationsFieldCreate.ownerName)}
             />
             {errors.ownerName && (
@@ -80,9 +84,11 @@ const PacientEdit = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formVeterinarian">
-            <Form.Label>email*</Form.Label>
+            <Form.Label>Email*</Form.Label>
             <Form.Control
               type="text"
+              maxLength={30}
+              required
               {...register("email", validationsFieldCreate.email)}
             />
             {errors.email && (
@@ -93,18 +99,23 @@ const PacientEdit = ({ getTurnosAPI }) => {
             <Form.Label>Tel*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="E.g., Max"
-              {...register("tel", validationsFieldCreate.tel)}
+              placeholder="Max"
+              maxLength={12}
+              required
+              {...register("tel", validationsFieldCreate.tel)}        
+
             />
             {errors.tel && (
               <ErrorMessage message={errors.tel.message} />
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formDate">
-            <Form.Label>petName*</Form.Label>
+            <Form.Label>Nombre de la mascota*</Form.Label>
             <Form.Control
               type="text"
               placeholder="Buddy"
+              maxLength={30}
+              required
               {...register("petName", validationsFieldCreate.petName)}
             />
             {errors.petName && (
@@ -112,10 +123,12 @@ const PacientEdit = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTime">
-            <Form.Label>Specie*</Form.Label>
+            <Form.Label>Especie*</Form.Label>
             <Form.Control
               type="text"
               placeholder="Perro"
+              maxLength={30}
+              required
               {...register("specie", validationsFieldCreate.specie)}
             />
             {errors.specie && (
@@ -123,10 +136,12 @@ const PacientEdit = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTime">
-            <Form.Label>Race*</Form.Label>
+            <Form.Label>Raza*</Form.Label>
             <Form.Control
               type="text"
               placeholder="Labrador"
+              maxLength={30}
+              required
               {...register("race", validationsFieldCreate.race)}
             />
             {errors.race && (
@@ -135,7 +150,7 @@ const PacientEdit = ({ getTurnosAPI }) => {
           </Form.Group>
 
           <div className="text-end">
-            <button className="btn-violeta">Update</button>
+            <button className="btn-violeta">Actualizar</button>
           </div>
         </Form>
         {errorMessage && (

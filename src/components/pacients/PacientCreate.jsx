@@ -28,8 +28,8 @@ const PacientCreate = ({ getAPI }) => {
       console.log(res);
       if (res.status === 201) {
         Swal.fire(
-          "Created",
-          "Your patient has been created successfully",
+          "Creado",
+          "El paciente fue creado con exito",
           "success"
         );
         reset();
@@ -50,17 +50,18 @@ const PacientCreate = ({ getAPI }) => {
   return (
     <div>
       <Container className="py-5">
-        <h1>Add Pacient🐾</h1>
+        <h1>Añadir paciente🐾</h1>
         <hr />
         {/* Form Pacient */}
         <Form className="my-5" onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formOwnerName">
-            <Form.Label>Owner name*</Form.Label>
+            <Form.Label>Nombre y apellido*</Form.Label>
             <Form.Control
               type="text"
               {...register("ownerName", validationsFieldCreate.ownerName)}
               placeholder="Juan Perez"
               maxLength={30}
+              required
             />
             {errors.ownerName && (
               <ErrorMessage message={errors.ownerName.message} />
@@ -73,6 +74,7 @@ const PacientCreate = ({ getAPI }) => {
               {...register("email", validationsFieldCreate.email)}
               placeholder="juanperez@gmail.com"
               maxLength={30}
+              required
             />
             {errors.email && <ErrorMessage message={errors.email.message} />}
           </Form.Group>
@@ -83,43 +85,47 @@ const PacientCreate = ({ getAPI }) => {
               {...register("tel", validationsFieldCreate.tel)}
               placeholder="381544444444"
               maxLength={12}
+              required
             />
             {errors.tel && <ErrorMessage message={errors.tel.message} />}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPetName">
-            <Form.Label>Pet Name*</Form.Label>
+            <Form.Label>Nombre de la mascota*</Form.Label>
             <Form.Control
               type="text"
               {...register("petName", validationsFieldCreate.petName)}
               placeholder="Frida"
               maxLength={30}
+              required
             />
             {errors.petName && (
               <ErrorMessage message={errors.petName.message} />
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formSpecie">
-            <Form.Label>Specie*</Form.Label>
+            <Form.Label>Especie*</Form.Label>
             <Form.Control
               type="text"
               {...register("specie", validationsFieldCreate.specie)}
               placeholder="Perro"
               maxLength={30}
+              required
             />
             {errors.specie && <ErrorMessage message={errors.specie.message} />}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formR">
-            <Form.Label>Race*</Form.Label>
+            <Form.Label>Raza*</Form.Label>
             <Form.Control
               type="text"
               {...register("race", validationsFieldCreate.race)}
               placeholder="Fox terrier"
               maxLength={30}
+              required
             />
             {errors.race && <ErrorMessage message={errors.race.message} />}
           </Form.Group>
           <div className="text-end">
-            <button className="btn btn-violeta">Save</button>
+            <button className="btn btn-violeta">Añadir paciente</button>
           </div>
         </Form>
         {errorMessage && (

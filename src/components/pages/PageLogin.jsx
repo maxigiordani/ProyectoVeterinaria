@@ -34,7 +34,7 @@ const PageLogin = () => {
     <Container className="mt-5">
       <Row className="justify-content-center">
         <Col md={6}>
-          <h2 className="mb-3">Iniciar Sesión</h2>
+          <h2 className="mb-4">Iniciar Sesión</h2>
           <Form>
             <Form.Group controlId="formUsername">
               <Form.Label>Usuario:</Form.Label>
@@ -46,7 +46,7 @@ const PageLogin = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formPassword">
+            <Form.Group controlId="formPassword">
               <Form.Label>Contraseña:</Form.Label>
               <Form.Control
                 type="password"
@@ -55,7 +55,7 @@ const PageLogin = () => {
                 onChange={(e) => setPasswordInput(e.target.value)}
               />
             </Form.Group>
-            <Button className="botonlogin mb-3" variant="primary" onClick={handleLogin}>
+            <Button className="botonlogin" variant="primary" onClick={handleLogin}>
               Ingresar
             </Button>
           </Form>

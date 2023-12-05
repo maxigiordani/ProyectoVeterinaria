@@ -7,15 +7,15 @@ import Appointments from "./Appointments";
 
 const AppointmentTable = ({ appointments, getTurnosAPI }) => {
   return (
-    <div>
+    <div className="estilotabla">
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
-          <h1>Appointment Table</h1>
+          <h1>Tabla de Turnos</h1>
           <Link
             to="/turnos/create"
             className=" btn btn-violeta text-decoration-none text-center"
           >
-            Add Appointment
+            Agregar Turno
             <TfiAgenda className="m-2" />
           </Link>
         </div>
@@ -26,12 +26,12 @@ const AppointmentTable = ({ appointments, getTurnosAPI }) => {
             <thead>
               <tr>
                 <th>Id</th>
-                <th>Appointment Details</th>
-                <th>Veterinarian</th>
-                <th>Pet</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Actions</th>
+                <th>Detalles del turno</th>
+                <th>Veterinario</th>
+                <th>Mascota</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Acción</th>
               </tr>
             </thead>
             <tbody>
@@ -46,7 +46,7 @@ const AppointmentTable = ({ appointments, getTurnosAPI }) => {
           </Table>
         ) : (
           <div className="no-products-found d-flex align-items-center justify-content-center">
-            <h1>📆 No Appointments found 📆</h1>
+            <h1>📆No se encontraron turnos📆</h1>
           </div>
         )}
       </Container>

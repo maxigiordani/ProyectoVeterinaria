@@ -1,7 +1,7 @@
 // Importa useState y useEffect directamente desde 'react'
 import { useState, useEffect } from 'react';
-import Footer from './components/pages/Footer';
-import NavComponent from './components/pages/Nav';
+import Footer from './components/layout/Footer'
+import NavComponent from './components/layout/Nav';
 import MainPage from './components/pages/MainPage';
 import PlanDetail from './components/pages/PlanDetail';
 import Page404 from './components/pages/Page404';
@@ -68,7 +68,7 @@ function App() {
           <Route path="/planes/adultos" element={<PlanDetail plan="adultos" />} />
           <Route path="/page404" element={<Page404 />} />
           <Route path="/contactus" element={<ContactUs />} />
-          <Route path='/pageadmin' element={<PageAdmin />} />
+          <Route path='/pageadmin' element={<PageAdmin  appointments={appointments} getTurnosAPI={getTurnosAPI} />} />
           <Route path='/aboutus' element={<AboutUs />} />
           <Route path='/pagelogin' element={<PageLogin />} />
           <Route path='/admin/pacientes' element={<PacientTable pacients={pacients} getAPI={getAPI} />} />

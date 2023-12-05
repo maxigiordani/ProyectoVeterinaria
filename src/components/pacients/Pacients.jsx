@@ -7,9 +7,9 @@ const Pacients = ({ pacients, getAPI }) => {
   const URL = import.meta.env.VITE_API_VETERINARIA;
   const handleDelete = (id) => {
     Swal.fire({
-      title: "Are you sure?",
+      title: "¿Está seguro?",
 
-      text: "You won't be able to revert this!",
+      text: "Esta acción no se puede deshacer",
 
       icon: "warning",
 
@@ -19,7 +19,9 @@ const Pacients = ({ pacients, getAPI }) => {
 
       cancelButtonColor: "#d33",
 
-      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "Cancelar",
+
+      confirmButtonText: "Si, Eliminar",
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
@@ -27,7 +29,7 @@ const Pacients = ({ pacients, getAPI }) => {
 
           console.log(res);
           if (res.status === STATUS.STATUS_OK) {
-            Swal.fire("Deleted!", "Your product has been deleted", "success");
+            Swal.fire("Eliminado", "El paciente fue eliminado", "success");
             getAPI();
           }
         } catch (error) {
@@ -53,13 +55,13 @@ const Pacients = ({ pacients, getAPI }) => {
             to={`/pacient/edit/${pacients?._id}`}
             className= "btn btn-warning mx-1 "
           >
-            Update 
+            Actualizar
           </Link>
           <button
             className="btn btn-danger mx-1"
             onClick={() => handleDelete(pacients?._id)}
           >
-            Delete
+            Eliminar
           </button>
         </div>
       </td>

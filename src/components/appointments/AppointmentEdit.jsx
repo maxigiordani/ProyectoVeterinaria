@@ -68,15 +68,17 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
   return (
     <div>
       <Container className="py-5">
-        <h1>Edit Appointment</h1>
+        <h1>Editar Turno</h1>
         <hr />
         {/* Form Appointment */}
         <Form className="my-5" onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formDetails">
-            <Form.Label>Appointment Detail*</Form.Label>
+            <Form.Label>Detalle del turno*</Form.Label>
             <Form.Control
               type="text"
               placeholder="E.g., Vaccination"
+              required
+              maxLength={30}
               {...register("appointmentDetail", validationAppointment.appointmentDetail)}
             />
             {errors.appointmentDetail && (
@@ -84,21 +86,25 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formVeterinarian">
-            <Form.Label>Veterinarian*</Form.Label>
+            <Form.Label>Veterinario*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="E.g., Dr. Smith"
+              placeholder="Dr. Smith"
               {...register("veterinarian", validationAppointment.veterinarian)}
+              maxLength={30}
+              required
             />
             {errors.veterinarian && (
               <ErrorMessage message={errors.veterinarian.message} />
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPet">
-            <Form.Label>Pet Name*</Form.Label>
+            <Form.Label>Nombre de mascota*</Form.Label>
             <Form.Control
               type="text"
-              placeholder="E.g., Max"
+              placeholder="Max"
+              maxLength={30}
+              required
               {...register("pet", validationAppointment.pet)}
             />
             {errors.pet && (
@@ -106,10 +112,11 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formDate">
-            <Form.Label>Date*</Form.Label>
+            <Form.Label>Fecha*</Form.Label>
             <Form.Control
-              type="text"
-              placeholder="E.g., 2023-01-01"
+              type="date"
+              placeholder="12"
+              required
               {...register("date", validationAppointment.date)}
             />
             {errors.date && (
@@ -117,9 +124,10 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTime">
-            <Form.Label>Time*</Form.Label>
+            <Form.Label>Horario*</Form.Label>
             <Form.Control
               type="text"
+              required
               placeholder="Ej. 10:00 AM"
               {...register("time", validationAppointment.time)}
             />
@@ -129,7 +137,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
           </Form.Group>
 
           <div className="text-end">
-            <button className="btn-violeta">Update</button>
+            <button className="btn-violeta">Actualizar</button>
           </div>
         </Form>
         {errorMessage && (
