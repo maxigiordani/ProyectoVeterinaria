@@ -48,7 +48,7 @@ const PageAdmin = ({appointments}) => {
           {
             appointments.map((appointment) =>(
               <Col key={appointment._id} xl={6} lg={6} md={6} sm={12}>
-              <Card className="d-flex text-justify btn-violeta fondo-violetaClaro p-3 m-2" >
+              <Card className="d-flex text-justify btn-violeta fondo-violetaClaro p-3 m-3" >
              
                 <div className="d-flex ">
                 <img
@@ -59,6 +59,7 @@ const PageAdmin = ({appointments}) => {
                       <p className="fw-bold text-center fs-4">Rolling Veterinaria</p>
                       <hr />
                       <p>Nombre: {appointment?.pet}</p>
+                      <p>Detalle: {appointment?.appointmentDetail} </p>
                       <p> Fecha: {appointment?.date}</p>
                       <p>Hora: {appointment?.time}</p>
                       </div>
