@@ -19,6 +19,8 @@ const Pacients = ({ pacients, getAPI }) => {
 
       cancelButtonColor: "#d33",
 
+      cancelButtonText: "Cancelar",
+
       confirmButtonText: "Si, Eliminar",
     }).then(async (result) => {
       if (result.isConfirmed) {

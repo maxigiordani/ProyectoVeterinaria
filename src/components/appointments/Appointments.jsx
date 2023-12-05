@@ -21,6 +21,8 @@ const Appointments = ({appointments, getTurnosAPI}) => {
         confirmButtonColor: "#3085d6",
   
         cancelButtonColor: "#d33",
+
+        cancelButtonText: "Cancelar",
   
         confirmButtonText: "Si, Eliminar",
       }).then(async (result) => {
