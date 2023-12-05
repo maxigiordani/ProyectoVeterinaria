@@ -53,7 +53,7 @@ export const validationsFieldCreate ={
         },
         maxLength:{
             value:30,
-            message: 'El nombre no puede tener más de 25 caracteres',
+            message: 'El nombre no puede tener más de 30 caracteres',
     
         }
     },
@@ -71,6 +71,14 @@ export const validationsFieldCreate ={
     }
     
     };
+
+
+
+
+
+
+
+
     // eslint-disable-next-line react-refresh/only-export-components
     export const validationAppointment={
         appointmentDetail:{
@@ -115,7 +123,7 @@ export const validationsFieldCreate ={
         time:{
             required: 'Este campo es obligatorio',
             pattern:{
-                value: /^(0[8-9]|1[0-5]):00$/,
+                value: /^(08|09|1[0-6]):00$/,
                 message: 'Recuerda el horario de atencion es de 8:00 a 16:00 de corrido. Los turnos son cada hora en punto, ej: "12:00"'
             }
         
@@ -127,11 +135,6 @@ export const validationsFieldCreate ={
     }
     
     
-    
-    
-    
-    
-    // eslint-disable-next-line react-refresh/only-export-components
     export const errorStyle = {
         color: 'red',
         fontSize: '14px',
