@@ -12,12 +12,12 @@ console.log(pacients)
      <div className="estilotabla">
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
-          <h1>Pacients Table</h1>
+          <h1>Tabla de Pacientes</h1>
           <Link
             to="/pacient/create"
             className=" btn btn-violeta text-decoration-none text-center"
           >
-            Add Pacient
+            Agregar Paciente
             <BsPersonPlus className="m-2" />
           </Link>
         </div>
@@ -28,13 +28,13 @@ console.log(pacients)
             <thead>
               <tr> 
                 <th>Id</th>
-                <th>Owner Name</th>
+                <th>Nombre y apellido </th>
                 <th>Email</th>
-                <th>Tel</th>
-                <th>Pet Name</th>
-                <th>Specie</th>
-                <th>Race</th>
-                <th>Actions</th>
+                <th>Telefóno</th>
+                <th>Nombre mascota</th>
+                <th>Especie</th>
+                <th>Raza</th>
+                <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
@@ -50,7 +50,7 @@ console.log(pacients)
           </Table>
         ) : (
           <div className="no-products-found d-flex align-items-center justify-content-center">
-            <h1>🐾 No pacients found 🐾</h1>
+            <h1>🐾 No se encontraron pacientes🐾</h1>
           </div>
         )}
         </Container>

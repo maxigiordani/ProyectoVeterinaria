@@ -28,8 +28,8 @@ const PacientCreate = ({ getAPI }) => {
       console.log(res);
       if (res.status === 201) {
         Swal.fire(
-          "Created",
-          "Your patient has been created successfully",
+          "Creado",
+          "El paciente fue creado con exito",
           "success"
         );
         reset();
@@ -50,12 +50,12 @@ const PacientCreate = ({ getAPI }) => {
   return (
     <div>
       <Container className="py-5">
-        <h1>Add Pacient🐾</h1>
+        <h1>Añadir paciente🐾</h1>
         <hr />
         {/* Form Pacient */}
         <Form className="my-5" onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formOwnerName">
-            <Form.Label>Owner name*</Form.Label>
+            <Form.Label>Nombre y apellido*</Form.Label>
             <Form.Control
               type="text"
               {...register("ownerName", validationsFieldCreate.ownerName)}
@@ -90,7 +90,7 @@ const PacientCreate = ({ getAPI }) => {
             {errors.tel && <ErrorMessage message={errors.tel.message} />}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPetName">
-            <Form.Label>Pet Name*</Form.Label>
+            <Form.Label>Nombre de la mascota*</Form.Label>
             <Form.Control
               type="text"
               {...register("petName", validationsFieldCreate.petName)}
@@ -103,7 +103,7 @@ const PacientCreate = ({ getAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formSpecie">
-            <Form.Label>Specie*</Form.Label>
+            <Form.Label>Especie*</Form.Label>
             <Form.Control
               type="text"
               {...register("specie", validationsFieldCreate.specie)}
@@ -114,7 +114,7 @@ const PacientCreate = ({ getAPI }) => {
             {errors.specie && <ErrorMessage message={errors.specie.message} />}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formR">
-            <Form.Label>Race*</Form.Label>
+            <Form.Label>Raza*</Form.Label>
             <Form.Control
               type="text"
               {...register("race", validationsFieldCreate.race)}
@@ -125,7 +125,7 @@ const PacientCreate = ({ getAPI }) => {
             {errors.race && <ErrorMessage message={errors.race.message} />}
           </Form.Group>
           <div className="text-end">
-            <button className="btn btn-violeta">Save</button>
+            <button className="btn btn-violeta">Añadir paciente</button>
           </div>
         </Form>
         {errorMessage && (

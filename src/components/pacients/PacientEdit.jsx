@@ -47,7 +47,7 @@ const PacientEdit = ({ getAPI }) => {
 
       console.log(res);
       if (res.status === STATUS.STATUS_OK) {
-        Swal.fire('Updated', 'Your pacient has been updated successfully', 'success');
+        Swal.fire('Actualizado', 'El paciente fue actualizado correctamente', 'success');
         reset(); 
         getAPI();
         navigate('/admin/pacientes');
@@ -68,11 +68,11 @@ const PacientEdit = ({ getAPI }) => {
   return (
     <div>
       <Container className="py-5">
-        <h1>Edit Pacient 🐾</h1>
+        <h1>Editar paciente 🐾</h1>
         <hr />
         <Form className="my-5" onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formDetails">
-            <Form.Label>Owner Name*</Form.Label>
+            <Form.Label>Nombre y apellido*</Form.Label>
             <Form.Control
               type="text"
               maxLength={30}
@@ -84,7 +84,7 @@ const PacientEdit = ({ getAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formVeterinarian">
-            <Form.Label>email*</Form.Label>
+            <Form.Label>Email*</Form.Label>
             <Form.Control
               type="text"
               maxLength={30}
@@ -110,7 +110,7 @@ const PacientEdit = ({ getAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formDate">
-            <Form.Label>petName*</Form.Label>
+            <Form.Label>Nombre de la mascota*</Form.Label>
             <Form.Control
               type="text"
               placeholder="Buddy"
@@ -123,7 +123,7 @@ const PacientEdit = ({ getAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTime">
-            <Form.Label>Specie*</Form.Label>
+            <Form.Label>Especie*</Form.Label>
             <Form.Control
               type="text"
               placeholder="Perro"
@@ -136,7 +136,7 @@ const PacientEdit = ({ getAPI }) => {
             )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTime">
-            <Form.Label>Race*</Form.Label>
+            <Form.Label>Raza*</Form.Label>
             <Form.Control
               type="text"
               placeholder="Labrador"
@@ -150,7 +150,7 @@ const PacientEdit = ({ getAPI }) => {
           </Form.Group>
 
           <div className="text-end">
-            <button className="btn-violeta">Update</button>
+            <button className="btn-violeta">Actualizar</button>
           </div>
         </Form>
         {errorMessage && (

@@ -10,9 +10,9 @@ const Appointments = ({appointments, getTurnosAPI}) => {
 
     const handleDelete = (id) => {
       Swal.fire({
-        title: "Are you sure?",
-  
-        text: "You won't be able to revert this!",
+        title: "¿Está seguro?",
+
+        text:"Esta acción no se puede deshacer",
   
         icon: "warning",
   
@@ -22,7 +22,7 @@ const Appointments = ({appointments, getTurnosAPI}) => {
   
         cancelButtonColor: "#d33",
   
-        confirmButtonText: "Yes, delete it!",
+        confirmButtonText: "Si, Eliminar",
       }).then(async (result) => {
         if (result.isConfirmed) {
           try {
@@ -30,7 +30,7 @@ const Appointments = ({appointments, getTurnosAPI}) => {
   
             console.log(res);
             if (res.status === STATUS.STATUS_OK) {
-              Swal.fire("Deleted!", "Your Appointment has been deleted", "success");
+              Swal.fire("Eliminado", "El paciente fue eliminado", "success");
               getTurnosAPI();
             }
           } catch (error) {
@@ -53,13 +53,13 @@ const Appointments = ({appointments, getTurnosAPI}) => {
             to={`/turnos/edit/${appointments?._id}`}
             className= "btn btn-warning mx-1 "
           >
-            Update 
+        Editar 
           </Link>
           <button
             className="btn btn-danger mx-1"
             onClick={() => handleDelete(appointments?._id)}
           >
-            Delete
+           Eliminar
           </button>
         </div>
       </td>
