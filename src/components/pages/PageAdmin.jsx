@@ -52,7 +52,7 @@ const PageAdmin = ({appointments}) => {
              
                 <div className="d-flex ">
                 <img
-                  src="../src/assets/imagenes/LOGO1.png"
+                  src="../src/assets/imagenes/logouno.png"
                   className="img-fluid w-25"
                 />
                     <div className="mx-3">

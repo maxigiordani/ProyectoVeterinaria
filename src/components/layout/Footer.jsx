@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "/src/App.css";
 import { Container, Row, Col } from "react-bootstrap";
-
+import logo from "../../assets/imagenes/logouno.png";
 
 const Footer = () => {
   return (
@@ -9,7 +9,11 @@ const Footer = () => {
       <Container className="text-center">
         <Row className="justify-content-center">
           <Col md={6} lg={3}>
-        
+            <img
+              src={logo}
+              alt="Logo de la Empresa"
+              className="d-inline-block align-top logofooter"
+            />
             <p className="infofooter">© 2023 Todos los derechos reservados</p>
           </Col>
           <Col md={6} lg={3}>
