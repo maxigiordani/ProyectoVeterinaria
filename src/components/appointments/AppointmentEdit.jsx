@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { Form, Container, Alert } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
@@ -9,6 +11,7 @@ import {
   ErrorMessage,
   validationAppointment,
 } from "../helpers/validateFieldCreate";
+import dayjs from "dayjs";
 
 const AppointmentEdit = ({ getTurnosAPI }) => {
   const {
@@ -30,12 +33,16 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
 
   const getOne = async () => {
     try {
+
       const res = await axios.get(`${URLTURNOS}/${id}`);
       const appointmentApi = res.data;
+      const formattedDate = dayjs(appointmentApi.date).format("DD-MM-YYYY");
 
-      Object.entries(appointmentApi).forEach(([key, value]) => {
-        setValue(key, value);
-      });
+      Object.entries({ ...appointmentApi, date: formattedDate }).forEach(
+        ([key, value]) => {
+          setValue(key, value);
+        }
+      );
     } catch (error) {
       console.log(error);
     }
@@ -114,9 +121,9 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Label>Fecha*</Form.Label>
             <Form.Control
               type="date"
-              placeholder="12"
-              required
               {...register("date", validationAppointment.date)}
+
+              required
             />
             {errors.date && <ErrorMessage message={errors.date.message} />}
           </Form.Group>
