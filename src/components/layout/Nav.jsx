@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/imagenes/logo1.png';
+
 
 const NavbarComponent = ({ isAdmin }) => {
   const location = useLocation();
@@ -9,14 +9,8 @@ const NavbarComponent = ({ isAdmin }) => {
   return (
     <Navbar bg="" expand="lg" className='navbarstyle'>
       <Container>
-        <Navbar.Brand as={Link} to="/">
-          <img
-            src={logo}
-            alt="Logo de la Empresa"
-            height="30"
-            className="d-inline-block align-top logounico"
-          />
-          <h3 className='titulonav h3'>VETERINARIA ROLLING</h3>
+        <Navbar.Brand as={Link} to="/" >
+       
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='botonnav' />
         <Navbar.Collapse id="basic-navbar-nav">
