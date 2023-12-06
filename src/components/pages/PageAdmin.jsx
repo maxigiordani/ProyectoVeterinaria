@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import logo from "../../assets/imagenes/logouno.png";
 
 const PageAdmin = ({appointments}) => {
   return (
@@ -52,7 +53,7 @@ const PageAdmin = ({appointments}) => {
              
                 <div className="d-flex ">
                 <img
-                  src="../src/assets/imagenes/logouno.png"
+                  src={logo}
                   className="img-fluid w-25"
                 />
                     <div className="mx-3">
