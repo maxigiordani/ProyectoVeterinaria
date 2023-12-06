@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Button, Modal } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
 import {
   validationRules,
   ErrorMessage,
@@ -15,9 +16,35 @@ const ContactUs = () => {
   } = useForm();
   const [showModal, setShowModal] = React.useState(false);
 
+  const emailjsConfig = {
+    serviceId: "service_fai8lrq",
+    templateId: "template_mmkeyvm",
+    userId: "uMxMpO7OXL7pbTgxO",
+  };
+
   const onSubmit = async (data) => {
-    setShowModal(true);
-    reset();
+    try {
+      const emailData = {
+        ...data,
+        user_name: data.name,
+        user_email: data.email,
+      };
+
+      const response = await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        emailData,
+        emailjsConfig.userId
+      );
+
+      console.log("Correo enviado con éxito:", response);
+
+      setShowModal(true);
+
+      reset();
+    } catch (error) {
+      console.error("Error al enviar el correo:", error);
+    }
   };
 
   const handleCloseModal = () => {
