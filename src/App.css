@@ -223,10 +223,6 @@
   color: white
 }
 
-.footer {
-  background-color: black;
-}
-
 .containerpage {
   min-height: 72.5vh;
   display: flex;
@@ -255,7 +251,7 @@
 }
 
 .estilotabla {
-  min-height: 74vh;
+  min-height: 78vh;
   display: flex;
   flex-direction: column;
 }
@@ -268,4 +264,8 @@
   border-color: rgb(120, 75, 163);
   border-width: 2px;
   
+}
+
+.footer {
+  background-color: red;
 }

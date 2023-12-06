@@ -49,7 +49,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
 
   return (
     <div>
-      <Container className="py-5">
+      <Container className="py-5 estilotabla" >
         <h1>Agregar Turno</h1>
         <hr />
         {/* Form Appointment */}
