@@ -1,6 +1,8 @@
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "/src/App.css";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import logo from "../../assets/imagenes/logouno.png";
 
 const Footer = () => {
@@ -20,19 +22,19 @@ const Footer = () => {
             <h5 className="mb-3">Nosotros</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <a className="linkfooter" href="/">
+                <Link className="linkfooter" to="/">
                   INICIO
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a className="linkfooter" href="/aboutus">
+                <Link className="linkfooter" to="/aboutus">
                   ACERCA DE NOSOTROS
-                </a>
+                </Link>
               </li>
-              <li >
-                <a className="linkfooter" href="/contactus">
+              <li>
+                <Link className="linkfooter" to="/contactus">
                   CONTÁCTENOS
-                </a>
+                </Link>
               </li>
             </ul>
           </Col>
