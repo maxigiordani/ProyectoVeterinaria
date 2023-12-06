@@ -112,7 +112,7 @@
 
 .comentariosdeclientes {
 
-  margin: 50px;
+  margin: 20px;
 
 }
 
@@ -268,4 +268,10 @@
 
 .footer {
   background-color: #c08ad4;
+}
+
+
+.cardprof {
+  margin: 20px;
+  border-color: #c08ad4;
 }

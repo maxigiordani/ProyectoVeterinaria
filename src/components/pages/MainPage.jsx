@@ -105,12 +105,13 @@ const MainPage = () => {
           <img src={publicidadImage} alt="Publicidad2" />
         </Col>
 
+<div className="container"> 
         <Row className="mt-4">
           <Col>
             <h3 className="text-center h3">Nuestros Profesionales</h3>
             <Container className="container fluid text-center">
-              <Card>
-                <Card.Body>
+              <Card className="cardprof">
+                <Card.Body >
                   <Card.Title>Vet. Marcelo Gomez</Card.Title>
                   <Card.Text>
                     Especialista en fauna silvestre, cuenta con más de diez años
@@ -118,7 +119,7 @@ const MainPage = () => {
                   </Card.Text>
                 </Card.Body>
               </Card>
-              <Card>
+              <Card className="cardprof">
                 <Card.Body>
                   <Card.Title>Vet. Laura Ramirez</Card.Title>
                   <Card.Text>
@@ -127,7 +128,7 @@ const MainPage = () => {
                   </Card.Text>
                 </Card.Body>
               </Card>
-              <Card>
+              <Card className="cardprof">
                 <Card.Body>
                   <Card.Title>Vet. Mateo Gordon</Card.Title>
                   <Card.Text>
@@ -136,7 +137,7 @@ const MainPage = () => {
                   </Card.Text>
                 </Card.Body>
               </Card>
-              <Card>
+              <Card className="cardprof">
                 <Card.Body>
                   <Card.Title>Vet. Camila Herrera</Card.Title>
                   <Card.Text>Especialista en rehabilitación animal.</Card.Text>
@@ -145,10 +146,10 @@ const MainPage = () => {
             </Container>
           </Col>
         </Row>
-
-        <div className="comentariosdeclientes">
-          <Row className="mt-4">
-            <h3 className="text-center h3">Comentarios de Nuestros Clientes</h3>
+</div>
+        <div className="container">
+          <Row>          
+              <h3 className="text-center h3">Comentarios de Nuestros Clientes</h3>
             <Col>
               <Carousel className="carousel text-center">
                 <Carousel.Item>
@@ -198,8 +199,9 @@ const MainPage = () => {
             </Col>
           </Row>
         </div>
-
-        <Row className="mt-4 text-center">
+<br />
+        <div className="container justify-content-center"> 
+        <Row className="text-center">
           <h3 className="text-center h3">
             En veterinaria tenemos diferentes planes de acuerdo a tus
             necesidades:
@@ -242,6 +244,8 @@ const MainPage = () => {
             </Col>
           </Row>
         </Row>
+        </div>
+
       </Container>
     </div>
   );

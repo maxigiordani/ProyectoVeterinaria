@@ -89,7 +89,7 @@ const PlanDetail = () => {
                 <Form.Control
                   type="tel"
                   {...register("phone", validationRules.phone)}
-                  placeholder="123-456-7890"
+                  placeholder="543816575556"
                   maxLength={12}
                   required
                 />
@@ -104,7 +104,7 @@ const PlanDetail = () => {
                   as="textarea"
                   rows={3}
                   {...register("message", validationRules.message)}
-                  placeholder="consultanos"
+                  placeholder="Su consulta"
                   maxLength={300}
                   required
                 />
