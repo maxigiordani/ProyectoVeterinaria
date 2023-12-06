@@ -1,4 +1,4 @@
-// Importa useState y useEffect directamente desde 'react'
+
 import { useState, useEffect } from 'react';
 import Footer from './components/layout/Footer'
 import NavComponent from './components/layout/Nav';
