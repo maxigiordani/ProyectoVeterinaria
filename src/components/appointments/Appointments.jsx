@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import axios from "axios";
 import Swal from "sweetalert2";
 import { STATUS } from "../constant";

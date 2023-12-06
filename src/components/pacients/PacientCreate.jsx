@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Alert, Container, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -27,11 +26,7 @@ const PacientCreate = ({ getAPI }) => {
       const res = await axios.post(URL, data);
       console.log(res);
       if (res.status === 201) {
-        Swal.fire(
-          "Creado",
-          "El paciente fue creado con exito",
-          "success"
-        );
+        Swal.fire("Creado", "El paciente fue creado con exito", "success");
         reset();
         getAPI();
         navigate("/admin/pacientes");
@@ -41,9 +36,7 @@ const PacientCreate = ({ getAPI }) => {
       error.response.data?.message &&
         setErrorMessage(error.response.data?.message);
       error.response.data?.errors?.length > 0 &&
-        error.response.data.errors?.map((error) =>
-          setErrorMessage(error.msg)
-        );
+        error.response.data.errors?.map((error) => setErrorMessage(error.msg));
     }
   };
 
@@ -52,7 +45,6 @@ const PacientCreate = ({ getAPI }) => {
       <Container className="py-5">
         <h1>Añadir paciente🐾</h1>
         <hr />
-        {/* Form Pacient */}
         <Form className="my-5" onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formOwnerName">
             <Form.Label>Nombre y apellido*</Form.Label>

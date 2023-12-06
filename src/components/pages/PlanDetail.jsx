@@ -1,18 +1,25 @@
-import React, { useState } from 'react';
-import { Form, Button, Modal, Container, Row, Col } from 'react-bootstrap';
-import { useForm } from 'react-hook-form';
-import emailjs from 'emailjs-com';
-import { validationRules, ErrorMessage } from '../helpers/PlanDetailValidations';
-import imagen from '../../assets/imagenes/bannerlogin.jpg'; // Ajusta la ruta según la estructura de tu proyecto
+import React, { useState } from "react";
+import { Form, Button, Modal, Container, Row, Col } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
+import {
+  validationRules,
+  ErrorMessage,
+} from "../helpers/PlanDetailValidations";
 
 const PlanDetail = () => {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
   const [showModal, setShowModal] = useState(false);
 
   const emailjsConfig = {
-    serviceId: 'service_fai8lrq',
-    templateId: 'template_mmkeyvm',
-    userId: 'uMxMpO7OXL7pbTgxO',
+    serviceId: "service_fai8lrq",
+    templateId: "template_mmkeyvm",
+    userId: "uMxMpO7OXL7pbTgxO",
   };
 
   const onSubmit = async (data) => {
@@ -30,13 +37,13 @@ const PlanDetail = () => {
         emailjsConfig.userId
       );
 
-      console.log('Correo enviado con éxito:', response);
+      console.log("Correo enviado con éxito:", response);
 
       setShowModal(true);
 
       reset();
     } catch (error) {
-      console.error('Error al enviar el correo:', error);
+      console.error("Error al enviar el correo:", error);
     }
   };
 
@@ -45,37 +52,72 @@ const PlanDetail = () => {
   };
 
   return (
-    <Container fluid className='mt-5 containerpage'>
-      <Row className='justify-content-center'>
+    <Container fluid className="mt-5 containerpage">
+      <Row className="justify-content-center">
         <Col md={6}>
-          <div className='container-fluid'>
+          <div className="container-fluid">
             <h2>Consulta de Plan</h2>
             <Form onSubmit={handleSubmit(onSubmit)}>
               <Form.Group controlId="formName">
                 <Form.Label>Nombre y apellido:</Form.Label>
-                <Form.Control type="text" {...register('name', validationRules.name)} placeholder='Juan Perez' maxLength={25} required />
+                <Form.Control
+                  type="text"
+                  {...register("name", validationRules.name)}
+                  placeholder="Juan Perez"
+                  maxLength={25}
+                  required
+                />
                 {errors.name && <ErrorMessage message={errors.name.message} />}
               </Form.Group>
 
               <Form.Group controlId="formEmail">
                 <Form.Label>Correo Electrónico:</Form.Label>
-                <Form.Control type="email" {...register('email', validationRules.email)} placeholder='juanperez@gmail.com' maxLength={35} required />
-                {errors.email && <ErrorMessage message={errors.email.message} />}
+                <Form.Control
+                  type="email"
+                  {...register("email", validationRules.email)}
+                  placeholder="juanperez@gmail.com"
+                  maxLength={35}
+                  required
+                />
+                {errors.email && (
+                  <ErrorMessage message={errors.email.message} />
+                )}
               </Form.Group>
 
               <Form.Group controlId="formPhone">
                 <Form.Label>Número de Celular:</Form.Label>
-                <Form.Control type="tel" {...register('phone', validationRules.phone)} placeholder='123-456-7890' maxLength={12} required />
-                {errors.phone && <ErrorMessage message={errors.phone.message} />}
+                <Form.Control
+                  type="tel"
+                  {...register("phone", validationRules.phone)}
+                  placeholder="123-456-7890"
+                  maxLength={12}
+                  required
+                />
+                {errors.phone && (
+                  <ErrorMessage message={errors.phone.message} />
+                )}
               </Form.Group>
 
               <Form.Group controlId="formMessage">
                 <Form.Label>Mensaje:</Form.Label>
-                <Form.Control as="textarea" rows={3} {...register('message', validationRules.message)} placeholder='consultanos' maxLength={300} required />
-                {errors.message && <ErrorMessage message={errors.message.message} />}
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  {...register("message", validationRules.message)}
+                  placeholder="consultanos"
+                  maxLength={300}
+                  required
+                />
+                {errors.message && (
+                  <ErrorMessage message={errors.message.message} />
+                )}
               </Form.Group>
 
-              <Button className="botonformulario" variant="primary" type="submit">
+              <Button
+                className="botonformulario"
+                variant="primary"
+                type="submit"
+              >
                 Enviar Consulta
               </Button>
             </Form>
@@ -96,7 +138,6 @@ const PlanDetail = () => {
           </div>
         </Col>
       </Row>
-   
     </Container>
   );
 };

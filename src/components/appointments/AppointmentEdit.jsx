@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { Form, Container, Alert } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
@@ -7,7 +5,10 @@ import axios from "../config/axiosInit";
 import Swal from "sweetalert2";
 import { STATUS } from "../constant";
 import { useForm } from "react-hook-form";
-import { ErrorMessage, validationAppointment } from "../helpers/validateFieldCreate";
+import {
+  ErrorMessage,
+  validationAppointment,
+} from "../helpers/validateFieldCreate";
 
 const AppointmentEdit = ({ getTurnosAPI }) => {
   const {
@@ -25,7 +26,6 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
 
   useEffect(() => {
     getOne();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getOne = async () => {
@@ -33,13 +33,11 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
       const res = await axios.get(`${URLTURNOS}/${id}`);
       const appointmentApi = res.data;
 
-      // Setear los valores al formulario
       Object.entries(appointmentApi).forEach(([key, value]) => {
         setValue(key, value);
       });
     } catch (error) {
       console.log(error);
-      // Manejo de errores aquí, puedes mostrar un mensaje o redirigir a otra página
     }
   };
 
@@ -49,19 +47,20 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
 
       console.log(res);
       if (res.status === STATUS.STATUS_OK) {
-        Swal.fire('Updated', 'Your appointment has been updated successfully', 'success');
-        reset(); // Resetea el formulario
+        Swal.fire(
+          "Actualizado",
+          "El paciente fue actualizado correctamente",
+          "success"
+        );
+        reset();
         getTurnosAPI();
-        navigate('/admin/turnos');
+        navigate("/admin/turnos");
       }
     } catch (error) {
-      console.log(error);
       error.response.data?.message &&
         setErrorMessage(error.response.data?.message);
       error.response.data?.errors?.length > 0 &&
-        error.response.data.errors?.map((error) =>
-          setErrorMessage(error.msg)
-        );
+        error.response.data.errors?.map((error) => setErrorMessage(error.msg));
     }
   };
 
@@ -70,7 +69,6 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
       <Container className="py-5 estilotabla">
         <h1>Editar Turno</h1>
         <hr />
-        {/* Form Appointment */}
         <Form className="my-5" onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formDetails">
             <Form.Label>Detalle del turno*</Form.Label>
@@ -79,7 +77,10 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
               placeholder="E.g., Vaccination"
               required
               maxLength={30}
-              {...register("appointmentDetail", validationAppointment.appointmentDetail)}
+              {...register(
+                "appointmentDetail",
+                validationAppointment.appointmentDetail
+              )}
             />
             {errors.appointmentDetail && (
               <ErrorMessage message={errors.appointmentDetail.message} />
@@ -107,9 +108,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
               required
               {...register("pet", validationAppointment.pet)}
             />
-            {errors.pet && (
-              <ErrorMessage message={errors.pet.message} />
-            )}
+            {errors.pet && <ErrorMessage message={errors.pet.message} />}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formDate">
             <Form.Label>Fecha*</Form.Label>
@@ -119,9 +118,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
               required
               {...register("date", validationAppointment.date)}
             />
-            {errors.date && (
-              <ErrorMessage message={errors.date.message} />
-            )}
+            {errors.date && <ErrorMessage message={errors.date.message} />}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTime">
             <Form.Label>Horario*</Form.Label>
@@ -131,9 +128,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
               placeholder="Ej. 10:00 AM"
               {...register("time", validationAppointment.time)}
             />
-            {errors.time && (
-              <ErrorMessage message={errors.time.message} />
-            )}
+            {errors.time && <ErrorMessage message={errors.time.message} />}
           </Form.Group>
 
           <div className="text-end">

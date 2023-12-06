@@ -1,15 +1,14 @@
-/* eslint-disable react/prop-types */
 import { Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Pacients from "./Pacients";
-import '../../App.css'
+import "../../App.css";
 import { BsPersonPlus } from "react-icons/bs";
 
 const PacientTable = ({ pacients, getAPI }) => {
-console.log(pacients)
+  console.log(pacients);
 
-    return (
-     <div className="estilotabla">
+  return (
+    <div className="estilotabla">
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
           <h1>Tabla de Pacientes</h1>
@@ -22,11 +21,11 @@ console.log(pacients)
           </Link>
         </div>
         <hr />
-    
+
         {pacients?.length !== 0 ? (
           <Table bordered hover responsive className="align-middle mt-3 ">
             <thead>
-              <tr> 
+              <tr>
                 <th>Id</th>
                 <th>Nombre y apellido </th>
                 <th>Email</th>
@@ -38,12 +37,11 @@ console.log(pacients)
               </tr>
             </thead>
             <tbody>
-            {pacients?.map((pacient) => (
+              {pacients?.map((pacient) => (
                 <Pacients
                   key={pacient._id}
                   pacients={pacient}
                   getAPI={getAPI}
-
                 />
               ))}
             </tbody>
@@ -53,10 +51,9 @@ console.log(pacients)
             <h1>🐾 No se encontraron pacientes🐾</h1>
           </div>
         )}
-        </Container>
+      </Container>
     </div>
   );
 };
-
 
 export default PacientTable;

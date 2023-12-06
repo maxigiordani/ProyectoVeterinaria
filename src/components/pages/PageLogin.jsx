@@ -1,33 +1,35 @@
-import React, { useState } from 'react';
-import { admin } from '../helpers/Credintals'; // Ajusta la ruta según la estructura de tu proyecto
-import bcrypt from 'bcryptjs'; // Importa bcrypt para comparar contraseñas
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import imagen from '../../assets/imagenes/bannerlogin.jpg';
-import Swal from 'sweetalert2';
+import React, { useState } from "react";
+import { admin } from "../helpers/Credintals";
+import bcrypt from "bcryptjs";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import imagen from "../../assets/imagenes/bannerlogin.jpg";
+import Swal from "sweetalert2";
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const PageLogin = () => {
-  const [usernameInput, setUsernameInput] = useState('');
-  const [passwordInput, setPasswordInput] = useState('');
+  const [usernameInput, setUsernameInput] = useState("");
+  const [passwordInput, setPasswordInput] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    const passwordMatch = await bcrypt.compare(passwordInput, admin.passwordHash);
+    const passwordMatch = await bcrypt.compare(
+      passwordInput,
+      admin.passwordHash
+    );
 
     if (passwordMatch) {
-      console.log('Inicio de sesión exitoso como administrador');
-      navigate('/pageadmin');
-
+      console.log("Inicio de sesión exitoso como administrador");
+      navigate("/pageadmin");
     } else {
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Las credenciales ingresadas son incorrectas',
+        icon: "error",
+        title: "Oops...",
+        text: "Las credenciales ingresadas son incorrectas",
       });
     }
-    setUsernameInput('');
-    setPasswordInput('');
+    setUsernameInput("");
+    setPasswordInput("");
   };
 
   return (
@@ -55,7 +57,11 @@ const PageLogin = () => {
                 onChange={(e) => setPasswordInput(e.target.value)}
               />
             </Form.Group>
-            <Button className="botonlogin" variant="primary" onClick={handleLogin}>
+            <Button
+              className="botonlogin"
+              variant="primary"
+              onClick={handleLogin}
+            >
               Ingresar
             </Button>
           </Form>

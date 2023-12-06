@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { Form, Container, Alert } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
@@ -7,7 +5,10 @@ import axios from "../config/axiosInit";
 import Swal from "sweetalert2";
 import { STATUS } from "../constant";
 import { useForm } from "react-hook-form";
-import { ErrorMessage, validationsFieldCreate } from "../helpers/validateFieldCreate";
+import {
+  ErrorMessage,
+  validationsFieldCreate,
+} from "../helpers/validateFieldCreate";
 
 const PacientEdit = ({ getAPI }) => {
   const {
@@ -25,7 +26,6 @@ const PacientEdit = ({ getAPI }) => {
 
   useEffect(() => {
     getOne();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getOne = async () => {
@@ -47,11 +47,14 @@ const PacientEdit = ({ getAPI }) => {
 
       console.log(res);
       if (res.status === STATUS.STATUS_OK) {
-        Swal.fire('Actualizado', 'El paciente fue actualizado correctamente', 'success');
-        reset(); 
+        Swal.fire(
+          "Actualizado",
+          "El paciente fue actualizado correctamente",
+          "success"
+        );
+        reset();
         getAPI();
-        navigate('/admin/pacientes');
-        // Llamada a getAPI para actualizar la lista de pacientes después de la edición
+        navigate("/admin/pacientes");
         getAPI();
       }
     } catch (error) {
@@ -59,9 +62,7 @@ const PacientEdit = ({ getAPI }) => {
       error.response.data?.message &&
         setErrorMessage(error.response.data?.message);
       error.response.data?.errors?.length > 0 &&
-        error.response.data.errors?.map((error) =>
-          setErrorMessage(error.msg)
-        );
+        error.response.data.errors?.map((error) => setErrorMessage(error.msg));
     }
   };
 
@@ -91,9 +92,7 @@ const PacientEdit = ({ getAPI }) => {
               required
               {...register("email", validationsFieldCreate.email)}
             />
-            {errors.email && (
-              <ErrorMessage message={errors.email.message} />
-            )}
+            {errors.email && <ErrorMessage message={errors.email.message} />}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formtel">
             <Form.Label>Tel*</Form.Label>
@@ -102,12 +101,9 @@ const PacientEdit = ({ getAPI }) => {
               placeholder="Max"
               maxLength={12}
               required
-              {...register("tel", validationsFieldCreate.tel)}        
-
+              {...register("tel", validationsFieldCreate.tel)}
             />
-            {errors.tel && (
-              <ErrorMessage message={errors.tel.message} />
-            )}
+            {errors.tel && <ErrorMessage message={errors.tel.message} />}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formDate">
             <Form.Label>Nombre de la mascota*</Form.Label>
@@ -131,9 +127,7 @@ const PacientEdit = ({ getAPI }) => {
               required
               {...register("specie", validationsFieldCreate.specie)}
             />
-            {errors.specie && (
-              <ErrorMessage message={errors.specie.message} />
-            )}
+            {errors.specie && <ErrorMessage message={errors.specie.message} />}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTime">
             <Form.Label>Raza*</Form.Label>
@@ -144,9 +138,7 @@ const PacientEdit = ({ getAPI }) => {
               required
               {...register("race", validationsFieldCreate.race)}
             />
-            {errors.race && (
-              <ErrorMessage message={errors.race.message} />
-            )}
+            {errors.race && <ErrorMessage message={errors.race.message} />}
           </Form.Group>
 
           <div className="text-end">

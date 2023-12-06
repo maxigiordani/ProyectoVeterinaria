@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { FaTemperatureHigh } from 'react-icons/fa'; 
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import { FaTemperatureHigh } from "react-icons/fa";
+import axios from "axios";
 
 const WeatherWidget = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const apiKey = '4a6d503b013ea6d2a76a2a71181b5be2'; 
-    const city = 'TUCUMAN'; 
+    const apiKey = "4a6d503b013ea6d2a76a2a71181b5be2";
+    const city = "TUCUMAN";
 
     const fetchData = async () => {
       try {
@@ -17,7 +17,7 @@ const WeatherWidget = () => {
         );
         setWeatherData(response.data);
       } catch (error) {
-        console.error('Error al obtener datos del clima:', error);
+        console.error("Error al obtener datos del clima:", error);
       } finally {
         setLoading(false);
       }
@@ -31,7 +31,7 @@ const WeatherWidget = () => {
       {loading ? (
         <p>Cargando datos del clima...</p>
       ) : weatherData ? (
-        <div className='tiempo'>
+        <div className="tiempo">
           <h5>{weatherData.name}</h5>
           <p>
             <FaTemperatureHigh /> {weatherData.main.temp}°C

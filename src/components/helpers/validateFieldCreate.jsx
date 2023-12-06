@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-
-// eslint-disable-next-line react-refresh/only-export-components
 export const validationsFieldCreate = {
   ownerName: {
     required: "Este campo es obligatorio",
@@ -70,7 +67,6 @@ export const validationsFieldCreate = {
   },
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const validationAppointment = {
   appointmentDetail: {
     required: "Este campo es obligatorio",

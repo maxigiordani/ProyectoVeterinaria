@@ -20,7 +20,6 @@ const AppointmentTable = ({ appointments, getTurnosAPI }) => {
           </Link>
         </div>
         <hr />
-        {/* Table of Appointments */}
         {appointments?.length !== 0 ? (
           <Table bordered hover responsive className="align-middle mt-3">
             <thead>

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import axios from "axios";
 import { STATUS } from "../constant";
 import Swal from "sweetalert2";
@@ -53,9 +52,9 @@ const Pacients = ({ pacients, getAPI }) => {
         <div className="d-flex justify-content-center">
           <Link
             to={`/pacient/edit/${pacients?._id}`}
-            className= "btn btn-warning mx-1 "
+            className="btn btn-warning mx-1 "
           >
-            Actualizar
+          Editar
           </Link>
           <button
             className="btn btn-danger mx-1"
