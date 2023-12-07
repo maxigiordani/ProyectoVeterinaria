@@ -33,20 +33,25 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
 
   const getOne = async () => {
     try {
-
       const res = await axios.get(`${URLTURNOS}/${id}`);
       const appointmentApi = res.data;
-      const formattedDate = dayjs(appointmentApi.date).format("DD-MM-YYYY");
-
+  
+      const formattedDate = dayjs(appointmentApi.date).format("YYYY-MM-DD");
+  
+      setValue("date", formattedDate);
+  
       Object.entries({ ...appointmentApi, date: formattedDate }).forEach(
         ([key, value]) => {
-          setValue(key, value);
+          if (key !== "date") {
+            setValue(key, value);
+          }
         }
       );
     } catch (error) {
       console.log(error);
     }
   };
+  
 
   const onSubmit = async (data) => {
     try {
@@ -130,7 +135,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
           <Form.Group className="mb-3" controlId="formTime">
             <Form.Label>Horario*</Form.Label>
             <Form.Control
-              type="text"
+              type="time"
               required
               placeholder="Ej. 10:00 AM"
               {...register("time", validationAppointment.time)}
@@ -139,7 +144,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
           </Form.Group>
 
           <div className="text-end">
-            <button className="btn-violeta">Actualizar</button>
+            <button className="btn btn-violeta">Actualizar</button>
           </div>
         </Form>
         {errorMessage && (
