@@ -142,7 +142,7 @@ const PacientEdit = ({ getAPI }) => {
           </Form.Group>
 
           <div className="text-end">
-            <button className="btn-violeta">Actualizar</button>
+            <button className="btn btn-violeta">Actualizar</button>
           </div>
         </Form>
         {errorMessage && (
