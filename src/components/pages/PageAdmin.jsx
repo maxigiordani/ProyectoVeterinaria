@@ -25,6 +25,7 @@ const PageAdmin = ({ appointments }) => {
               Administración Pacientes
             </Link>
           </Card>
+          <br />
         </Col>
         <Col xl={6} lg={6} md={6} sm={12}>
           <Card className="mx-5">
