@@ -6,6 +6,8 @@ import logo from "../../assets/imagenes/logouno.png";
 const NavbarComponent = ({ isAdmin }) => {
   const location = useLocation();
 
+  const isSmallScreen = () => window.innerWidth <= 768;
+
   return (
     <Navbar bg="" expand="lg" className="navbarstyle">
       <Container>
@@ -21,7 +23,7 @@ const NavbarComponent = ({ isAdmin }) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="botonnav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            {isAdmin &&
+            {isAdmin && !isSmallScreen() && ( 
               (location.pathname.startsWith("/admin") ||
                 location.pathname === "/pageadmin" ||
                 location.pathname === "/pacient/create" ||
@@ -37,7 +39,8 @@ const NavbarComponent = ({ isAdmin }) => {
                     ADMINISTRAR TURNOS
                   </Nav.Link>
                 </>
-              )}
+              )
+            )}
           </Nav>
           <Nav className="ms-auto">
             <Nav.Link className="linknav" as={Link} to="/">
