@@ -10,12 +10,12 @@ const NavbarComponent = () => {
   useEffect(() => {
     setIsAdminPage(
       location.pathname.startsWith("/admin") ||
-        location.pathname === "/pageadmin" ||
-        location.pathname === "/pacient/create" ||
-        location.pathname === "/turnos/create"
+      location.pathname === "/pageadmin" ||
+      location.pathname === "/pacient/create" ||
+      location.pathname === "/turnos/create"
     );
   }, [location.pathname]);
-
+  
   const isSmallScreen = () => window.innerWidth <= 768;
 
   return (

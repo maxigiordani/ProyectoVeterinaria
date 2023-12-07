@@ -57,64 +57,20 @@ function App() {
         <NavComponent isAdmin={isAdmin} />
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route
-            path="/planes/primeros-pasos"
-            element={<PlanDetail plan="primeros-pasos" />}
-          />
-          <Route
-            path="/planes/madurando"
-            element={<PlanDetail plan="madurando" />}
-          />
-          <Route
-            path="/planes/adultos"
-            element={<PlanDetail plan="adultos" />}
-          />
+          <Route path="/planes/primeros-pasos"element={<PlanDetail plan="primeros-pasos" />}/>
+          <Route path="/planes/madurando" element={<PlanDetail plan="madurando" />}/>
+          <Route path="/planes/adultos" element={<PlanDetail plan="adultos" />}/>
           <Route path="/page404" element={<Page404 />} />
           <Route path="/contactus" element={<ContactUs />} />
-          <Route
-            path="/pageadmin"
-            element={
-              <PageAdmin
-                appointments={appointments}
-                getTurnosAPI={getTurnosAPI}
-              />
-            }
-          />
+          <Route path="/pageadmin" element={<PageAdmin appointments={appointments}getTurnosAPI={getTurnosAPI}/> } />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/pagelogin" element={<PageLogin />} />
-          <Route
-            path="/admin/pacientes"
-            element={<PacientTable pacients={pacients} getAPI={getAPI} />}
-          />
-          <Route
-            exact
-            path="/pacient/create"
-            element={<PacientCreate getAPI={getAPI} />}
-          />
-          <Route
-            exact
-            path="/pacient/edit/:id"
-            element={<PacientEdit getAPI={getAPI} />}
-          />
-          <Route
-            path="/admin/turnos"
-            element={
-              <AppointmentTable
-                appointments={appointments}
-                getTurnosAPI={getTurnosAPI}
-              />
-            }
-          />
-          <Route
-            exact
-            path="/turnos/create"
-            element={<AppointmentCreate getTurnosAPI={getTurnosAPI} />}
-          />
-
-          <Route
-            exact
-            path="/turnos/edit/:id"
-            element={<AppointmentEdit getTurnosAPI={getTurnosAPI} />}
+          <Route path="/admin/pacientes" element={<PacientTable pacients={pacients} getAPI={getAPI} />} />
+          <Route exact path="/pacient/create" element={<PacientCreate getAPI={getAPI} />} />
+          <Route exact path="/pacient/edit/:id" element={<PacientEdit getAPI={getAPI} />} />
+          <Route path="/admin/turnos" element={ <AppointmentTable appointments={appointments} getTurnosAPI={getTurnosAPI} />}/>
+          <Route exact path="/turnos/create" element={<AppointmentCreate getTurnosAPI={getTurnosAPI} />} />
+         <Route exact path="/turnos/edit/:id" element={<AppointmentEdit getTurnosAPI={getTurnosAPI} />}
           />
         </Routes>
         <Footer />
