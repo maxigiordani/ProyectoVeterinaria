@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -13,7 +14,7 @@ const PageAdmin = ({ appointments }) => {
       <hr />
       <Row className="justify-content-center text-center my-3">
         <Col xl={6} lg={6} md={6} sm={12}>
-          <Card className="mx-5">
+          <Card className="mx-5 my-3">
             <Card.Img
               variant="top"
               src="https://img.freepik.com/foto-gratis/propietario-cerca-lindo-perro_23-2149143856.jpg?w=900&t=st=1701344682~exp=1701345282~hmac=34efa45c0d22e1f64fc814e3cc9372946bff3de08d81bc54696304f5368bd296"
@@ -28,7 +29,7 @@ const PageAdmin = ({ appointments }) => {
           <br />
         </Col>
         <Col xl={6} lg={6} md={6} sm={12}>
-          <Card className="mx-5">
+          <Card className="mx-5 my-3">
             <Card.Img
               variant="top"
               src="https://img.freepik.com/foto-gratis/lindo-perro-consulta_23-2149314384.jpg?w=900&t=st=1701344918~exp=1701345518~hmac=bec033b3e5ee999294964b28a497ce56d68c09d6a3c7ffd33528ae4bdfdde9f2"

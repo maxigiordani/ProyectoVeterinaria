@@ -1,3 +1,7 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/prop-types */
+import dayjs from "dayjs";
+
 export const validationsFieldCreate = {
   ownerName: {
     required: "Este campo es obligatorio",
@@ -106,6 +110,16 @@ export const validationAppointment = {
   },
   date: {
     required: "Este campo es obligatorio",
+    validate: (value) => {
+      const currentDate = dayjs();
+      const selectedDate = dayjs(value);
+
+      if (selectedDate.isBefore(currentDate, "day")) {
+        return "La fecha no puede ser del pasado";
+      }
+
+      return true;
+    },
   },
   time: {
     required: "Este campo es obligatorio",

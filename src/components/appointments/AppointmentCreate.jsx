@@ -25,7 +25,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
 
   const onSubmit = async (data) => {
     try {
-      data.date = dayjs(data.date).format("DD-MM-YYYY");
+      data.date = dayjs(data.date).format("YYYY-MM-DD");
 
       const res = await axios.post(URLTURNO, data);
 
