@@ -94,15 +94,58 @@ const MainPage = () => {
         </div>
 
         <div className="container">
-          <Row>
-            <h3 className="text-center h3">Comentarios de Nuestros Clientes</h3>
+          <Row>          
+              <h3 className="text-center h3">Comentarios de Nuestros Clientes</h3>
             <Col>
               <Carousel className="carousel text-center">
-                {/* ... */}
+                <Carousel.Item>
+                  <Card className="comentscustomer">
+                    <Card.Body>
+                      <Card.Text>
+                        "Excelente servicio, siempre confío en la veterinaria
+                        Rolling para el cuidado de mis mascotas."
+                      </Card.Text>
+                      <p className="cliente">- María Pérez</p>
+                    </Card.Body>
+                  </Card>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <Card className="comentscustomer">
+                    <Card.Body>
+                      <Card.Text>
+                        "Los profesionales de la veterinaria son muy dedicados.
+                        Mi perro siempre recibe la mejor atención aquí."
+                      </Card.Text>
+                      <p className="cliente">- Juan Rodríguez</p>
+                    </Card.Body>
+                  </Card>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <Card className="comentscustomer">
+                    <Card.Body>
+                      <Card.Text>
+                        "Excelente atención, muy buenos precios y contencion al
+                        cliente."
+                      </Card.Text>
+                      <p className="cliente">- Carlos Giovanni</p>
+                    </Card.Body>
+                  </Card>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <Card className="comentscustomer">
+                    <Card.Body>
+                      <Card.Text>
+                        "Rapida atención, excelente trato y precios accesibles."
+                      </Card.Text>
+                      <p className="cliente">-Valentina Mamani</p>
+                    </Card.Body>
+                  </Card>
+                </Carousel.Item>
               </Carousel>
             </Col>
           </Row>
         </div>
+<br />
 
         <div className="container justify-content-center">
           <Row className="text-center">
