@@ -24,31 +24,31 @@ const MainPage = () => {
             <Col md={8}>
               <ListGroup className="listgroup-services">
                 <Link className="linkstyle" to="/page404">
-                  <ListGroup.Item className="listaservicios">Cirugías ✔</ListGroup.Item>
+                  <ListGroup.Item className="listaservicios">Cirugías </ListGroup.Item>
                 </Link>
                 <Link className="linkstyle" to="/page404">
-                  <ListGroup.Item className="listaservicios">Ecografías ✔</ListGroup.Item>
+                  <ListGroup.Item className="listaservicios">Ecografías </ListGroup.Item>
                 </Link>
                 <Link className="linkstyle" to="/page404">
-                  <ListGroup.Item className="listaservicios">Aplicación y venta de vacunas ✔</ListGroup.Item>
+                  <ListGroup.Item className="listaservicios">Aplicación y venta de vacunas </ListGroup.Item>
                 </Link>
                 <Link className="linkstyle" to="/page404">
-                  <ListGroup.Item className="listaservicios">Radiografías ✔</ListGroup.Item>
+                  <ListGroup.Item className="listaservicios">Radiografías </ListGroup.Item>
                 </Link>
                 <Link className="linkstyle" to="/page404">
-                  <ListGroup.Item className="listaservicios">Laboratorio de análisis ✔</ListGroup.Item>
+                  <ListGroup.Item className="listaservicios">Laboratorio de análisis </ListGroup.Item>
                 </Link>
                 <Link className="linkstyle" to="/page404">
-                  <ListGroup.Item className="listaservicios">Accesorios para tu mascota ✔</ListGroup.Item>
+                  <ListGroup.Item className="listaservicios">Accesorios para tu mascota </ListGroup.Item>
                 </Link>
                 <Link className="linkstyle" to="/page404">
-                  <ListGroup.Item className="listaservicios">Alimentos balanceados de varias marcas ✔</ListGroup.Item>
+                  <ListGroup.Item className="listaservicios">Alimentos balanceados de varias marcas </ListGroup.Item>
                 </Link>
                 <Link className="linkstyle" to="/page404">
-                  <ListGroup.Item className="listaservicios">Venta de medicamentos ✔</ListGroup.Item>
+                  <ListGroup.Item className="listaservicios">Venta de medicamentos </ListGroup.Item>
                 </Link>
                 <Link className="linkstyle" to="/page404">
-                  <ListGroup.Item className="listaservicios">Peluqueria ✔</ListGroup.Item>
+                  <ListGroup.Item className="listaservicios">Peluqueria </ListGroup.Item>
                 </Link>
               </ListGroup>
             </Col>

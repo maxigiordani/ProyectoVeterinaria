@@ -13,6 +13,7 @@ const NavbarComponent = () => {
       location.pathname === "/pageadmin" ||
       location.pathname === "/pacient/create" ||
       location.pathname === "/turnos/create"
+      
     );
   }, [location.pathname]);
   
