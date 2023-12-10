@@ -1,5 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable react/prop-types */
 import dayjs from "dayjs";
 
 export const validationsFieldCreate = {
@@ -124,7 +122,7 @@ export const validationAppointment = {
   time: {
     required: "Este campo es obligatorio",
     pattern: {
-      value: /^(08|09|1[0-6]):00$/,
+      value: /^(08|09|1[0-6]):[0-5][0-9]$/,
       message:
         'Recuerda el horario de atencion es de 8:00 a 16:00 de corrido. Los turnos son cada hora en punto, ej: "12:00"',
     },
