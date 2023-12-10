@@ -31,8 +31,8 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
 
       if (res.status === 201) {
         Swal.fire(
-          "Created",
-          "Your appointment has been created successfully",
+          "Creado",
+          "La cita fue creada con exito",
           "success"
         );
         reset();

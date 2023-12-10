@@ -251,7 +251,7 @@
 }
 
 .estilotabla {
-  min-height: 78vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
 }
