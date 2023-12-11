@@ -19,7 +19,6 @@ const PageLogin = () => {
     );
 
     if (passwordMatch) {
-      console.log("Inicio de sesión exitoso como administrador");
       navigate("/pageadmin");
     } else {
       Swal.fire({
