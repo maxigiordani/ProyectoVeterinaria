@@ -98,7 +98,7 @@ function App() {
               isAdmin ? (
                 <PacientCreate getAPI={getAPI} />
               ) : (
-                <Navigate to="/" />
+                <Navigate to="/pageunauthorized"/>
               )
             }
           />

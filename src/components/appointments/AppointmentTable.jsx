@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { TfiAgenda } from "react-icons/tfi";
@@ -21,7 +20,12 @@ const AppointmentTable = ({ appointments, getTurnosAPI }) => {
         </div>
         <hr />
         {appointments?.length !== 0 ? (
-          <Table bordered hover responsive className="align-middle mt-3">
+          <Table
+            bordered
+            hover
+            responsive
+            className="align-middle mt-3 text-center"
+          >
             <thead>
               <tr>
                 <th>Id</th>

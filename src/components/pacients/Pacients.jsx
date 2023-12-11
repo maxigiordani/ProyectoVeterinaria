@@ -54,7 +54,7 @@ const Pacients = ({ pacients, getAPI }) => {
             to={`/pacient/edit/${pacients?._id}`}
             className="btn btn-warning mx-1 "
           >
-          Editar
+            Editar
           </Link>
           <button
             className="btn btn-danger mx-1"

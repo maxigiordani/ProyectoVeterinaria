@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Form, Container, Alert } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
@@ -34,11 +33,11 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
     try {
       const res = await axios.get(`${URLTURNOS}/${id}`);
       const appointmentApi = res.data;
-  
+
       const formattedDate = dayjs(appointmentApi.date).format("YYYY-MM-DD");
-  
+
       setValue("date", formattedDate);
-  
+
       Object.entries({ ...appointmentApi, date: formattedDate }).forEach(
         ([key, value]) => {
           if (key !== "date") {
@@ -50,7 +49,6 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
       console.log(error);
     }
   };
-  
 
   const onSubmit = async (data) => {
     try {
@@ -126,7 +124,6 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
             <Form.Control
               type="date"
               {...register("date", validationAppointment.date)}
-
               required
             />
             {errors.date && <ErrorMessage message={errors.date.message} />}

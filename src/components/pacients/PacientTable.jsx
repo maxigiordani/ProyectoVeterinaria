@@ -23,7 +23,12 @@ const PacientTable = ({ pacients, getAPI }) => {
         <hr />
 
         {pacients?.length !== 0 ? (
-          <Table bordered hover responsive className="align-middle mt-3 ">
+          <Table
+            bordered
+            hover
+            responsive
+            className="align-middle mt-3 text-center"
+          >
             <thead>
               <tr>
                 <th>Id</th>

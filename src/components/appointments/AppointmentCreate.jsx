@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Alert, Container, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -30,11 +29,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
       const res = await axios.post(URLTURNO, data);
 
       if (res.status === 201) {
-        Swal.fire(
-          "Creado",
-          "La cita fue creada con exito",
-          "success"
-        );
+        Swal.fire("Creado", "La cita fue creada con exito", "success");
         reset();
         getTurnosAPI();
         navigate("/admin/turnos");
