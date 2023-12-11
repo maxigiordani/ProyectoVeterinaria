@@ -55,7 +55,7 @@ const MainPage = () => {
           </Row>
         </div>
 
-        <Col className="publicidad-horizontal text-center fluid d-none d-md-block">
+        <Col className="publicidad-horizontal text-center d-none d-lg-block">
           <img src={publicidadImage} alt="Publicidad2" />
         </Col>
 
