@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../assets/imagenes/logouno.png";

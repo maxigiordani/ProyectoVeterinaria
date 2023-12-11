@@ -12,10 +12,12 @@ const NavbarComponent = () => {
       location.pathname.startsWith("/admin") ||
       location.pathname === "/pageadmin" ||
       location.pathname === "/pacient/create" ||
-      location.pathname === "/turnos/create"
-      
+      location.pathname === "/turnos/create" ||
+      location.pathname.startsWith("/pacient/edit/") ||
+      location.pathname.startsWith("/turnos/edit/")
     );
   }, [location.pathname]);
+  
   
   const isSmallScreen = () => window.innerWidth <= 768;
 
