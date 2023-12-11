@@ -48,7 +48,7 @@ const MainPage = () => {
                   <ListGroup.Item className="listaservicios">Venta de medicamentos </ListGroup.Item>
                 </Link>
                 <Link className="linkstyle" to="/page404">
-                  <ListGroup.Item className="listaservicios">Peluqueria </ListGroup.Item>
+                  <ListGroup.Item className="listaservicios">Peluquería </ListGroup.Item>
                 </Link>
               </ListGroup>
             </Col>
