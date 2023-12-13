@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { admin } from "../helpers/Credintals";
 import bcrypt from "bcryptjs";
-import { Form, Container, Row, Col } from "react-bootstrap";
+import { Form, Container, Row, Col, Button } from "react-bootstrap";
 import imagen from "../../assets/imagenes/bannerlogin.jpg";
 import Swal from "sweetalert2";
 
@@ -56,13 +56,13 @@ const PageLogin = () => {
                 onChange={(e) => setPasswordInput(e.target.value)}
               />
             </Form.Group>
-            <button
+            <Button
               className="btn btn-violeta botonlogin"
               
               onClick={handleLogin}
             >
               Ingresar
-            </button>
+            </Button>
           </Form>
           <img
             src={imagen}

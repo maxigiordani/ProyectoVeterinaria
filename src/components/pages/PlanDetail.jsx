@@ -114,8 +114,8 @@ const PlanDetail = () => {
               </Form.Group>
 
               <Button
-                className="botonformulario"
-                variant="primary"
+                className="botonformulario btn btn-violeta"
+            
                 type="submit"
               >
                 Enviar Consulta
