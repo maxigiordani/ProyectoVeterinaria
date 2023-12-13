@@ -58,7 +58,7 @@ const NavbarComponent = () => {
               {isAdminPage ? "SALIR" : "INGRESAR"}
             </Nav.Link>
             <Nav.Link className="linknav" as={Link} to="/contactus">
-              CONTÁCTENOS
+              CONTACTANOS
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

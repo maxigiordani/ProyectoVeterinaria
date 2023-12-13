@@ -56,13 +56,13 @@ const PageLogin = () => {
                 onChange={(e) => setPasswordInput(e.target.value)}
               />
             </Form.Group>
-            <Button
-              className="botonlogin"
-              variant="primary"
+            <button
+              className="btn btn-violeta botonlogin"
+              
               onClick={handleLogin}
             >
               Ingresar
-            </Button>
+            </button>
           </Form>
           <img
             src={imagen}

@@ -55,7 +55,7 @@ const ContactUs = () => {
     <div className="container fluid mt-5 containerpage">
       <div className="row">
         <div className="col-md-6">
-          <h2 className="mb-2">Contáctenos</h2>
+          <h2 className="mb-2">Contactanos</h2>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group controlId="formName">
               <Form.Label>Nombre y apellido:</Form.Label>
@@ -108,9 +108,9 @@ const ContactUs = () => {
               )}
             </Form.Group>
 
-            <Button className="botonformulario" variant="primary" type="submit">
+            <button className="botonformulario btn btn-violeta"  type="submit">
               Enviar Consulta
-            </Button>
+            </button>
           </Form>
         </div>
 

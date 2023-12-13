@@ -33,7 +33,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link className="linkfooter" to="/contactus">
-                  CONTÁCTENOS
+                  CONTACTANOS
                 </Link>
               </li>
             </ul>

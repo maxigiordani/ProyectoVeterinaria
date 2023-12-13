@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card, Button, Carousel, ListGroup } from "react-bootstrap";
+import { Container, Row, Col, Card, Carousel, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import WeatherWidget from "../helpers/WeatherWidget";
 import publicidadImage from "../../assets/imagenes/principal.jpg";
@@ -147,7 +147,7 @@ const MainPage = () => {
         </div>
 <br />
 
-        <div className="container justify-content-center my-5">
+        <div className="container justify-content-center mt-5 mb-3">
           <Row className="text-center">
             <h3 className="text-center h3 mb-4">En veterinaria tenemos diferentes planes de acuerdo a tus necesidades</h3>
             <Row className="estilocards text-center">
