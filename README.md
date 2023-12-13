@@ -2,7 +2,7 @@
 
 Es una página web desarrollada con ReactJS, centrada en el cuidado de mascotas, resalta servicios, profesionales y planes veterinarios. Emplea React Router para la navegación y muestra información climática a través de una API dedicada. También, integra un CRUD para la gestión de turnos y pacientes, conectándose a una API externa.
 
-## ✨ [Ver Demo](agregar ruta del deploy del frontend) 
+## ✨ [Ver Demo](https://veterinariarolling.netlify.app/) 
 
 ## Comandos
 
