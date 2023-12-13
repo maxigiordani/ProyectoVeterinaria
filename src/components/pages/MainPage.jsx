@@ -147,9 +147,9 @@ const MainPage = () => {
         </div>
 <br />
 
-        <div className="container justify-content-center">
+        <div className="container justify-content-center my-5">
           <Row className="text-center">
-            <h3 className="text-center h3">En veterinaria tenemos diferentes planes de acuerdo a tus necesidades:</h3>
+            <h3 className="text-center h3 pb-3">En veterinaria tenemos diferentes planes de acuerdo a tus necesidades:</h3>
             <Row className="estilocards text-center">
               <Col md={4} sm={6}>
                 <Card className="cardplanes text-center">
@@ -157,7 +157,7 @@ const MainPage = () => {
                     <Card.Title>Primeros Pasos</Card.Title>
                     <Card.Text>Servicios para mascotas de 0 a 5 años.</Card.Text>
                     <Link to="/planes/primeros-pasos">
-                      <Button variant="primary">Detalles</Button>
+                      <button className="btn btn-violetaOscuro">Detalles</button>
                     </Link>
                   </Card.Body>
                 </Card>
@@ -168,7 +168,7 @@ const MainPage = () => {
                     <Card.Title>Madurando</Card.Title>
                     <Card.Text>Servicios para mascotas de 5 a 10 años.</Card.Text>
                     <Link to="/planes/madurando">
-                      <Button variant="primary">Detalles</Button>
+                      <button className="btn btn-violetaOscuro">Detalles</button>
                     </Link>
                   </Card.Body>
                 </Card>
@@ -179,7 +179,7 @@ const MainPage = () => {
                     <Card.Title>Adultos</Card.Title>
                     <Card.Text>Servicios para mascotas de más de 10 años.</Card.Text>
                     <Link to="/planes/adultos">
-                      <Button variant="primary">Detalles</Button>
+                      <button className="btn btn-violetaOscuro">Detalles</button>
                     </Link>
                   </Card.Body>
                 </Card>

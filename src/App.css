@@ -173,6 +173,15 @@
   color: white
 }
 
+.btn-violetaOscuro{
+  background-color: blueviolet;
+  color: white
+}
+.btn-violetaOscuro:hover{
+  background-color: blueviolet;
+  color: white
+}
+
 .btn-violeta:hover {
   background-color: blueviolet;
   color: white
