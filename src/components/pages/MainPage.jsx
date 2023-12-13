@@ -95,7 +95,7 @@ const MainPage = () => {
 
         <div className="container">
           <Row>          
-              <h3 className="text-center h3">Comentarios de Nuestros Clientes</h3>
+              <h3 className="text-center h3 mb-4">Comentarios de Nuestros Clientes</h3>
             <Col>
               <Carousel className="carousel text-center">
                 <Carousel.Item>
@@ -149,7 +149,7 @@ const MainPage = () => {
 
         <div className="container justify-content-center my-5">
           <Row className="text-center">
-            <h3 className="text-center h3 pb-3">En veterinaria tenemos diferentes planes de acuerdo a tus necesidades:</h3>
+            <h3 className="text-center h3 mb-4">En veterinaria tenemos diferentes planes de acuerdo a tus necesidades</h3>
             <Row className="estilocards text-center">
               <Col md={4} sm={6}>
                 <Card className="cardplanes text-center">
@@ -186,6 +186,7 @@ const MainPage = () => {
               </Col>
             </Row>
           </Row>
+          <br />
         </div>
       </Container>
     </div>
