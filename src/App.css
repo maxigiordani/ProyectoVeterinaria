@@ -2,8 +2,6 @@
   background-color: black
 }
 
-
-
 .estilocards {
   display: flex;
   justify-content: center;
@@ -14,9 +12,9 @@
 .cardplanes {
   width: 100%;
   margin-bottom: 20px;
+  border-color: #c08ad4;
 
 }
-
 
 .tituloprincipal {
   color: white;
@@ -65,9 +63,7 @@
 }
 
 .comentariosdeclientes {
-
   margin: 20px;
-
 }
 
 .servicios {
@@ -117,17 +113,13 @@
   max-height: 300px;
   background-color: #c08ad4;
   padding: 15px;
-
 }
-
 
 .titulonav {
   color: white;
   margin-top: -100px;
   margin-left: 80px;
-
 }
-
 
 .botonnav {
   margin: 20px;
@@ -144,7 +136,6 @@
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(183, 26, 223, 0.5);
 }
-
 
 .fraseequipo {
   margin: 30px;
@@ -245,6 +236,7 @@
   margin: 10px;
   padding: 12px;
   font-size: 20px;
+  border-color: #c08ad4;
 
 }
 

@@ -95,7 +95,7 @@ const MainPage = () => {
 
         <div className="container">
           <Row>          
-              <h3 className="text-center h3 mb-4">Comentarios de Nuestros Clientes</h3>
+              <h3 className="text-center h3 my-4">Comentarios de Nuestros Clientes</h3>
             <Col>
               <Carousel className="carousel text-center">
                 <Carousel.Item>
