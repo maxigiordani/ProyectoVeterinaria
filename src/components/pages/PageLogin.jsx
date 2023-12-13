@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { admin } from "../helpers/Credintals";
 import bcrypt from "bcryptjs";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Container, Row, Col } from "react-bootstrap";
 import imagen from "../../assets/imagenes/bannerlogin.jpg";
 import Swal from "sweetalert2";
 

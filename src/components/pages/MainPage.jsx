@@ -102,8 +102,8 @@ const MainPage = () => {
                   <Card className="comentscustomer">
                     <Card.Body>
                       <Card.Text>
-                        "Excelente servicio, siempre confío en la veterinaria
-                        Rolling para el cuidado de mis mascotas."
+                      &quot;Excelente servicio, siempre confío en la veterinaria
+                        Rolling para el cuidado de mis mascotas.&quot;
                       </Card.Text>
                       <p className="cliente">- María Pérez</p>
                     </Card.Body>
@@ -113,8 +113,8 @@ const MainPage = () => {
                   <Card className="comentscustomer">
                     <Card.Body>
                       <Card.Text>
-                        "Los profesionales de la veterinaria son muy dedicados.
-                        Mi perro siempre recibe la mejor atención aquí."
+                      &quot;Los profesionales de la veterinaria son muy dedicados.
+                        Mi perro siempre recibe la mejor atención aquí.&quot;
                       </Card.Text>
                       <p className="cliente">- Juan Rodríguez</p>
                     </Card.Body>
@@ -124,8 +124,8 @@ const MainPage = () => {
                   <Card className="comentscustomer">
                     <Card.Body>
                       <Card.Text>
-                        "Excelente atención, muy buenos precios y contencion al
-                        cliente."
+                      &quot;Excelente atención, muy buenos precios y contencion al
+                        cliente.&quot;
                       </Card.Text>
                       <p className="cliente">- Carlos Giovanni</p>
                     </Card.Body>
@@ -135,7 +135,7 @@ const MainPage = () => {
                   <Card className="comentscustomer">
                     <Card.Body>
                       <Card.Text>
-                        "Rapida atención, excelente trato y precios accesibles."
+                      &quot;Rapida atención, excelente trato y precios accesibles.&quot;
                       </Card.Text>
                       <p className="cliente">-Valentina Mamani</p>
                     </Card.Body>
