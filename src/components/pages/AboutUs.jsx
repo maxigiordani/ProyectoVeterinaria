@@ -49,16 +49,7 @@ const AboutUs = () => {
           <h4 className="mt-3">Rosario Alvarez</h4>
         </Col>
 
-        <Col>
-          <Image
-            className="imagenavatar"
-            src={Integrante4Avatar}
-            alt="Avatar Integrante 4"
-            roundedCircle
-            fluid
-          />
-          <h4 className="mt-3">Sofía Delgado</h4>
-        </Col>
+      
       </Row>
     </Container>
   );
