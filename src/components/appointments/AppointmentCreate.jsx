@@ -72,7 +72,7 @@ const AppointmentCreate = ({ getTurnosAPI }) => {
               {...register("veterinarian", validationAppointment.veterinarian)}
               maxLength={30}
               required
-              placeholder="Medico Alejandro Cortez"
+              placeholder="Alejandro Cortez"
             />
             {errors.veterinarian && (
               <ErrorMessage message={errors.veterinarian.message} />
