@@ -28,7 +28,7 @@ const Appointments = ({ appointments, getTurnosAPI }) => {
         try {
           const res = await axios.delete(`${URLTURNO}/${id}`);
 
-          console.log(res);
+          
           if (res.status === STATUS.STATUS_OK) {
             Swal.fire("Eliminado", "El paciente fue eliminado", "success");
             getTurnosAPI();

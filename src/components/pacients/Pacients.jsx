@@ -26,7 +26,7 @@ const Pacients = ({ pacients, getAPI }) => {
         try {
           const res = await axios.delete(`${URL}/${id}`);
 
-          console.log(res);
+     
           if (res.status === STATUS.STATUS_OK) {
             Swal.fire("Eliminado", "El paciente fue eliminado", "success");
             getAPI();

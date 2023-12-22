@@ -37,7 +37,7 @@ const PlanDetail = () => {
         emailjsConfig.userId
       );
 
-      console.log("Correo enviado con éxito:", response);
+    
 
       setShowModal(true);
 

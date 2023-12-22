@@ -24,7 +24,7 @@ const PacientCreate = ({ getAPI }) => {
   const onSubmit = async (data) => {
     try {
       const res = await axios.post(URL, data);
-      console.log(res);
+   
       if (res.status === 201) {
         Swal.fire("Creado", "El paciente fue creado con exito", "success");
         reset();

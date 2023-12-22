@@ -5,7 +5,7 @@ import "../../App.css";
 import { BsPersonPlus } from "react-icons/bs";
 
 const PacientTable = ({ pacients, getAPI }) => {
-  console.log(pacients);
+
 
   return (
     <div className="estilotabla">

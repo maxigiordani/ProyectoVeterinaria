@@ -45,7 +45,7 @@ const PacientEdit = ({ getAPI }) => {
     try {
       const res = await axios.put(`${URL}/${id}`, data);
 
-      console.log(res);
+    
       if (res.status === STATUS.STATUS_OK) {
         Swal.fire(
           "Actualizado",

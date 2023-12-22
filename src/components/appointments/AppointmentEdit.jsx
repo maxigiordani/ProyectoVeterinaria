@@ -54,7 +54,7 @@ const AppointmentEdit = ({ getTurnosAPI }) => {
     try {
       const res = await axios.put(`${URLTURNOS}/${id}`, data);
 
-      console.log(res);
+ 
       if (res.status === STATUS.STATUS_OK) {
         Swal.fire(
           "Actualizado",

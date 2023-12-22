@@ -31,8 +31,7 @@ function App() {
   const URL = import.meta.env.VITE_API_VETERINARIA;
   const URLTURNOS = import.meta.env.VITE_API_APPOINTMENTS;
 
-  console.log(URL);
-  console.log(URLTURNOS);
+
 
   const getTurnosAPI = async () => {
     try {
